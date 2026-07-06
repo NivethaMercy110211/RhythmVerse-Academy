@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="RhythmVerse Academy Student Dashboard — Batch Timings."/>
+  <title>Batch Timings | RhythmVerse Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/navbar.css"/>
+  <link rel="stylesheet" href="assets/css/dashboard.css"/>
+  <style>
+    .sidebar-toggle-btn{display:none;width:38px;height:38px;border-radius:var(--radius-sm);background:var(--bg-alt);border:1px solid var(--border);align-items:center;justify-content:center;color:var(--text);font-size:1rem;cursor:pointer;transition:all var(--trans-fast);flex-shrink:0;margin-right:12px;}
+    .sidebar-toggle-btn:hover{background:var(--primary);color:#FFF;border-color:var(--primary);}
+    @media(max-width:1024px){.sidebar-toggle-btn{display:flex;}}
+    [dir="rtl"] .sidebar-toggle-btn{margin-right:0;margin-left:12px;}
+  </style>
+</head>
+<body class="dashboard-page">
+<!-- DASHBOARD TOP BAR -->
+<header class="dash-top-bar" role="banner">
+  <div class="dash-top-bar-left">
+    <!-- Mobile toggle button (hidden on desktop) -->
+    <button class="sidebar-toggle-btn" aria-label="Toggle sidebar navigation" title="Toggle sidebar">
+      <i class="bi bi-layout-sidebar-inset"></i>
+    </button>
+    <a href="index.html" class="navbar-logo">
+      <div class="navbar-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+      <div class="navbar-logo-text">
+        <span class="logo-line1">RhythmVerse</span>
+        <span class="logo-line2">Academy</span>
+      </div>
+    </a>
+  </div>
+  <div class="dash-top-bar-right">
+    <button class="dash-ctrl-btn icon-btn" data-theme-toggle aria-label="Toggle theme" title="Toggle theme">
+      <i class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i>
+    </button>
+    <button class="dash-ctrl-btn" data-dir-toggle aria-label="Toggle direction">
+      <span class="icon-ltr">RTL</span>
+      <span class="icon-rtl">LTR</span>
+    </button>
+    <div class="dash-top-divider"></div>
+    <div class="dash-profile-box">
+      <div class="profile-text">
+        <span class="profile-name">Ananya Nair</span>
+        <span class="profile-status">Active Member</span>
+      </div>
+      <div class="profile-avatar">AN</div>
+    </div>
+  </div>
+</header>
+
+<!-- SIDEBAR OVERLAY -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<main id="main-content">
+<div class="dashboard-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="dashboard-sidebar" id="dashboard-sidebar" role="navigation" aria-label="Dashboard navigation">
+    <!-- Sidebar Logo (visible when mobile sidebar is open) -->
+    <div class="sidebar-logo-box">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+        <div class="navbar-logo-text">
+          <span class="logo-line1">RhythmVerse</span>
+          <span class="logo-line2">Academy</span>
+        </div>
+      </a>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-label">Dashboard</div>
+      <a href="dashboard.html" class="sidebar-link"><i class="bi bi-grid-fill"></i> Overview</a>
+      <a href="dashboard-batches.html" class="sidebar-link active" aria-current="page"><i class="bi bi-clock-fill"></i> Batch Timings</a>
+      <a href="dashboard-attendance.html" class="sidebar-link"><i class="bi bi-calendar-check-fill"></i> Attendance<span class="sidebar-notif-dot" aria-label="New updates available"></span></a>
+      <a href="dashboard-recitals.html" class="sidebar-link"><i class="bi bi-stars"></i> Recital Schedule</a>
+      <a href="dashboard-fees.html" class="sidebar-link"><i class="bi bi-credit-card-fill"></i> Fee Status</a>
+      <a href="dashboard-notifications.html" class="sidebar-link"><i class="bi bi-bell-fill"></i> Notifications<span class="sidebar-notif-dot" aria-label="3 new notifications"></span></a>
+      <div class="sidebar-label">Account</div>
+      <a href="dashboard-profile.html" class="sidebar-link"><i class="bi bi-person-fill"></i> My Profile</a>
+      <a href="dashboard-settings.html" class="sidebar-link"><i class="bi bi-gear-fill"></i> Settings</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <a href="login.html" class="sidebar-link" style="color:var(--accent);"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    </div>
+  </aside>
+
+  <!-- DASHBOARD MAIN -->
+  <div class="dashboard-main">
+
+    <!-- Batch timings card -->
+    <div class="dash-card" id="batch-timings" style="margin-top: 24px;" data-animate="fade-up">
+      <div class="dash-card-header">
+        <div class="dash-card-title"><i class="bi bi-clock-fill"></i> My Active Batch Timings</div>
+        <a href="contact.html" class="dash-card-link">Request Change <i class="bi bi-chevron-right"></i></a>
+      </div>
+      <div class="dash-card-body">
+        <div class="batch-timing-grid">
+          <div class="batch-timing-card">
+            <span class="btc-style text-gradient">Classical Dance — Batch A</span>
+            <div class="btc-time">07:00 – 09:00 AM</div>
+            <div class="btc-days"><i class="bi bi-calendar3"></i> Mon, Wed, Fri</div>
+            <div class="btc-instructor"><i class="bi bi-person-fill"></i> Instructor: Priya Anand</div>
+          </div>
+          <div class="batch-timing-card">
+            <span class="btc-style" style="color:var(--accent);">Contemporary Dance — Batch E</span>
+            <div class="btc-time">05:30 – 07:00 PM</div>
+            <div class="btc-days"><i class="bi bi-calendar3"></i> Tue, Thu</div>
+            <div class="btc-instructor"><i class="bi bi-person-fill"></i> Instructor: Meena Pillai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /dashboard-main -->
+</div><!-- /dashboard-layout -->
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

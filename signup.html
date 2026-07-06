@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Create your RhythmVerse Academy student account and start your dance journey today."/>
+  <title>Create Account | RhythmVerse Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/auth.css"/>
+</head>
+<body>
+
+  <!-- Fixed Auth Controls -->
+  <div class="auth-controls" role="toolbar" aria-label="Theme and direction controls">
+    <button class="auth-ctrl-btn" data-theme-toggle aria-label="Toggle dark/light mode">
+      <i class="bi bi-moon-stars-fill icon-moon"></i>
+      <i class="bi bi-sun-fill icon-sun"></i>
+    </button>
+    <button class="auth-ctrl-btn" data-dir-toggle aria-label="Toggle RTL/LTR" title="Toggle direction">
+      <span class="icon-ltr">RTL</span>
+      <span class="icon-rtl">LTR</span>
+    </button>
+  </div>
+
+  <div class="auth-page signup-page">
+
+    <!-- LEFT PANEL -->
+    <div class="auth-left">
+      <div class="auth-bg" style="background-image:url('assets/images/auth/signup-bg.png');"></div>
+      <div class="auth-bg-overlay"></div>
+      <div class="auth-left-content">
+        <a href="index.html" class="auth-brand" aria-label="RhythmVerse Academy Home">
+          <div class="auth-brand-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+          <div class="auth-brand-text">
+            <span class="brand-line1">RhythmVerse</span>
+            <span class="brand-line2">Academy</span>
+          </div>
+        </a>
+        <div class="auth-left-headline">
+          <h2>Start Your Dance<br>Journey Today</h2>
+          <p>Create your student account and unlock a world of dance styles, expert instructors, and incredible performance opportunities.</p>
+        </div>
+        <div class="auth-features">
+          <div class="auth-feature-item"><i class="bi bi-check-circle-fill"></i><span>Free trial class after registration</span></div>
+          <div class="auth-feature-item"><i class="bi bi-check-circle-fill"></i><span>Access to student dashboard</span></div>
+          <div class="auth-feature-item"><i class="bi bi-check-circle-fill"></i><span>Online attendance tracking</span></div>
+          <div class="auth-feature-item"><i class="bi bi-check-circle-fill"></i><span>Recital schedule and notifications</span></div>
+          <div class="auth-feature-item"><i class="bi bi-check-circle-fill"></i><span>Digital fee payment records</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL — Signup Form -->
+    <div class="auth-right">
+      <div class="auth-card">
+        <!-- Mobile Brand Logo -->
+        <a href="index.html" class="auth-brand mobile-brand" aria-label="RhythmVerse Academy Home">
+          <div class="auth-brand-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+          <div class="auth-brand-text">
+            <span class="brand-line1">RhythmVerse</span>
+            <span class="brand-line2">Academy</span>
+          </div>
+        </a>
+        <h2 class="auth-title">Create Your Account</h2>
+        <p class="auth-subtitle">Join 1,200+ students at RhythmVerse Academy</p>
+
+        <!-- Signup Form -->
+        <form class="auth-form" id="signup-form" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label" for="signup-firstname">First Name *</label><input class="form-control" type="text" id="signup-firstname" name="firstname" placeholder="First name" autocomplete="given-name" required/></div>
+            <div class="form-group"><label class="form-label" for="signup-lastname">Last Name *</label><input class="form-control" type="text" id="signup-lastname" name="lastname" placeholder="Last name" autocomplete="family-name" required/></div>
+          </div>
+          <div class="form-group"><label class="form-label" for="signup-email">Email Address *</label><input class="form-control" type="email" id="signup-email" name="email" placeholder="you@example.com" autocomplete="email" required/></div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label" for="signup-phone">Phone Number *</label><input class="form-control" type="tel" id="signup-phone" name="phone" placeholder="+91 00000 00000" autocomplete="tel" required/></div>
+            <div class="form-group"><label class="form-label" for="signup-age">Age *</label><input class="form-control" type="number" id="signup-age" name="age" placeholder="e.g. 18" min="3" max="80" required/></div>
+          </div>
+          <div class="form-group"><label class="form-label" for="signup-style">Preferred Dance Style</label><select class="form-control" id="signup-style" name="style"><option value="" disabled selected>Select a style</option><option>Classical Dance</option><option>Western Dance</option><option>Hip-Hop</option><option>Salsa</option><option>Contemporary</option><option>Freestyle</option><option>Not sure yet</option></select></div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label" for="signup-password">Password *</label><div class="input-group"><input class="form-control" type="password" id="signup-password" name="password" placeholder="Min. 8 characters" autocomplete="new-password" required/><button type="button" class="input-eye-btn" aria-label="Toggle password visibility"><i class="bi bi-eye"></i></button></div></div>
+            <div class="form-group"><label class="form-label" for="signup-confirm">Confirm Password *</label><div class="input-group"><input class="form-control" type="password" id="signup-confirm" name="confirm" placeholder="Repeat password" autocomplete="new-password" required/><button type="button" class="input-eye-btn" aria-label="Toggle confirm password visibility"><i class="bi bi-eye"></i></button></div></div>
+          </div>
+          <!-- Password Strength -->
+          <div class="password-strength" id="password-strength">
+            <div class="strength-bars"><div class="strength-bar" data-level="1"></div><div class="strength-bar" data-level="2"></div><div class="strength-bar" data-level="3"></div><div class="strength-bar" data-level="4"></div></div>
+          </div>
+          <div class="auth-check-row">
+            <input type="checkbox" id="signup-terms" name="terms" required/>
+            <label for="signup-terms">I agree to the <a href="#" style="color:var(--primary);">Terms of Use</a> and <a href="#" style="color:var(--primary);">Privacy Policy</a></label>
+          </div>
+          <div class="auth-check-row">
+            <input type="checkbox" id="signup-newsletter" name="newsletter" checked/>
+            <label for="signup-newsletter">Send me updates about events, workshops and news from RhythmVerse</label>
+          </div>
+          <button type="submit" class="btn-auth-submit" id="signup-submit-btn">
+            <i class="bi bi-person-plus-fill"></i> Create Account
+          </button>
+        </form>
+
+        <div class="auth-divider"><span>or continue with social signups</span></div>
+
+        <!-- OAuth Buttons -->
+        <div class="oauth-btns">
+          <a href="#" class="oauth-btn" aria-label="Sign up with Google" id="google-signup-btn"><i class="fa-brands fa-google google-icon"></i> Google</a>
+          <a href="#" class="oauth-btn" aria-label="Sign up with Facebook" id="facebook-signup-btn"><i class="fa-brands fa-facebook-f facebook-icon"></i> Facebook</a>
+          <a href="#" class="oauth-btn" aria-label="Sign up with Apple" id="apple-signup-btn"><i class="fa-brands fa-apple apple-icon"></i> Apple</a>
+        </div>
+
+        <div class="auth-link-row">
+          <span>Already have an account?</span>&nbsp;<a href="login.html">Sign In</a>
+        </div>
+        <div class="auth-link-row" style="margin-top:8px;">
+          <a href="index.html" style="color:var(--text-muted);font-size:0.8rem;display:flex;align-items:center;gap:6px;justify-content:center;"><i class="bi bi-arrow-left"></i> Back to Website</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

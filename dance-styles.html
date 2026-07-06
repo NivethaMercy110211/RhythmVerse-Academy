@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore all dance styles at RhythmVerse Academy — Classical, Western, Hip-Hop, Salsa, Contemporary and Freestyle dance programs."/>
+  <title>Dance Styles | RhythmVerse Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/navbar.css"/>
+  <style>
+    /* Style detail section — alternating layout */
+    .style-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 80px 0;
+    }
+
+    /* Reverse columns on desktop using modern Grid placement */
+    .style-detail.reverse .style-detail-img {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .style-detail.reverse .style-detail-content {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .style-detail-img {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      width: 100%;
+    }
+    .style-detail-img img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      transition: transform var(--trans-slow);
+    }
+    .style-detail-img:hover img {
+      transform: scale(1.05);
+    }
+    .style-detail-content {}
+    .style-icon-lg {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-md);
+      background: var(--grad-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #FFF;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(106,13,173,0.3);
+    }
+    .style-detail-content h2 {
+      margin-bottom: 14px;
+    }
+    .style-detail-content p {
+      margin-bottom: 20px;
+    }
+    .style-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .style-feature-tag {
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+    .style-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .style-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .style-detail {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 60px 0;
+      }
+      /* Reset column order on mobile/tablet viewports */
+      .style-detail.reverse .style-detail-img,
+      .style-detail.reverse .style-detail-content {
+        grid-column: auto;
+        grid-row: auto;
+      }
+    }
+    @media (max-width: 768px) {
+      .style-detail {
+        padding: 40px 0;
+      }
+    }
+    @media (max-width: 480px) {
+      .style-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .style-feature-tag {
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 0.8rem;
+      }
+      .style-actions {
+        flex-wrap: nowrap;
+        gap: 8px;
+      }
+      .style-actions .btn {
+        flex: 1;
+        padding: 10px 4px;
+        font-size: 0.78rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar" id="main-navbar" role="navigation" aria-label="Main navigation">
+  <div class="container"><div class="navbar-inner">
+    <a href="index.html" class="navbar-logo"><div class="navbar-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div><div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span class="logo-line2">Academy</span></div></a>
+    <ul class="navbar-menu" role="menubar">
+      <li><a href="index.html" class="nav-link">Home 1</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="dance-styles.html" class="nav-link active">Dance Styles</a></li>
+      <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i></button>
+      <button class="nav-toggle-btn" data-dir-toggle aria-label="Toggle direction" title="Toggle direction">
+        <span class="icon-ltr">RTL</span>
+        <span class="icon-rtl">LTR</span>
+      </button>
+    </div>
+    <a href="login.html" class="btn-nav-login" id="nav-login-btn"><i class="bi bi-person-circle"></i> Login</a>
+    <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+  </div></div>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <div class="mobile-menu-inner">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="bi bi-house-fill"></i>Home 1</a></li>
+      <li><a href="home2.html" class="mobile-nav-link"><i class="bi bi-house-heart-fill"></i>Home 2</a></li>
+      <li><a href="about.html" class="mobile-nav-link"><i class="bi bi-info-circle-fill"></i>About</a></li>
+      <li><a href="dance-styles.html" class="mobile-nav-link active"><i class="bi bi-stars"></i>Dance Styles</a></li>
+      <li><a href="faculty.html" class="mobile-nav-link"><i class="bi bi-people-fill"></i>Faculty</a></li>
+      <li><a href="events.html" class="mobile-nav-link"><i class="bi bi-calendar-event-fill"></i>Events</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="bi bi-envelope-fill"></i>Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link"><i class="bi bi-grid-fill"></i>Dashboard</a></li>
+    </ul>
+    <div class="mobile-menu-divider"></div>
+    <div class="mobile-controls">
+      <span class="mobile-controls-label">Preferences</span>
+      <button class="mobile-toggle-btn" data-theme-toggle><i class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i></button>
+      <button class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle direction" title="Toggle direction">
+        <span class="icon-ltr">RTL</span>
+        <span class="icon-rtl">LTR</span>
+      </button>
+    </div>
+    <a href="login.html" class="mobile-login-btn"><i class="bi bi-person-circle"></i> Login</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- SECTION 1 — BANNER -->
+  <section class="banner" aria-label="Dance styles page banner">
+    <div class="banner-bg" style="background-image:url('assets/images/banners/banner-dance-styles.png');"></div>
+    <div class="banner-overlay"></div>
+    <div class="container"><div class="banner-content">
+      <div class="banner-breadcrumb"><a href="index.html">Home</a><span class="sep"><i class="bi bi-chevron-right"></i></span><span class="current">Dance Styles</span></div>
+      <h1 data-animate="fade-up">Our <span>Dance Styles</span></h1>
+      <p data-animate="fade-up" data-delay="100">Six distinct disciplines — each with its own language, history and energy. Find the style that speaks to your soul.</p>
+    </div></div>
+  </section>
+
+  <!-- Style Quick Nav -->
+  <section class="section-sm section-alt" aria-label="Style quick navigation">
+    <div class="container">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;" data-animate="fade-up">
+        <a href="#classical" class="btn btn-secondary btn-sm"><i class="bi bi-flower1"></i> Classical</a>
+        <a href="#western"   class="btn btn-secondary btn-sm"><i class="bi bi-music-note-list"></i> Western</a>
+        <a href="#hiphop"    class="btn btn-secondary btn-sm"><i class="bi bi-lightning-charge-fill"></i> Hip-Hop</a>
+        <a href="#salsa"     class="btn btn-secondary btn-sm"><i class="bi bi-heart-fill"></i> Salsa</a>
+        <a href="#contemporary" class="btn btn-secondary btn-sm"><i class="bi bi-wind"></i> Contemporary</a>
+        <a href="#freestyle" class="btn btn-secondary btn-sm"><i class="bi bi-shuffle"></i> Freestyle</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — CLASSICAL DANCE -->
+  <section class="section" id="classical" aria-label="Classical dance">
+    <div class="container">
+      <div class="style-detail">
+        <div class="style-detail-img" data-animate="fade-right">
+          <img src="assets/images/dance-styles/classical.png" alt="Classical Bharatanatyam dance" loading="lazy"/>
+        </div>
+        <div class="style-detail-content" data-animate="fade-left">
+          <div class="style-icon-lg"><i class="bi bi-flower1"></i></div>
+          <p class="section-badge" style="justify-content:flex-start;margin-bottom:10px;"><i class="bi bi-stars"></i> Style 01</p>
+          <h2 class="section-title" style="text-align:left;margin-bottom:14px;">Classical <span>Dance</span></h2>
+          <p>Rooted in centuries-old traditions, classical dance is the foundation of all Indian performing arts. Our program covers Bharatanatyam, Kathak and Odissi — taught in authentic lineage style by Guru Priya Anand.</p>
+          <p>Students progress through systematic arangetram preparation, mudra training, abhinaya expression, and thalam (rhythmic) mastery.</p>
+          <div class="style-features">
+            <span class="style-feature-tag">Bharatanatyam</span>
+            <span class="style-feature-tag">Kathak</span>
+            <span class="style-feature-tag">Odissi</span>
+            <span class="style-feature-tag">Mudra Training</span>
+          </div>
+          <div class="style-actions">
+            <a href="contact.html" class="btn btn-primary"><i class="bi bi-person-plus-fill"></i> Enroll Now</a>
+            <a href="contact.html" class="btn btn-secondary"><i class="bi bi-calendar-check-fill"></i> Book Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — WESTERN DANCE -->
+  <section class="section section-alt" id="western" aria-label="Western dance">
+    <div class="container">
+      <div class="style-detail reverse">
+        <div class="style-detail-img" data-animate="fade-left">
+          <img src="assets/images/dance-styles/western.png" alt="Western contemporary dance" loading="lazy"/>
+        </div>
+        <div class="style-detail-content" data-animate="fade-right">
+          <div class="style-icon-lg"><i class="bi bi-music-note-list"></i></div>
+          <p class="section-badge" style="justify-content:flex-start;margin-bottom:10px;"><i class="bi bi-stars"></i> Style 02</p>
+          <h2 class="section-title" style="text-align:left;margin-bottom:14px;">Western <span>Dance</span></h2>
+          <p>A dynamic fusion of ballet technique with modern stage flair, our Western dance program covers Jazz, Contemporary Ballet, and Lyrical dance. Ideal for students seeking a versatile performance toolkit.</p>
+          <p>Classes focus on flexibility, extension, partnering and stage presence — building a strong technical base that can be applied across many styles.</p>
+          <div class="style-features">
+            <span class="style-feature-tag">Jazz</span>
+            <span class="style-feature-tag">Lyrical</span>
+            <span class="style-feature-tag">Contemporary Ballet</span>
+            <span class="style-feature-tag">Stage Performance</span>
+          </div>
+          <div class="style-actions">
+            <a href="contact.html" class="btn btn-primary"><i class="bi bi-person-plus-fill"></i> Enroll Now</a>
+            <a href="contact.html" class="btn btn-secondary"><i class="bi bi-calendar-check-fill"></i> Book Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — HIP-HOP -->
+  <section class="section" id="hiphop" aria-label="Hip-hop dance">
+    <div class="container">
+      <div class="style-detail">
+        <div class="style-detail-img" data-animate="fade-right">
+          <img src="assets/images/dance-styles/hiphop.png" alt="Hip-hop street dance" loading="lazy"/>
+        </div>
+        <div class="style-detail-content" data-animate="fade-left">
+          <div class="style-icon-lg"><i class="bi bi-lightning-charge-fill"></i></div>
+          <p class="section-badge" style="justify-content:flex-start;margin-bottom:10px;"><i class="bi bi-stars"></i> Style 03</p>
+          <h2 class="section-title" style="text-align:left;margin-bottom:14px;">Hip-Hop</h2>
+          <p>Born on the streets of New York, hip-hop is the most expressive and dynamic of all urban dance forms. Our program covers Breaking, Popping, Locking, Krumping and New Style Hip-Hop under senior instructor Rajan Mehta.</p>
+          <p>Our batch structure takes you from foundational grooves to full-length choreographic routines ready for competition and stage.</p>
+          <div class="style-features">
+            <span class="style-feature-tag">Breaking</span>
+            <span class="style-feature-tag">Popping</span>
+            <span class="style-feature-tag">Locking</span>
+            <span class="style-feature-tag">New Style</span>
+          </div>
+          <div class="style-actions">
+            <a href="contact.html" class="btn btn-primary"><i class="bi bi-person-plus-fill"></i> Enroll Now</a>
+            <a href="contact.html" class="btn btn-secondary"><i class="bi bi-calendar-check-fill"></i> Book Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — SALSA -->
+  <section class="section section-alt" id="salsa" aria-label="Salsa dance">
+    <div class="container">
+      <div class="style-detail reverse">
+        <div class="style-detail-img" data-animate="fade-left">
+          <img src="assets/images/dance-styles/salsa.png" alt="Salsa couple dancing" loading="lazy"/>
+        </div>
+        <div class="style-detail-content" data-animate="fade-right">
+          <div class="style-icon-lg"><i class="bi bi-heart-fill"></i></div>
+          <p class="section-badge" style="justify-content:flex-start;margin-bottom:10px;"><i class="bi bi-stars"></i> Style 04</p>
+          <h2 class="section-title" style="text-align:left;margin-bottom:14px;">Salsa</h2>
+          <p>Salsa is passion, connection and rhythm in pure form. Led by Latin dance champion Sofia Reyes, our Salsa program covers Cuban style, New York On2, Bachata and social dance etiquette — both solo and partner work.</p>
+          <p>Our special Couples batch makes salsa learning accessible and fun for partners at any level of dance experience.</p>
+          <div class="style-features">
+            <span class="style-feature-tag">Cuban Salsa</span>
+            <span class="style-feature-tag">Bachata</span>
+            <span class="style-feature-tag">Partner Work</span>
+            <span class="style-feature-tag">Couples Batch</span>
+          </div>
+          <div class="style-actions">
+            <a href="contact.html" class="btn btn-primary"><i class="bi bi-person-plus-fill"></i> Enroll Now</a>
+            <a href="contact.html" class="btn btn-secondary"><i class="bi bi-calendar-check-fill"></i> Book Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — CONTEMPORARY & FREESTYLE -->
+  <section class="section" id="contemporary" aria-label="Contemporary and freestyle dance">
+    <div class="container">
+      <!-- Contemporary -->
+      <div class="style-detail" style="padding-bottom:48px;" id="contemporary-detail">
+        <div class="style-detail-img" data-animate="fade-right">
+          <img src="assets/images/dance-styles/contemporary.png" alt="Contemporary dance floor work" loading="lazy"/>
+        </div>
+        <div class="style-detail-content" data-animate="fade-left">
+          <div class="style-icon-lg"><i class="bi bi-wind"></i></div>
+          <p class="section-badge" style="justify-content:flex-start;margin-bottom:10px;"><i class="bi bi-stars"></i> Style 05</p>
+          <h2 class="section-title" style="text-align:left;margin-bottom:14px;">Contemporary</h2>
+          <p>Contemporary dance defies boundaries. It blends elements of modern, jazz, ballet, and lyrical into a fluid, emotion-driven form of expression. Our instructors guide students through improvisation, floor work, and compositional elements.</p>
+          <p>Classes focus on body weight distribution, fluid transitions, and creative expression — helping you build a deeper emotional connection with the music.</p>
+          <div class="style-features">
+            <span class="style-feature-tag">Modern Technique</span>
+            <span class="style-feature-tag">Floor Work</span>
+            <span class="style-feature-tag">Improvisation</span>
+            <span class="style-feature-tag">Composition</span>
+          </div>
+          <div class="style-actions">
+            <a href="contact.html" class="btn btn-primary"><i class="bi bi-person-plus-fill"></i> Enroll Now</a>
+            <a href="contact.html" class="btn btn-secondary"><i class="bi bi-calendar-check-fill"></i> Book Trial</a>
+          </div>
+        </div>
+      </div>
+      <!-- Freestyle -->
+      <div class="style-detail reverse" id="freestyle">
+        <div class="style-detail-img" data-animate="fade-left">
+          <img src="assets/images/dance-styles/freestyle.png" alt="Freestyle group dance" loading="lazy"/>
+        </div>
+        <div class="style-detail-content" data-animate="fade-right">
+          <div class="style-icon-lg"><i class="bi bi-shuffle"></i></div>
+          <p class="section-badge" style="justify-content:flex-start;margin-bottom:10px;"><i class="bi bi-stars"></i> Style 06</p>
+          <h2 class="section-title" style="text-align:left;margin-bottom:14px;">Freestyle</h2>
+          <p>Freestyle is where all rules dissolve and your unique voice as a dancer takes over. This program is designed for students who have foundational training in any style and want to develop their personal choreographic signature.</p>
+          <p>Our sessions provide guided battle practice, musical interpretation, and choreographic tools to help you break free from patterns and dance with true freedom.</p>
+          <div class="style-features">
+            <span class="style-feature-tag">Fusion Choreography</span>
+            <span class="style-feature-tag">Battle Prep</span>
+            <span class="style-feature-tag">Personal Style Dev</span>
+            <span class="style-feature-tag">Musicality</span>
+          </div>
+          <div class="style-actions">
+            <a href="contact.html" class="btn btn-primary"><i class="bi bi-person-plus-fill"></i> Enroll Now</a>
+            <a href="contact.html" class="btn btn-secondary"><i class="bi bi-calendar-check-fill"></i> Book Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — CTA ENROLLMENT -->
+  <section class="cta-section" id="styles-cta" aria-label="Enrollment call to action">
+    <div class="cta-bg" style="background-image:url('assets/images/banners/styles_cta_bg.png');"></div>
+    <div class="cta-overlay"></div>
+    <div class="container"><div class="cta-content">
+      <p class="section-badge" data-animate="fade-up" style="color:var(--accent);justify-content:center;"><i class="bi bi-stars"></i> Find Your Style</p>
+      <h2 data-animate="fade-up" data-delay="100">Not Sure Which Style to <span>Choose?</span></h2>
+      <p data-animate="fade-up" data-delay="200">Book a free trial class and let our instructors help you discover the dance style that resonates with your personality and passion.</p>
+      <div class="cta-btns" data-animate="fade-up" data-delay="300">
+        <a href="contact.html" class="btn btn-accent btn-lg"><i class="bi bi-calendar-check-fill"></i> Book Free Trial</a>
+        <a href="faculty.html" class="btn btn-outline-white btn-lg"><i class="bi bi-people-fill"></i> Meet Your Instructor</a>
+      </div>
+    </div></div>
+  </section>
+
+</main>
+
+<!-- FOOTER (condensed shared version) -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand" data-animate="fade-up"><a href="index.html" class="footer-logo"><div class="footer-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div><div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span class="logo-line2">Academy</span></div></a><p>A world-class dance academy dedicated to nurturing talent, passion, and artistry in every student.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div></div>
+      <div data-animate="fade-up" data-delay="100"><h4 class="footer-heading">Quick Links</h4><nav class="footer-links"><a href="index.html"><i class="bi bi-chevron-right"></i> Home 1</a><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Dance Styles</a><a href="faculty.html"><i class="bi bi-chevron-right"></i> Faculty</a><a href="events.html"><i class="bi bi-chevron-right"></i> Events</a><a href="dashboard.html"><i class="bi bi-chevron-right"></i> Dashboard</a><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></nav></div>
+      <div data-animate="fade-up" data-delay="200"><h4 class="footer-heading">Dance Styles</h4><nav class="footer-links"><a href="#classical"><i class="bi bi-chevron-right"></i> Classical Dance</a><a href="#western"><i class="bi bi-chevron-right"></i> Western Dance</a><a href="#hiphop"><i class="bi bi-chevron-right"></i> Hip-Hop</a><a href="#salsa"><i class="bi bi-chevron-right"></i> Salsa</a><a href="#contemporary"><i class="bi bi-chevron-right"></i> Contemporary</a><a href="#freestyle"><i class="bi bi-chevron-right"></i> Freestyle</a></nav></div>
+      <div data-animate="fade-up" data-delay="300"><h4 class="footer-heading">Contact Info</h4><address style="font-style:normal;"><div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>42, Dance Avenue, Arts District, Chennai – 600001</span></div><div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><span><a href="tel:+919876543210" style="color:inherit;">+91 98765 43210</a></span></div><div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span><a href="mailto:info@rhythmverseacademy.in" style="color:inherit;">info@rhythmverseacademy.in</a></span></div><div class="footer-contact-item"><i class="bi bi-clock-fill"></i><span>Mon–Sat: 7 AM – 9 PM</span></div></address></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;"><p>&copy; 2026 RhythmVerse Academy. All rights reserved.</p><nav class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></nav></div></div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

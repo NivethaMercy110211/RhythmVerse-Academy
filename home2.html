@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="RhythmVerse Academy Home 2 — Student success stories, dance programs, trial class bookings, studio facilities, and gallery." />
+  <title>Home 2 | RhythmVerse Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <style>
+    /* Home2 hero — split layout */
+    .hero2 {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+
+    .hero2-left {
+      background: var(--grad-cta);
+      display: flex;
+      align-items: center;
+      padding: 120px 64px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero2-left::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .hero2-left::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -60px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .hero2-left-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero2-left h1 {
+      color: #FFF;
+      margin-bottom: 20px;
+    }
+
+    .hero2-left h1 span {
+      color: var(--accent-light);
+    }
+
+    .hero2-left p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+    }
+
+    .hero2-right {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+
+    .hero2-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero2-right-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -2px;
+      right: 0;
+      background: linear-gradient(to right, #FF2E88 0%, rgba(59, 15, 112, 0.75) 35%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .hero2-badges {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: absolute;
+      bottom: 48px;
+      left: 32px;
+    }
+
+    .hero2-badge {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-md);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #FFF;
+    }
+
+    .hero2-badge i {
+      font-size: 1.4rem;
+      color: var(--accent-light);
+    }
+
+    .hero2-badge strong {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    .hero2-badge span {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    /* Program cards */
+    .program-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 290px;
+      transition: transform var(--trans-base), box-shadow var(--trans-base), border-color var(--trans-base);
+    }
+
+    @media (max-width: 1200px) {
+      .program-card {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .program-card {
+        min-height: 270px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .program-card {
+        min-height: auto;
+      }
+    }
+
+    .program-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+    }
+
+    .program-num {
+      font-family: var(--font-head);
+      font-size: 3rem;
+      font-weight: 900;
+      background: var(--grad-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .program-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .program-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 16px;
+      min-height: 76px;
+    }
+
+    @media (max-width: 1200px) {
+      .program-card p {
+        min-height: 96px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .program-card p {
+        min-height: 84px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .program-card p {
+        min-height: 124px;
+      }
+    }
+
+    .program-duration {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: rgba(59, 15, 112, 0.08);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(59, 15, 112, 0.15);
+    }
+
+    /* Studio facility items */
+    .facility-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .facility-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .facility-item:last-child {
+      border-bottom: none;
+    }
+
+    .facility-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #FFF;
+      flex-shrink: 0;
+    }
+
+    .facility-icon.p {
+      background: var(--grad-primary);
+    }
+
+    .facility-icon.b {
+      background: linear-gradient(135deg, #FF2E88, #7A3AED);
+    }
+
+    .facility-icon.g {
+      background: linear-gradient(135deg, #7A3AED, #FF2E88);
+    }
+
+    .facility-icon.r {
+      background: linear-gradient(135deg, #3B0F70, #FF2E88);
+    }
+
+    .facility-item h5 {
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .facility-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Trial section */
+    .trial-section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .trial-form-wrap {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .trial-form-wrap h3 {
+      margin-bottom: 8px;
+    }
+
+    .trial-form-wrap .sub {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width:1024px) {
+      .hero2 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero2-right {
+        min-height: 50vh;
+      }
+
+      .hero2-left {
+        padding: 100px 40px 60px;
+      }
+
+      .trial-section-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width:768px) {
+      .hero2-left {
+        padding: 80px 24px 48px;
+      }
+
+      .hero2-badges {
+        left: 16px;
+        bottom: 24px;
+      }
+    }
+
+    @media (max-width:480px) {
+      .hero2-badge strong {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="main-navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo" aria-label="RhythmVerse Academy Home">
+          <div class="navbar-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+          <div class="navbar-logo-text">
+            <span class="logo-line1">RhythmVerse</span>
+            <span class="logo-line2">Academy</span>
+          </div>
+        </a>
+        <ul class="navbar-menu" role="menubar">
+          <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home 1</a></li>
+          <li role="none"><a href="home2.html" class="nav-link active" role="menuitem">Home 2</a></li>
+          <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+          <li role="none"><a href="dance-styles.html" class="nav-link" role="menuitem">Dance Styles</a></li>
+          <li role="none"><a href="faculty.html" class="nav-link" role="menuitem">Faculty</a></li>
+          <li role="none"><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+          <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+          <li role="none"><a href="dashboard.html" class="nav-link" role="menuitem">Dashboard</a></li>
+        </ul>
+        <div class="navbar-controls">
+          <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i>
+          </button>
+          <button class="nav-toggle-btn" data-dir-toggle aria-label="Toggle RTL/LTR" title="Toggle direction">
+            <span class="icon-ltr">RTL</span>
+            <span class="icon-rtl">LTR</span>
+          </button>
+        </div>
+        <a href="login.html" class="btn-nav-login" id="nav-login-btn"><i class="bi bi-person-circle"></i> Login</a>
+        <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-menu"
+          aria-label="Open menu">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link"><i class="bi bi-house-fill"></i>Home 1</a></li>
+        <li><a href="home2.html" class="mobile-nav-link active"><i class="bi bi-house-heart-fill"></i>Home 2</a></li>
+        <li><a href="about.html" class="mobile-nav-link"><i class="bi bi-info-circle-fill"></i>About</a></li>
+        <li><a href="dance-styles.html" class="mobile-nav-link"><i class="bi bi-stars"></i>Dance Styles</a></li>
+        <li><a href="faculty.html" class="mobile-nav-link"><i class="bi bi-people-fill"></i>Faculty</a></li>
+        <li><a href="events.html" class="mobile-nav-link"><i class="bi bi-calendar-event-fill"></i>Events</a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><i class="bi bi-envelope-fill"></i>Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link"><i class="bi bi-grid-fill"></i>Dashboard</a></li>
+      </ul>
+      <div class="mobile-menu-divider"></div>
+      <div class="mobile-controls">
+        <span class="mobile-controls-label">Preferences</span>
+        <button class="mobile-toggle-btn" data-theme-toggle><i class="bi bi-moon-stars-fill icon-moon"></i><i
+            class="bi bi-sun-fill icon-sun"></i></button>
+        <button class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle direction" title="Toggle direction">
+          <span class="icon-ltr">RTL</span>
+          <span class="icon-rtl">LTR</span>
+        </button>
+      </div>
+      <a href="login.html" class="mobile-login-btn"><i class="bi bi-person-circle"></i> Login</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- SECTION 1 — ALTERNATIVE HERO (SPLIT LAYOUT) -->
+    <section class="hero2" style="margin-top:var(--navbar-h);" aria-label="Hero alternate">
+      <div class="hero2-left">
+        <div class="hero2-left-content">
+          <p class="section-badge" data-animate="fade-right"
+            style="color:var(--accent);justify-content:flex-start;margin-bottom:16px;">
+            <i class="bi bi-lightning-charge-fill"></i> Discover Your Rhythm
+          </p>
+          <h1 data-animate="fade-up" data-delay="100">
+            Move. <span>Express.</span><br>Inspire the World.
+          </h1>
+          <p data-animate="fade-up" data-delay="200">
+            At RhythmVerse Academy, we don't just teach dance — we build performers, artists and champions. Start your
+            transformation today.
+          </p>
+          <div style="display:flex; gap:14px; flex-wrap:wrap;" data-animate="fade-up" data-delay="300">
+            <a href="contact.html" class="btn btn-accent btn-lg"><i class="bi bi-person-plus-fill"></i> Enroll Now</a>
+            <a href="about.html" class="btn btn-outline-white btn-lg"><i class="bi bi-play-circle-fill"></i> Our
+              Story</a>
+          </div>
+          <div
+            style="display:flex; gap:32px; margin-top:40px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.12);"
+            data-animate="fade-up" data-delay="400">
+            <div>
+              <div style="font-family:'Outfit',sans-serif;font-size:2rem;font-weight:900;color:var(--accent);"
+                data-count="6" data-suffix="">6</div>
+              <div style="color:rgba(255,255,255,0.7);font-size:0.8rem;">Dance Styles</div>
+            </div>
+            <div>
+              <div style="font-family:'Outfit',sans-serif;font-size:2rem;font-weight:900;color:var(--accent);"
+                data-count="18" data-suffix="">18</div>
+              <div style="color:rgba(255,255,255,0.7);font-size:0.8rem;">Instructors</div>
+            </div>
+            <div>
+              <div style="font-family:'Outfit',sans-serif;font-size:2rem;font-weight:900;color:var(--accent);"
+                data-count="15" data-suffix="+">15+</div>
+              <div style="color:rgba(255,255,255,0.7);font-size:0.8rem;">Years Running</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero2-right">
+        <img src="assets/images/banners/banner-home2.png" alt="Dynamic dancer in motion" />
+        <div class="hero2-right-overlay"></div>
+        <div class="hero2-badges">
+          <div class="hero2-badge">
+            <i class="bi bi-trophy-fill"></i>
+            <div><strong>150+</strong><br><span>Awards Won</span></div>
+          </div>
+          <div class="hero2-badge">
+            <i class="bi bi-star-fill"></i>
+            <div><strong>4.9/5</strong><br><span>Student Rating</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — STUDENT SUCCESS STORIES -->
+    <section class="section" id="success-stories" aria-label="Student success stories">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-chat-quote-fill"></i> Testimonials</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Words from Our <span>Champions</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">Real stories from students whose lives were
+            transformed through dance at RhythmVerse Academy.</p>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <div class="testimonial-card" data-animate="fade-up" data-delay="100">
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testimonial-text">"I joined RhythmVerse with zero dance experience. Within a year, I was already performing live on stage at the Annual Recital. All the instructors here genuinely care about each student's growth."</p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonials/champion-1.png" alt="Ananya Nair" class="testimonial-avatar" />
+              <div>
+                <div class="testimonial-name">Ananya Nair</div>
+                <div class="testimonial-meta">Classical Dance, 2 Years</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" data-animate="fade-up" data-delay="200">
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testimonial-text">"Rajan sir's hip-hop classes completely changed my confidence. I competed at the State Youth Competition and won Silver. This would never have happened without RhythmVerse."</p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonials/champion-2.png" alt="Karthik Suresh" class="testimonial-avatar" />
+              <div>
+                <div class="testimonial-name">Karthik Suresh</div>
+                <div class="testimonial-meta">Hip-Hop, 3 Years</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" data-animate="fade-up" data-delay="300">
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+            <p class="testimonial-text">"My daughter has been attending the kids' classical dance batch for eight months. The discipline, grace and joy she has developed is truly remarkable. We highly recommend this academy!"</p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonials/champion-3.png" alt="Rekha Pillai" class="testimonial-avatar" />
+              <div>
+                <div class="testimonial-name">Rekha Pillai</div>
+                <div class="testimonial-meta">Parent of Student</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — DANCE PROGRAMS -->
+    <section class="section section-alt" id="programs" aria-label="Dance programs">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-collection-fill"></i> Programs</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Structured <span>Learning Paths</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">From beginner foundations to
+            professional-level training — choose the right program for your journey.</p>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <div class="program-card" data-animate="fade-up" data-delay="100">
+            <div class="program-num">01</div>
+            <h4>Beginner Foundation</h4>
+            <p>Perfect for absolute beginners. Learn basic rhythm, body coordination, foundational movements, and key dance techniques across multiple signature styles.</p>
+            <div class="program-duration"><i class="bi bi-clock"></i> 3 Months</div>
+          </div>
+          <div class="program-card" data-animate="fade-up" data-delay="150">
+            <div class="program-num">02</div>
+            <h4>Intermediate Mastery</h4>
+            <p>Build on your solid foundations with advanced techniques, style-specific training, and intensive choreography work that prepares you for real stage performance.</p>
+            <div class="program-duration"><i class="bi bi-clock"></i> 6 Months</div>
+          </div>
+          <div class="program-card" data-animate="fade-up" data-delay="200">
+            <div class="program-num">03</div>
+            <h4>Advanced Performance</h4>
+            <p>For serious dancers ready to conquer the stage. Receive intensive technical coaching, competition preparation, and professional choreography development.</p>
+            <div class="program-duration"><i class="bi bi-clock"></i> 12 Months</div>
+          </div>
+          <div class="program-card" data-animate="fade-up" data-delay="250">
+            <div class="program-num">04</div>
+            <h4>Kids Special Program</h4>
+            <p>A fun, structured program designed specifically for young dancers aged 5–14. Develops natural rhythm, creative expression, discipline, and a lifelong love of dance.</p>
+            <div class="program-duration"><i class="bi bi-clock"></i> 3 or 6 Months</div>
+          </div>
+          <div class="program-card" data-animate="fade-up" data-delay="300">
+            <div class="program-num">05</div>
+            <h4>Weekend Intensive</h4>
+            <p>Designed specifically for busy professionals who can only train on weekends. Our comprehensive curriculum is compressed into impactful Saturday and Sunday sessions.</p>
+            <div class="program-duration"><i class="bi bi-clock"></i> 6 Months</div>
+          </div>
+          <div class="program-card" data-animate="fade-up" data-delay="350">
+            <div class="program-num">06</div>
+            <h4>Certification Course</h4>
+            <p>Obtain a globally recognized dance certification. Ideal for those seeking to teach dance professionally or add formal qualifications to their dancer profile.</p>
+            <div class="program-duration"><i class="bi bi-clock"></i> 12–18 Months</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — TRIAL CLASS -->
+    <section class="section" id="trial-class" aria-label="Book trial class">
+      <div class="container">
+        <div class="trial-section-grid">
+          <div data-animate="fade-right">
+            <p class="section-badge"><i class="bi bi-lightning-charge-fill"></i> Free Trial</p>
+            <h2 class="section-title" style="text-align:left; margin-bottom:16px;">Try Before You <span>Commit</span>
+            </h2>
+            <p style="margin-bottom:24px;">Not sure which style suits you? Book a free trial class with one of our
+              expert instructors and experience the RhythmVerse difference firsthand — no registration fee, no
+              commitment.</p>
+            <ul style="display:flex;flex-direction:column;gap:12px;list-style:none;">
+              <li style="display:flex;gap:10px;align-items:center;color:var(--text-muted);font-size:0.925rem;"><i
+                  class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.1rem;"></i> Free 60-minute
+                session with a senior instructor</li>
+              <li style="display:flex;gap:10px;align-items:center;color:var(--text-muted);font-size:0.925rem;"><i
+                  class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.1rem;"></i> Personalized style
+                assessment and guidance</li>
+              <li style="display:flex;gap:10px;align-items:center;color:var(--text-muted);font-size:0.925rem;"><i
+                  class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.1rem;"></i> Meet the batch and
+                fellow students</li>
+              <li style="display:flex;gap:10px;align-items:center;color:var(--text-muted);font-size:0.925rem;"><i
+                  class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.1rem;"></i> No credit card or
+                payment required to book</li>
+              <li style="display:flex;gap:10px;align-items:center;color:var(--text-muted);font-size:0.925rem;"><i
+                  class="bi bi-check-circle-fill" style="color:var(--accent);font-size:1.1rem;"></i> Available 7 days a
+                week across all batches</li>
+            </ul>
+          </div>
+          <div data-animate="fade-left">
+            <div class="trial-form-wrap">
+              <h3>Book Your <span class="text-gradient">Free Trial</span></h3>
+              <p class="sub">Fill in the details and we'll get back to you within 24 hours to confirm your slot.</p>
+              <form id="trial-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="trial-name">Full Name</label>
+                    <input class="form-control" type="text" id="trial-name" name="name" placeholder="Your full name"
+                      required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="trial-age">Age</label>
+                    <input class="form-control" type="number" id="trial-age" name="age" placeholder="Your age" min="3"
+                      max="80" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="trial-phone">Phone Number</label>
+                  <input class="form-control" type="tel" id="trial-phone" name="phone" placeholder="+91 00000 00000"
+                    required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="trial-style">Preferred Dance Style</label>
+                  <select class="form-control" id="trial-style" name="style" required>
+                    <option value="" disabled selected>Select a style</option>
+                    <option>Classical Dance</option>
+                    <option>Western Dance</option>
+                    <option>Hip-Hop</option>
+                    <option>Salsa</option>
+                    <option>Contemporary</option>
+                    <option>Freestyle</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="trial-batch">Preferred Batch</label>
+                  <select class="form-control" id="trial-batch" name="batch" required>
+                    <option value="" disabled selected>Select a batch time</option>
+                    <option>Morning (7:00 AM – 9:00 AM)</option>
+                    <option>Evening (5:30 PM – 7:30 PM)</option>
+                    <option>Weekend (9:00 AM – 12:00 PM)</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" style="margin-top:8px; justify-content:center;">
+                  <i class="bi bi-calendar-check-fill"></i> Book Free Trial Class
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — STUDIO FACILITIES -->
+    <section class="section section-alt" id="facilities" aria-label="Studio facilities">
+      <div class="container">
+        <div class="split-grid-2">
+          <div data-animate="fade-right">
+            <div style="border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-xl);">
+              <img src="assets/images/banners/banner-faculty.png" alt="Dance studio interior"
+                style="width:100%; aspect-ratio:4/3; object-fit:cover;" loading="lazy" />
+            </div>
+          </div>
+          <div data-animate="fade-left">
+            <p class="section-badge"><i class="bi bi-building"></i> Facilities</p>
+            <h2 class="section-title" style="text-align:left; margin-bottom:24px;">World-Class <span>Studio
+                Infrastructure</span></h2>
+            <div class="facility-list">
+              <div class="facility-item">
+                <div class="facility-icon p"><i class="bi bi-layers-fill"></i></div>
+                <div>
+                  <h5>Professional Sprung Floors</h5>
+                  <p>Specially designed resilient sprung hardwood floors that reduce impact and protect your joints
+                    during intensive training sessions.</p>
+                </div>
+              </div>
+              <div class="facility-item">
+                <div class="facility-icon b"><i class="bi bi-soundwave"></i></div>
+                <div>
+                  <h5>Studio-Grade Sound Systems</h5>
+                  <p>High-fidelity surround sound installations in every studio for an immersive musical experience
+                    during classes and performances.</p>
+                </div>
+              </div>
+              <div class="facility-item">
+                <div class="facility-icon g"><i class="bi bi-lightbulb-fill"></i></div>
+                <div>
+                  <h5>Professional Stage Lighting</h5>
+                  <p>Programmable LED stage lighting simulating theatrical conditions, helping dancers build confidence and master stage presence.</p>
+                </div>
+              </div>
+              <div class="facility-item">
+                <div class="facility-icon r"><i class="bi bi-camera-video-fill"></i></div>
+                <div>
+                  <h5>Recording & Playback Studio</h5>
+                  <p>Full HD recording capabilities so students can review their performances, track progress, and
+                    create professional demo videos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — GALLERY PREVIEW -->
+    <section class="section" id="gallery-preview" aria-label="Photo gallery">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-images"></i> Gallery</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Moments of <span>Pure Magic</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">A glimpse into the energy, artistry, and joy
+            that fills our studios and stages every single day.</p>
+        </div>
+        <div class="gallery-grid" data-animate="zoom-in" data-delay="100">
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-1.png" alt="Classical dance performance" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-2.png" alt="Breakdancer handstand trick" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-3.png" alt="Salsa dancers in spin" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-4.png" alt="Contemporary dance jump" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-5.png" alt="Synchronized jazz performance" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-6.png" alt="Street dance routine" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-7.png" alt="Graceful ballet dancer on stage" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-8.png" alt="Energetic hip-hop jump trick" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-9.png" alt="Ballroom waltz dance spin" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="text-center mt-48">
+          <a href="events.html" class="btn btn-primary" data-animate="zoom-in"><i class="bi bi-images"></i> View Full
+            Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — CTA SECTION -->
+    <section class="cta-section" id="home2-cta" aria-label="Call to action">
+      <div class="cta-bg" style="background-image:url('assets/images/banners/home2_cta_bg.png');"></div>
+      <div class="cta-overlay"></div>
+      <div class="container">
+        <div class="cta-content">
+          <p class="section-badge" data-animate="fade-up" style="color:var(--accent-light);justify-content:center;"><i
+              class="bi bi-stars"></i> Your Journey Starts Today</p>
+          <h2 data-animate="fade-up" data-delay="100">Dance is Not Just an Art —<br>It is <span>Who You Are</span></h2>
+          <p data-animate="fade-up" data-delay="200">Join a community of passionate dancers. Enroll at RhythmVerse
+            Academy and let your story unfold on stage.</p>
+          <div class="cta-btns" data-animate="fade-up" data-delay="300">
+            <a href="contact.html" class="btn btn-accent btn-lg"><i class="bi bi-person-plus-fill"></i> Enroll Today</a>
+            <a href="faculty.html" class="btn btn-outline-white btn-lg"><i class="bi bi-people-fill"></i> Meet Our
+              Faculty</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand" data-animate="fade-up">
+          <a href="index.html" class="footer-logo">
+            <div class="footer-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+            <div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span
+                class="logo-line2">Academy</span></div>
+          </a>
+          <p>A world-class dance academy dedicated to nurturing talent, passion, and artistry in every student. Dance is
+            not just movement — it is life.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div data-animate="fade-up" data-delay="100">
+          <h4 class="footer-heading">Quick Links</h4>
+          <nav class="footer-links">
+            <a href="index.html"><i class="bi bi-chevron-right"></i> Home 1</a>
+            <a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a>
+            <a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a>
+            <a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Dance Styles</a>
+            <a href="faculty.html"><i class="bi bi-chevron-right"></i> Faculty</a>
+            <a href="events.html"><i class="bi bi-chevron-right"></i> Events</a>
+            <a href="dashboard.html"><i class="bi bi-chevron-right"></i> Dashboard</a>
+            <a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a>
+          </nav>
+        </div>
+        <div data-animate="fade-up" data-delay="200">
+          <h4 class="footer-heading">Dance Styles</h4>
+          <nav class="footer-links">
+            <a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Classical Dance</a>
+            <a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Western Dance</a>
+            <a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Hip-Hop</a>
+            <a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Salsa</a>
+            <a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Contemporary</a>
+            <a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Freestyle</a>
+          </nav>
+        </div>
+        <div data-animate="fade-up" data-delay="300">
+          <h4 class="footer-heading">Contact Info</h4>
+          <address style="font-style:normal;">
+            <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>42, Dance Avenue, Arts District,
+                Chennai – 600001</span></div>
+            <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><span><a href="tel:+919876543210"
+                  style="color:inherit;">+91 98765 43210</a></span></div>
+            <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span><a
+                  href="mailto:info@rhythmverseacademy.in" style="color:inherit;">info@rhythmverseacademy.in</a></span>
+            </div>
+            <div class="footer-contact-item"><i class="bi bi-clock-fill"></i><span>Mon–Sat: 7 AM – 9 PM</span></div>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"
+        style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <p>&copy; 2026 RhythmVerse Academy. All rights reserved.</p>
+        <nav class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a
+            href="#">Sitemap</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

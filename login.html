@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Login to your RhythmVerse Academy student account to access your dashboard, attendance, and recital schedule."/>
+  <title>Login | RhythmVerse Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/auth.css"/>
+</head>
+<body>
+
+  <!-- Fixed Auth Controls -->
+  <div class="auth-controls" role="toolbar" aria-label="Theme and direction controls">
+    <button class="auth-ctrl-btn" data-theme-toggle aria-label="Toggle dark/light mode" title="Toggle theme">
+      <i class="bi bi-moon-stars-fill icon-moon"></i>
+      <i class="bi bi-sun-fill icon-sun"></i>
+    </button>
+    <button class="auth-ctrl-btn" data-dir-toggle aria-label="Toggle RTL/LTR direction" title="Toggle direction">
+      <span class="icon-ltr">RTL</span>
+      <span class="icon-rtl">LTR</span>
+    </button>
+  </div>
+
+  <div class="auth-page login-page">
+
+    <!-- LEFT PANEL — Dance Background -->
+    <div class="auth-left">
+      <div class="auth-bg" style="background-image:url('assets/images/auth/login-bg.png');"></div>
+      <div class="auth-bg-overlay"></div>
+      <div class="auth-left-content">
+        <a href="index.html" class="auth-brand" aria-label="RhythmVerse Academy Home">
+          <div class="auth-brand-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+          <div class="auth-brand-text">
+            <span class="brand-line1">RhythmVerse</span>
+            <span class="brand-line2">Academy</span>
+          </div>
+        </a>
+        <div class="auth-left-headline">
+          <h2>Step Back into<br>Your Rhythm</h2>
+          <p>Your dance journey continues. Log in to track your attendance, view upcoming recitals, and manage your fees — all in one place.</p>
+        </div>
+        <div class="auth-left-stats">
+          <div class="auth-stat"><div class="auth-stat-num" data-count="1200" data-suffix="+">1200+</div><div class="auth-stat-label">Students</div></div>
+          <div class="auth-stat"><div class="auth-stat-num" data-count="18">18</div><div class="auth-stat-label">Instructors</div></div>
+          <div class="auth-stat"><div class="auth-stat-num" data-count="15" data-suffix="+">15+</div><div class="auth-stat-label">Years</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL — Login Form -->
+    <div class="auth-right">
+      <div class="auth-card">
+        <!-- Mobile Brand Logo -->
+        <a href="index.html" class="auth-brand mobile-brand" aria-label="RhythmVerse Academy Home">
+          <div class="auth-brand-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+          <div class="auth-brand-text">
+            <span class="brand-line1">RhythmVerse</span>
+            <span class="brand-line2">Academy</span>
+          </div>
+        </a>
+        <h2 class="auth-title">Welcome Back</h2>
+        <p class="auth-subtitle">Sign in to your student account to access your dashboard.</p>
+
+        <!-- Login Form -->
+        <form class="auth-form" id="login-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address</label>
+            <input class="form-control" type="email" id="login-email" name="email" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="login-password">Password</label>
+            <div class="input-group">
+              <input class="form-control" type="password" id="login-password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+              <button type="button" class="input-eye-btn" aria-label="Toggle password visibility">
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="auth-options-row">
+            <div class="auth-check-row">
+              <input type="checkbox" id="login-remember" name="remember" />
+              <label for="login-remember">Remember me</label>
+            </div>
+            <a href="forgot-password.html" class="auth-forgot-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn-auth-submit" id="login-submit-btn">
+            <i class="bi bi-box-arrow-in-right"></i> Sign In
+          </button>
+        </form>
+
+        <div class="auth-divider"><span>or continue with social logins</span></div>
+
+        <!-- OAuth Buttons -->
+        <div class="oauth-btns">
+          <a href="#" class="oauth-btn" aria-label="Continue with Google" id="google-login-btn">
+            <i class="fa-brands fa-google google-icon"></i> Google
+          </a>
+          <a href="#" class="oauth-btn" aria-label="Continue with Facebook" id="facebook-login-btn">
+            <i class="fa-brands fa-facebook-f facebook-icon"></i> Facebook
+          </a>
+          <a href="#" class="oauth-btn" aria-label="Continue with Apple" id="apple-login-btn">
+            <i class="fa-brands fa-apple apple-icon"></i> Apple
+          </a>
+        </div>
+
+        <div class="auth-link-row">
+          <span>Don't have an account?</span>&nbsp;
+          <a href="signup.html">Create Account</a>
+        </div>
+        <div class="auth-link-row" style="margin-top:8px;">
+          <a href="index.html" style="color:var(--text-muted);font-size:0.8rem;display:flex;align-items:center;gap:6px;justify-content:center;"><i class="bi bi-arrow-left"></i> Back to Website</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

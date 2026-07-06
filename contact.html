@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contact RhythmVerse Academy — Enrollment enquiry, batch information, location, FAQ and how to reach us." />
+  <title>Contact Us | RhythmVerse Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 56px;
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    #enquiry-form .contact-grid {
+      padding-bottom: 32px;
+    }
+
+    .contact-grid>*,
+    #batch-enquiry .cards-grid>*,
+    .social-grid>* {
+      min-width: 0;
+    }
+
+    .contact-form-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-form-card form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-form-card .form-row {
+      margin: 0;
+    }
+
+    .contact-form-card .form-group {
+      margin: 0;
+    }
+
+    .contact-info-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-info-card h3 {
+      margin-bottom: 20px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-info-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .contact-info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--grad-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info-detail h5 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .contact-info-detail p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .contact-info-detail a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.4;
+      text-decoration: none;
+      display: block;
+    }
+
+    .contact-info-detail a + a {
+      margin-top: 4px;
+    }
+
+    .contact-info-detail a:hover {
+      color: var(--primary);
+    }
+
+    .batch-enquiry-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform var(--trans-base), box-shadow var(--trans-base), border-color var(--trans-base);
+    }
+
+    .batch-enquiry-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-light);
+    }
+
+    .beq-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      background: var(--grad-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: #FFF;
+      margin-bottom: 14px;
+    }
+
+    .beq-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .beq-title-two-line {
+      min-height: calc(2 * 1.4em);
+    }
+
+    .mobile-br {
+      display: none;
+    }
+
+    .beq-time {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-bottom: 8px;
+    }
+
+    .beq-desc {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 14px;
+    }
+
+    @media(min-width:1025px) {
+      #batch-enquiry .beq-title {
+        min-height: calc(2 * 1.4em);
+      }
+
+      #batch-enquiry .beq-title-two-line {
+        min-height: calc(2 * 1.4em);
+      }
+
+      #batch-enquiry .beq-time {
+        min-height: calc(2 * 1.45em);
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      #batch-enquiry .beq-desc {
+        min-height: calc(4 * 1.65em);
+      }
+    }
+
+    .social-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      transition: border-color var(--trans-fast), transform var(--trans-fast);
+      min-width: 0;
+    }
+
+    .social-card:hover {
+      border-color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    .social-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .social-card-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .social-card-handle {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      overflow-wrap: anywhere;
+    }
+
+    .social-links-section {
+      margin-top: 24px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media(max-width:480px) {
+      .social-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+
+    .map-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      isolation: isolate;
+    }
+
+    @media(max-width:1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+    }
+
+    @media(max-width:480px) {
+      .mobile-br {
+        display: inline;
+      }
+
+      #enquiry-form .container,
+      #location .container,
+      #batch-enquiry .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .contact-form-card {
+        padding: 24px 16px;
+        border-radius: var(--radius-lg);
+      }
+
+      .contact-info-card {
+        padding: 24px 12px;
+        border-radius: var(--radius-lg);
+      }
+
+      .contact-info-card .contact-info-item {
+        gap: 10px;
+      }
+
+      .contact-info-card .contact-info-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+      }
+
+      .contact-info-card .contact-info-detail p {
+        font-size: 0.775rem;
+      }
+
+      .contact-info-card .contact-info-detail a {
+        font-size: 0.775rem;
+        white-space: nowrap;
+        line-height: 1.3;
+      }
+
+      .contact-info-card .contact-info-detail a + a {
+        margin-top: 2px;
+      }
+
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 44px;
+        max-width: none;
+      }
+
+      #enquiry-form .contact-grid {
+        padding-bottom: 40px;
+      }
+
+      .contact-form-card form {
+        gap: 18px;
+      }
+
+      .contact-info-item {
+        gap: 12px;
+        padding: 14px 0;
+      }
+
+      .contact-info-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .contact-info-detail p,
+      .contact-info-detail a {
+        font-size: 0.82rem;
+        line-height: 1.55;
+      }
+
+      .social-card {
+        padding: 14px;
+      }
+
+      .map-wrapper {
+        height: 260px !important;
+        aspect-ratio: auto !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        transform: none !important;
+        opacity: 1 !important;
+        z-index: 0;
+      }
+
+      .map-wrapper iframe {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0 !important;
+      }
+
+      #batch-enquiry .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      #batch-enquiry .cards-grid> :last-child:nth-child(2n+1) {
+        grid-column: auto;
+        max-width: none;
+        margin: 0;
+      }
+
+      .batch-enquiry-card {
+        padding: 20px 16px;
+        border-radius: var(--radius-lg);
+      }
+
+      #batch-enquiry .beq-title,
+      #batch-enquiry .beq-time,
+      #batch-enquiry .beq-desc {
+        min-height: 0;
+      }
+
+      .beq-time {
+        font-size: 0.8rem;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+      }
+
+      .beq-desc {
+        font-size: 0.82rem;
+        line-height: 1.55;
+      }
+
+      .batch-enquiry-card .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .contact-info-detail a {
+        word-break: break-all;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="main-navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">
+          <div class="navbar-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+          <div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span
+              class="logo-line2">Academy</span></div>
+        </a>
+        <ul class="navbar-menu" role="menubar">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="dance-styles.html" class="nav-link">Dance Styles</a></li>
+          <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+        <div class="navbar-controls">
+          <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"><i
+              class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i></button>
+          <button class="nav-toggle-btn" data-dir-toggle aria-label="Toggle direction" title="Toggle direction">
+            <span class="icon-ltr">RTL</span>
+            <span class="icon-rtl">LTR</span>
+          </button>
+        </div>
+        <a href="login.html" class="btn-nav-login" id="nav-login-btn"><i class="bi bi-person-circle"></i> Login</a>
+        <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-menu"
+          aria-label="Open menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span
+            class="hamburger-line"></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link"><i class="bi bi-house-fill"></i>Home 1</a></li>
+        <li><a href="home2.html" class="mobile-nav-link"><i class="bi bi-house-heart-fill"></i>Home 2</a></li>
+        <li><a href="about.html" class="mobile-nav-link"><i class="bi bi-info-circle-fill"></i>About</a></li>
+        <li><a href="dance-styles.html" class="mobile-nav-link"><i class="bi bi-stars"></i>Dance Styles</a></li>
+        <li><a href="faculty.html" class="mobile-nav-link"><i class="bi bi-people-fill"></i>Faculty</a></li>
+        <li><a href="events.html" class="mobile-nav-link"><i class="bi bi-calendar-event-fill"></i>Events</a></li>
+        <li><a href="contact.html" class="mobile-nav-link active"><i class="bi bi-envelope-fill"></i>Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link"><i class="bi bi-grid-fill"></i>Dashboard</a></li>
+      </ul>
+      <div class="mobile-menu-divider"></div>
+      <div class="mobile-controls"><span class="mobile-controls-label">Preferences</span><button
+          class="mobile-toggle-btn" data-theme-toggle><i class="bi bi-moon-stars-fill icon-moon"></i><i
+            class="bi bi-sun-fill icon-sun"></i></button><button class="mobile-toggle-btn" data-dir-toggle
+          aria-label="Toggle direction" title="Toggle direction"><span class="icon-ltr">RTL</span><span
+            class="icon-rtl">LTR</span></button></div>
+      <a href="login.html" class="mobile-login-btn"><i class="bi bi-person-circle"></i> Login</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- SECTION 1 — BANNER -->
+    <section class="banner" aria-label="Contact page banner">
+      <div class="banner-bg" style="background-image:url('assets/images/banners/banner-contact.png');"></div>
+      <div class="banner-overlay"></div>
+      <div class="container">
+        <div class="banner-content">
+          <div class="banner-breadcrumb"><a href="index.html">Home</a><span class="sep"><i
+                class="bi bi-chevron-right"></i></span><span class="current">Contact Us</span></div>
+          <h1 data-animate="fade-up">Get in <span>Touch</span></h1>
+          <p data-animate="fade-up" data-delay="100">Questions about enrollment, batches, fees or events? We are here to
+            help. Reach us anytime — we respond within 24 hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — ENROLLMENT ENQUIRY FORM + CONTACT DETAILS -->
+    <section class="section" id="enquiry-form" aria-label="Enrollment enquiry">
+      <div class="container">
+        <div class="contact-grid">
+          <div data-animate="fade-right">
+            <div class="contact-form-card">
+              <h2 style="margin-bottom:8px;">Enrollment <span class="text-gradient">Enquiry</span></h2>
+              <p style="margin-bottom:28px;color:var(--text-muted);font-size:0.925rem;">Fill in the form below and our
+                admissions team will contact you within 24 hours to guide you through enrollment.</p>
+              <form id="enrollment-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label" for="enq-name">Full Name *</label><input
+                      class="form-control" type="text" id="enq-name" name="name" placeholder="Your full name"
+                      required /></div>
+                  <div class="form-group"><label class="form-label" for="enq-age">Age *</label><input
+                      class="form-control" type="number" id="enq-age" name="age" placeholder="e.g. 15" min="3" max="80"
+                      required /></div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label" for="enq-email">Email Address *</label><input
+                      class="form-control" type="email" id="enq-email" name="email" placeholder="you@example.com"
+                      required /></div>
+                  <div class="form-group"><label class="form-label" for="enq-phone">Phone Number *</label><input
+                      class="form-control" type="tel" id="enq-phone" name="phone" placeholder="+91 00000 00000"
+                      required /></div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label" for="enq-style">Dance Style Interest
+                      *</label><select class="form-control" id="enq-style" name="style" required>
+                      <option value="" disabled selected>Select a style</option>
+                      <option>Classical Dance</option>
+                      <option>Western Dance</option>
+                      <option>Hip-Hop</option>
+                      <option>Salsa</option>
+                      <option>Contemporary</option>
+                      <option>Freestyle</option>
+                      <option>Not sure yet</option>
+                    </select></div>
+                  <div class="form-group"><label class="form-label" for="enq-batch">Preferred Batch *</label><select
+                      class="form-control" id="enq-batch" name="batch" required>
+                      <option value="" disabled selected>Select batch time</option>
+                      <option>Morning (7:00 AM – 9:00 AM)</option>
+                      <option>Evening (5:30 PM – 7:30 PM)</option>
+                      <option>Weekend (9:00 AM – 12:00 PM)</option>
+                      <option>Kids Morning (10:00 AM – 11:30 AM)</option>
+                    </select></div>
+                </div>
+                <div class="form-group"><label class="form-label" for="enq-exp">Experience Level</label><select
+                    class="form-control" id="enq-exp" name="experience">
+                    <option value="" disabled selected>Select your level</option>
+                    <option>Absolute Beginner</option>
+                    <option>Some Experience (1-2 years)</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                  </select></div>
+                <div class="form-group"><label class="form-label" for="enq-message">Additional Message</label><textarea
+                    class="form-control" id="enq-message" name="message"
+                    placeholder="Any specific questions, requirements or special needs..." rows="3"></textarea></div>
+                <button type="submit" class="btn btn-primary w-100"
+                  style="justify-content:center;margin-top:4px;padding:15px;">
+                  <i class="bi bi-send-fill"></i> Send Enquiry
+                </button>
+              </form>
+            </div>
+          </div>
+          <div data-animate="fade-left" style="display:flex;flex-direction:column;gap:20px;">
+            <div class="contact-info-card">
+              <h3>Contact <span class="text-gradient">Details</span></h3>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="contact-info-detail">
+                  <h5>Studio Address</h5>
+                  <p>42, Dance Avenue, Arts District<br>Chennai – 600001, Tamil Nadu, India</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                <div class="contact-info-detail">
+                  <h5>Phone &amp; WhatsApp</h5>
+                  <a href="tel:+919876543210">+91 98765 43210</a>
+                  <a href="tel:+914466778899">+91 44 6677 8899 (Landline)</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+                <div class="contact-info-detail">
+                  <h5>Email</h5>
+                  <a href="mailto:info@rhythmverseacademy.in">info@rhythmverseacademy.in</a>
+                  <a href="mailto:admissions@rhythmverseacademy.in">admissions@rhythmverseacademy.in</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-clock-fill"></i></div>
+                <div class="contact-info-detail">
+                  <h5>Studio Hours</h5>
+                  <p>Monday – Saturday: 7:00 AM – 9:00 PM<br>Sunday: 9:00 AM – 1:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <!-- Social Links -->
+            <div class="social-links-section">
+              <h4 style="margin-bottom:12px;">Follow Us</h4>
+              <div class="social-grid">
+                <a href="#" class="social-card" aria-label="Instagram">
+                  <div class="social-card-icon"
+                    style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#FFF;"><i
+                      class="bi bi-instagram"></i></div>
+                  <div>
+                    <div class="social-card-name">Instagram</div>
+                    <div class="social-card-handle">@rhythmverse</div>
+                  </div>
+                </a>
+                <a href="#" class="social-card" aria-label="YouTube">
+                  <div class="social-card-icon" style="background:#FF0000;color:#FFF;"><i class="bi bi-youtube"></i>
+                  </div>
+                  <div>
+                    <div class="social-card-name">YouTube</div>
+                    <div class="social-card-handle">RhythmVerse</div>
+                  </div>
+                </a>
+                <a href="#" class="social-card" aria-label="Facebook">
+                  <div class="social-card-icon" style="background:#1877F2;color:#FFF;"><i class="bi bi-facebook"></i>
+                  </div>
+                  <div>
+                    <div class="social-card-name">Facebook</div>
+                    <div class="social-card-handle">RhythmVerse</div>
+                  </div>
+                </a>
+                <a href="#" class="social-card" aria-label="WhatsApp">
+                  <div class="social-card-icon" style="background:#25D366;color:#FFF;"><i class="bi bi-whatsapp"></i>
+                  </div>
+                  <div>
+                    <div class="social-card-name">WhatsApp</div>
+                    <div class="social-card-handle">+91 98765</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — LOCATION / MAP -->
+    <section class="section section-alt" id="location" aria-label="Studio location">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-geo-alt-fill"></i> Find Us</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Our <span>Studio Location</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">Conveniently located in the Arts District of
+            Chennai, easily accessible by metro, bus and road.</p>
+        </div>
+        <div class="map-wrapper" data-animate="fade-up" data-delay="100">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5097384556!2d80.2707184!3d13.082680099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1720000000000!5m2!1sen!2sin"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="RhythmVerse Academy Location Map"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — BATCH ENQUIRY CARDS -->
+    <section class="section" id="batch-enquiry" aria-label="Batch enquiry">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-clock-fill"></i> Batches</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Choose Your <span>Batch</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">We offer flexible batch timings to suit every
+            schedule. Contact us to check current availability.</p>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <div class="batch-enquiry-card" data-animate="fade-up" data-delay="100">
+            <div class="beq-icon"><i class="bi bi-sunrise-fill"></i></div>
+            <div class="beq-title">Morning Batch</div>
+            <div class="beq-time"><i class="bi bi-clock"></i> 7:00 AM – 9:00 AM | Mon, Wed, Fri</div>
+            <p class="beq-desc">Best for students, kids, and early risers. A wide variety of Classical Indian Dance and Western Dance styles are available in our morning batches. Start your day with high energy and graceful movements.</p><a href="#enquiry-form" class="btn btn-primary btn-sm"><i
+                class="bi bi-person-plus-fill"></i> Enquire Now</a>
+          </div>
+          <div class="batch-enquiry-card" data-animate="fade-up" data-delay="150">
+            <div class="beq-icon"><i class="bi bi-moon-stars-fill"></i></div>
+            <div class="beq-title">Evening Batch</div>
+            <div class="beq-time"><i class="bi bi-clock"></i> 5:30 PM – 7:30 PM | Tue, Thu, Sat</div>
+            <p class="beq-desc">Our most popular batch option. Dynamic Hip-Hop, Salsa, and Contemporary styles are available. Ideal for school, college students, and working professionals looking to unwind and learn new choreographies.</p><a href="#enquiry-form" class="btn btn-primary btn-sm"><i class="bi bi-person-plus-fill"></i>
+              Enquire Now</a>
+          </div>
+          <div class="batch-enquiry-card" data-animate="fade-up" data-delay="200">
+            <div class="beq-icon"><i class="bi bi-calendar-week-fill"></i></div>
+            <div class="beq-title beq-title-two-line">Weekend Batch</div>
+            <div class="beq-time"><i class="bi bi-clock"></i> 9:00 AM – 12:00 PM | Sat &amp; Sun</div>
+            <p class="beq-desc">Perfect for working professionals and busy students. Energetic freestyle, fusion, and advanced choreography sessions are covered over the weekends. Join us to refine your skills and master new routines.</p><a href="#enquiry-form" class="btn btn-primary btn-sm"><i
+                class="bi bi-person-plus-fill"></i> Enquire Now</a>
+          </div>
+          <div class="batch-enquiry-card" data-animate="fade-up" data-delay="250">
+            <div class="beq-icon"><i class="bi bi-brightness-high-fill"></i></div>
+            <div class="beq-title">Kids Morning Batch</div>
+            <div class="beq-time"><i class="bi bi-clock"></i> 10:00 AM – 11:30 AM | Mon, Wed, Fri</div>
+            <p class="beq-desc">Fun, creative, and structured classes for children aged 5–12. We focus on rhythm, coordination, physical fitness, and building a lifelong love for dance. Safe environment for young aspiring dancers.</p><a href="#enquiry-form" class="btn btn-primary btn-sm"><i
+                class="bi bi-person-plus-fill"></i> Enquire Now</a>
+          </div>
+          <div class="batch-enquiry-card" data-animate="fade-up" data-delay="300">
+            <div class="beq-icon"><i class="bi bi-star-fill"></i></div>
+            <div class="beq-title beq-title-two-line">Advanced Batch</div>
+            <div class="beq-time"><i class="bi bi-clock"></i> 7:30 PM – 9:00 PM | Daily</div>
+            <p class="beq-desc">Available by invitation only. Exclusive, high-intensity training sessions for competition-level students under direct and personal faculty supervision. Prepare for national and international contests.</p><a href="#enquiry-form" class="btn btn-primary btn-sm"><i
+                class="bi bi-person-plus-fill"></i> Enquire Now</a>
+          </div>
+          <div class="batch-enquiry-card" data-animate="fade-up" data-delay="350">
+            <div class="beq-icon"><i class="bi bi-people-fill"></i></div>
+            <div class="beq-title beq-title-two-line">Couples Batch</div>
+            <div class="beq-time"><i class="bi bi-clock"></i> 6:00 PM – 7:30 PM | Saturday</div>
+            <p class="beq-desc">Salsa, Bachata, and partner dances designed exclusively for couples. No prior experience is needed — simply show up and start dancing with your partner. Perfect way to bond and stay active together.</p><a href="#enquiry-form" class="btn btn-primary btn-sm"><i
+                class="bi bi-person-plus-fill"></i> Enquire Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — FAQ PREVIEW -->
+    <section class="section section-alt" id="faq" aria-label="Frequently asked questions">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-question-circle-fill"></i> FAQ</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Frequently Asked <span>Questions</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">Got questions? We have got answers. Here are
+            the most common questions we receive about RhythmVerse Academy.</p>
+        </div>
+        <div style="max-width:800px;margin:0 auto;" data-animate="fade-up" data-delay="100">
+          <div class="accordion-item active">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="true">What is the minimum age to
+              enroll at RhythmVerse Academy?<div class="accordion-icon"><i class="bi bi-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">We welcome students from age 5 onwards. Our Kids Special Program is
+                designed for children aged 5–14, and our regular batches cater to teenagers and adults of all ages.
+                There is no upper age limit — dance is for everyone!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">Do I need prior dance
+              experience to join?<div class="accordion-icon"><i class="bi bi-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">Absolutely not! Our Beginner Foundation batches are designed
+                specifically for absolute beginners. We assess every new student and place them in the most suitable
+                batch. Your first class is free, so you can experience the learning environment before committing.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">How much does enrollment cost
+              per month?<div class="accordion-icon"><i class="bi bi-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">Monthly fees vary by dance style and batch level, ranging from ₹2,000 to
+                ₹4,500 per month. A registration fee of ₹500 is applicable for new students. Contact our admissions team
+                for a detailed fee structure specific to your chosen program.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">Can I switch dance styles
+              after enrolling?<div class="accordion-icon"><i class="bi bi-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">Yes! Students can request a style transfer or add a second style after
+                completing at least one full month. Speak to our admissions team and they will help you make the switch
+                smoothly without any disruption to your learning.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">Are costumes and props
+              included in the fee?<div class="accordion-icon"><i class="bi bi-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">Basic practice attire guidance is provided free of cost. Performance
+                costumes for recitals and events are provided by the academy at a nominal additional cost. We work with
+                trusted costume designers to ensure beautiful, affordable performance wear for all students.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">Is there a trial class before
+              full enrollment?<div class="accordion-icon"><i class="bi bi-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">Yes! We offer a completely free, no-obligation 60-minute trial class in
+                any of our available batches. Simply fill in the enrollment enquiry form above or call us to schedule
+                your trial class. We encourage every new student to try before committing.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — CTA -->
+    <section class="cta-section" id="contact-cta" aria-label="Contact CTA">
+      <div class="cta-bg" style="background-image:url('assets/images/banners/contact_cta_bg.png');"></div>
+      <div class="cta-overlay"></div>
+      <div class="container">
+        <div class="cta-content">
+          <p class="section-badge" data-animate="fade-up" style="color:var(--accent);justify-content:center;"><i
+              class="bi bi-telephone-fill"></i> We are here for you</p>
+          <h2 data-animate="fade-up" data-delay="100">Take the First Step.<br><span>Call Us Today.</span></h2>
+          <p data-animate="fade-up" data-delay="200">Our friendly admissions team is available Monday to Saturday, 9 AM
+            – 7 PM. Give us a call or drop in for a studio tour — no appointment needed!</p>
+          <div class="cta-btns" data-animate="fade-up" data-delay="300">
+            <a href="tel:+919876543210" class="btn btn-accent btn-lg"><i class="bi bi-telephone-fill"></i> +91 98765 43210</a>
+            <a href="mailto:info@rhythmverseacademy.in" class="btn btn-outline-white btn-lg"><i
+                class="bi bi-envelope-fill"></i> Email Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand" data-animate="fade-up"><a href="index.html" class="footer-logo">
+            <div class="footer-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+            <div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span
+                class="logo-line2">Academy</span></div>
+          </a>
+          <p>A world-class dance academy dedicated to nurturing talent, passion, and artistry in every student.</p>
+          <div class="footer-social"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#"
+              aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="YouTube"><i
+                class="bi bi-youtube"></i></a><a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a><a
+              href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div>
+        </div>
+        <div data-animate="fade-up" data-delay="100">
+          <h4 class="footer-heading">Quick Links</h4>
+          <nav class="footer-links"><a href="index.html"><i class="bi bi-chevron-right"></i> Home 1</a><a
+              href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a><a href="about.html"><i
+                class="bi bi-chevron-right"></i> About Us</a><a href="dance-styles.html"><i
+                class="bi bi-chevron-right"></i> Dance Styles</a><a href="faculty.html"><i
+                class="bi bi-chevron-right"></i> Faculty</a><a href="events.html"><i class="bi bi-chevron-right"></i>
+              Events</a><a href="dashboard.html"><i class="bi bi-chevron-right"></i> Dashboard</a><a
+              href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></nav>
+        </div>
+        <div data-animate="fade-up" data-delay="200">
+          <h4 class="footer-heading">Dance Styles</h4>
+          <nav class="footer-links"><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Classical
+              Dance</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Western Dance</a><a
+              href="dance-styles.html"><i class="bi bi-chevron-right"></i> Hip-Hop</a><a href="dance-styles.html"><i
+                class="bi bi-chevron-right"></i> Salsa</a><a href="dance-styles.html"><i
+                class="bi bi-chevron-right"></i> Contemporary</a><a href="dance-styles.html"><i
+                class="bi bi-chevron-right"></i> Freestyle</a></nav>
+        </div>
+        <div data-animate="fade-up" data-delay="300">
+          <h4 class="footer-heading">Contact Info</h4>
+          <address style="font-style:normal;">
+            <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>42, Dance Avenue, Arts District,
+                Chennai – 600001</span></div>
+            <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><span><a href="tel:+919876543210"
+                  style="color:inherit;">+91 98765 43210</a></span></div>
+            <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span><a
+                  href="mailto:info@rhythmverseacademy.in" style="color:inherit;">info@rhythmverseacademy.in</a></span>
+            </div>
+            <div class="footer-contact-item"><i class="bi bi-clock-fill"></i><span>Mon–Sat: 7 AM – 9 PM</span></div>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"
+        style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <p>&copy; 2026 RhythmVerse Academy. All rights reserved.</p>
+        <nav class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a
+            href="#">Sitemap</a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

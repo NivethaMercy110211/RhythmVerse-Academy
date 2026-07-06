@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About RhythmVerse Academy — Our story, mission, training approach, studio facilities, achievements and student testimonials." />
+  <title>About Us | RhythmVerse Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <style>
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+    .story-img{border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl);position:relative;max-width:540px;margin:0 auto;}
+    .story-img img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+    .story-badge{position:absolute;bottom:24px;left:24px;background:var(--grad-primary);color:#FFF;border-radius:var(--radius-md);padding:14px 20px;display:flex;align-items:center;gap:10px;}
+    .story-badge strong{font-family:var(--font-head);font-size:1.4rem;font-weight:800;}
+    .story-badge span{font-size:0.8rem;opacity:0.85;}
+    .mv-card{background:var(--bg-card);border-radius:var(--radius-xl);border:1px solid var(--border);padding:40px;position:relative;overflow:hidden;height:100%;}
+    .mv-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;opacity:0.06;}
+    .mv-card.mission::before{background:var(--primary);}
+    .mv-card.vision::before{background:var(--accent);}
+    .mv-icon{width:64px;height:64px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#FFF;margin-bottom:20px;}
+    .mv-card.mission .mv-icon{background:var(--grad-primary);}
+    .mv-card.vision .mv-icon{background:linear-gradient(135deg,#7A3AED,#FF2E88);}
+    .mv-card h3{margin-bottom:14px;}
+    .mv-card p{color:var(--text-muted);line-height:1.8;}
+    .approach-step{display:flex;gap:20px;align-items:flex-start;padding:24px;border-radius:var(--radius-md);background:var(--bg-card);border:1px solid var(--border);transition:transform var(--trans-base),box-shadow var(--trans-base),border-color var(--trans-base);height:100%;}
+    .approach-step:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--primary-light);}
+    .step-num{width:48px;height:48px;border-radius:50%;background:var(--grad-primary);display:flex;align-items:center;justify-content:center;color:#FFF;font-family:'Outfit',sans-serif;font-weight:800;font-size:1.1rem;flex-shrink:0;}
+    .step-content h5{color:var(--text);margin-bottom:6px;}
+    .step-content p{font-size:0.88rem;color:var(--text-muted);line-height:1.65;margin:0;}
+    .achievement-card{background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border);padding:28px;text-align:center;height:100%;transition:transform var(--trans-base),box-shadow var(--trans-base);}
+    .achievement-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+    .achievement-icon{width:60px;height:60px;border-radius:50%;background:var(--grad-primary);display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:#FFFFFF;margin:0 auto 16px;}
+    .achievement-card h4{font-size:1rem;margin-bottom:8px;}
+    @media(min-width:769px){.achievement-card h4{max-width:120px;margin-left:auto;margin-right:auto;}}
+    .achievement-card p{font-size:0.875rem;color:var(--text-muted);}
+    @media(min-width:481px) and (max-width:768px){.achievement-national-desc{max-width:205px;margin-left:auto;margin-right:auto;}}
+    @media(min-width:769px){.achievement-card p{max-width:150px;min-height:calc(5 * 1.8em);margin-left:auto;margin-right:auto;line-height:1.8;}}
+    @media(min-width:769px){.achievement-card p .achievement-line{display:block;line-height:1.8;}}
+    @media(min-width:1024px){#about-testimonials .testimonial-text{max-width:245px;margin-left:auto;margin-right:auto;}}
+    @media(max-width:1100px){
+      #training-approach .step-content h5{
+        font-size:0.95rem;
+        line-height:1.25;
+        white-space:nowrap;
+      }
+      #training-approach .step-content p{
+        width:180px;
+        max-width:100%;
+        min-height:calc(5 * 1.65em);
+      }
+      #training-approach .approach-step:nth-child(4) .step-content p{
+        width:165px;
+        min-height:calc(6 * 1.65em);
+      }
+      #training-approach .video-review-desc .method-line{
+        display:block;
+        line-height:1.65;
+        white-space:nowrap;
+      }
+    }
+    @media(min-width:769px) and (max-width:1024px){.story-img{max-width:760px;}}
+    @media(max-width:1024px){.story-grid{grid-template-columns:1fr;}.story-copy{order:1;}.story-media{order:2;}}
+    @media(max-width:768px){.story-badge{bottom:12px;left:12px;padding:10px 14px;}.story-badge strong{font-size:1.1rem;}}
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar" id="main-navbar" role="navigation" aria-label="Main navigation">
+  <div class="container"><div class="navbar-inner">
+    <a href="index.html" class="navbar-logo"><div class="navbar-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div><div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span class="logo-line2">Academy</span></div></a>
+    <ul class="navbar-menu" role="menubar">
+      <li><a href="index.html" class="nav-link">Home 1</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+      <li><a href="dance-styles.html" class="nav-link">Dance Styles</a></li>
+      <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i></button>
+      <button class="nav-toggle-btn" data-dir-toggle aria-label="Toggle direction" title="Toggle direction">
+        <span class="icon-ltr">RTL</span>
+        <span class="icon-rtl">LTR</span>
+      </button>
+    </div>
+    <a href="login.html" class="btn-nav-login" id="nav-login-btn"><i class="bi bi-person-circle"></i> Login</a>
+    <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+  </div></div>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <div class="mobile-menu-inner">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="bi bi-house-fill"></i>Home 1</a></li>
+      <li><a href="home2.html" class="mobile-nav-link"><i class="bi bi-house-heart-fill"></i>Home 2</a></li>
+      <li><a href="about.html" class="mobile-nav-link active"><i class="bi bi-info-circle-fill"></i>About</a></li>
+      <li><a href="dance-styles.html" class="mobile-nav-link"><i class="bi bi-stars"></i>Dance Styles</a></li>
+      <li><a href="faculty.html" class="mobile-nav-link"><i class="bi bi-people-fill"></i>Faculty</a></li>
+      <li><a href="events.html" class="mobile-nav-link"><i class="bi bi-calendar-event-fill"></i>Events</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="bi bi-envelope-fill"></i>Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link"><i class="bi bi-grid-fill"></i>Dashboard</a></li>
+    </ul>
+    <div class="mobile-menu-divider"></div>
+    <div class="mobile-controls">
+      <span class="mobile-controls-label">Preferences</span>
+      <button class="mobile-toggle-btn" data-theme-toggle><i class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i></button>
+      <button class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle direction" title="Toggle direction">
+        <span class="icon-ltr">RTL</span>
+        <span class="icon-rtl">LTR</span>
+      </button>
+    </div>
+    <a href="login.html" class="mobile-login-btn"><i class="bi bi-person-circle"></i> Login</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- SECTION 1 — BANNER -->
+  <section class="banner" aria-label="About page banner">
+    <div class="banner-bg" style="background-image:url('assets/images/banners/banner-about.png');"></div>
+    <div class="banner-overlay"></div>
+    <div class="container">
+      <div class="banner-content">
+        <div class="banner-breadcrumb"><a href="index.html">Home</a><span class="sep"><i class="bi bi-chevron-right"></i></span><span class="current">About Us</span></div>
+        <h1 data-animate="fade-up">Our <span>Story</span> &amp; Legacy</h1>
+        <p data-animate="fade-up" data-delay="100">Founded with a vision to make world-class dance education accessible to all, RhythmVerse Academy has shaped over 1,200 dancers across 15 years of excellence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — ACADEMY STORY -->
+  <section class="section" id="academy-story" aria-label="Academy story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-media" data-animate="fade-right">
+          <div class="story-img">
+            <img src="assets/images/banners/banner-faculty.png" alt="RhythmVerse Academy founders and early students" loading="lazy" />
+            <div class="story-badge"><div><strong>2009</strong><br><span>Year Founded</span></div></div>
+          </div>
+        </div>
+        <div class="story-copy" data-animate="fade-left">
+          <p class="section-badge"><i class="bi bi-book-fill"></i> Our Story</p>
+          <h2 class="section-title" style="text-align:left; margin-bottom:20px;">Born from a <span>Passion for Dance</span></h2>
+          <p style="margin-bottom:16px;">RhythmVerse Academy was founded in 2009 by Guru Priya Anand — a celebrated Bharatanatyam artist who believed that every individual, regardless of age or background, deserves access to professional dance training.</p>
+          <p style="margin-bottom:16px;">What began as a small studio in Chennai's Arts District with just 12 students has grown into a premier multi-studio dance institution serving over 1,200 active students annually.</p>
+          <p style="margin-bottom:28px;">Over 15 years, we have expanded our faculty to 18 expert instructors, introduced 6 distinct dance disciplines, and produced award-winning performers who have graced national and international stages.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="stat-card"><div class="stat-number" data-count="2009" data-suffix="">2009</div><div class="stat-label">Year Founded</div></div>
+            <div class="stat-card"><div class="stat-number" data-count="4" data-suffix=" Studios">4 Studios</div><div class="stat-label">State-of-the-Art Facilities</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — MISSION & VISION -->
+  <section class="section section-alt" id="mission-vision" aria-label="Mission and vision">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-badge" data-animate="fade-up"><i class="bi bi-bullseye"></i> Our Purpose</p>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">Mission &amp; <span>Vision</span></h2>
+        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+      </div>
+      <div class="cards-grid cards-grid-2" style="max-width:900px;margin:0 auto;">
+        <div class="mv-card mission" data-animate="fade-right">
+          <div class="mv-icon"><i class="bi bi-rocket-fill"></i></div>
+          <h3>Our <span class="text-gradient">Mission</span></h3>
+          <p>To provide world-class, accessible dance education that nurtures not just technique, but the whole artist — building discipline, confidence, creativity and a lifelong love for the performing arts.</p>
+          <ul style="margin-top:16px;display:flex;flex-direction:column;gap:8px;padding-left:4px;">
+            <li style="display:flex;gap:8px;color:var(--text-muted);font-size:0.875rem;"><i class="bi bi-check2-circle" style="color:var(--primary);margin-top:2px;flex-shrink:0;"></i> Excellence in every class, every day</li>
+            <li style="display:flex;gap:8px;color:var(--text-muted);font-size:0.875rem;"><i class="bi bi-check2-circle" style="color:var(--primary);margin-top:2px;flex-shrink:0;"></i> Inclusivity across all ages and abilities</li>
+            <li style="display:flex;gap:8px;color:var(--text-muted);font-size:0.875rem;"><i class="bi bi-check2-circle" style="color:var(--primary);margin-top:2px;flex-shrink:0;"></i> Performance opportunities for every student</li>
+          </ul>
+        </div>
+        <div class="mv-card vision" data-animate="fade-left">
+          <div class="mv-icon"><i class="bi bi-eye-fill"></i></div>
+          <h3>Our <span class="text-gradient">Vision</span></h3>
+          <p>To be South Asia's most respected dance academy — a creative home where tradition meets innovation, and where every student who walks through our doors emerges as a confident, skilled performer.</p>
+          <ul style="margin-top:16px;display:flex;flex-direction:column;gap:8px;padding-left:4px;">
+            <li style="display:flex;gap:8px;color:var(--text-muted);font-size:0.875rem;"><i class="bi bi-check2-circle" style="color:var(--accent);margin-top:2px;flex-shrink:0;"></i> A global network of RhythmVerse alumni</li>
+            <li style="display:flex;gap:8px;color:var(--text-muted);font-size:0.875rem;"><i class="bi bi-check2-circle" style="color:var(--accent);margin-top:2px;flex-shrink:0;"></i> Recognized certification and curriculum</li>
+            <li style="display:flex;gap:8px;color:var(--text-muted);font-size:0.875rem;"><i class="bi bi-check2-circle" style="color:var(--accent);margin-top:2px;flex-shrink:0;"></i> Expanding to 10 cities by 2030</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — TRAINING APPROACH -->
+  <section class="section" id="training-approach" aria-label="Training approach">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-badge" data-animate="fade-up"><i class="bi bi-diagram-3-fill"></i> Methodology</p>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">Our <span>Training Approach</span></h2>
+        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+        <p class="section-desc" data-animate="fade-up" data-delay="200">A six-step pedagogy designed by our master instructors to deliver measurable progress at every level.</p>
+      </div>
+      <div class="cards-grid cards-grid-3">
+        <div class="approach-step" data-animate="fade-up" data-delay="100"><div class="step-num">01</div><div class="step-content"><h5>Assessment &amp; Placement</h5><p>Every new student undergoes a free assessment session to determine their current level and ideal batch placement.</p></div></div>
+        <div class="approach-step" data-animate="fade-up" data-delay="150"><div class="step-num">02</div><div class="step-content"><h5>Foundation Building</h5><p>Core technique, body awareness, rhythm training and basic style elements form the bedrock of our curriculum.</p></div></div>
+        <div class="approach-step" data-animate="fade-up" data-delay="200"><div class="step-num">03</div><div class="step-content"><h5>Choreography Immersion</h5><p>Students begin learning full choreographic sequences, developing memory, spatial awareness and artistic interpretation.</p></div></div>
+        <div class="approach-step" data-animate="fade-up" data-delay="250"><div class="step-num">04</div><div class="step-content"><h5>Video Review &amp; Feedback</h5><p class="video-review-desc"><span class="method-line">Regular session</span><span class="method-line">recordings help</span><span class="method-line">students and</span><span class="method-line">instructors review,</span><span class="method-line">identify gaps and</span><span class="method-line">celebrate progress.</span></p></div></div>
+        <div class="approach-step" data-animate="fade-up" data-delay="300"><div class="step-num">05</div><div class="step-content"><h5>Stage Rehearsal</h5><p>Students rehearse in performance conditions — lights, music, costumes — building stage confidence before events.</p></div></div>
+        <div class="approach-step" data-animate="fade-up" data-delay="350"><div class="step-num">06</div><div class="step-content"><h5>Performance &amp; Celebration</h5><p>Monthly showcases and annual recitals give every student a real audience and the priceless experience of live performance.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — STUDIO FACILITIES -->
+  <section class="section section-alt" id="about-facilities" aria-label="Studio facilities">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-badge" data-animate="fade-up"><i class="bi bi-building"></i> Our Studios</p>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">Spaces Built for <span>Artists</span></h2>
+        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+        <p class="section-desc" data-animate="fade-up" data-delay="200">Four fully equipped studios designed to elevate your training experience to professional standards.</p>
+      </div>
+      <div class="cards-grid cards-grid-2">
+        <div class="feature-card" data-animate="fade-up" data-delay="100">
+          <div class="feature-icon"><i class="bi bi-layers-fill"></i></div>
+          <h4>Sprung Performance Floors</h4>
+          <p>Professional-grade hardwood sprung floors in all four studios that absorb impact and protect dancer joints during repetitive training.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="150">
+          <div class="feature-icon"><i class="bi bi-soundwave"></i></div>
+          <h4>Studio-Grade Audio Systems</h4>
+          <p>High-fidelity speaker systems with professional mixing boards in each studio — ideal for hearing every nuance of the music.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="200">
+          <div class="feature-icon"><i class="bi bi-camera-video-fill"></i></div>
+          <h4>HD Recording &amp; Playback</h4>
+          <p>Every studio is equipped with multi-angle HD cameras so students can review their performance footage after each session.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="250">
+          <div class="feature-icon"><i class="bi bi-lightbulb-fill"></i></div>
+          <h4>Professional Stage Lighting</h4>
+          <p>Programmable LED stage lights used for both rehearsals and in-house performances, giving students real stage experience.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="300">
+          <div class="feature-icon"><i class="bi bi-symmetry-vertical"></i></div>
+          <h4>Full-Wall Mirror Systems</h4>
+          <p>Floor-to-ceiling gymnasium mirrors across all studios allow real-time self-correction and monitoring of technique alignment.</p>
+        </div>
+        <div class="feature-card" data-animate="fade-up" data-delay="350">
+          <div class="feature-icon"><i class="bi bi-cup-hot-fill"></i></div>
+          <h4>Student Lounge &amp; Changing Rooms</h4>
+          <p>A comfortable student lounge, modern changing rooms, and a hydration station make every visit a premium experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — ACHIEVEMENTS -->
+  <section class="section" id="achievements" aria-label="Achievements and milestones">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-badge" data-animate="fade-up"><i class="bi bi-trophy-fill"></i> Achievements</p>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">15 Years of <span>Glory</span></h2>
+        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+        <p class="section-desc" data-animate="fade-up" data-delay="200">A track record of excellence that speaks louder than words — here are just a few of our proudest milestones.</p>
+      </div>
+      <div class="cards-grid cards-grid-4">
+        <div class="achievement-card" data-animate="zoom-in" data-delay="100"><div class="achievement-icon"><i class="bi bi-award-fill"></i></div><h4>National Dance Championship</h4><p class="achievement-national-desc">First Place in Classical Dance at the 2023 National Youth Championship, New Delhi.</p></div>
+        <div class="achievement-card" data-animate="zoom-in" data-delay="150"><div class="achievement-icon"><i class="bi bi-globe-asia-australia"></i></div><h4>International Showcase</h4><p>Represented India at the 2022 International Dance Festival in Singapore with our fusion performance.</p></div>
+        <div class="achievement-card" data-animate="zoom-in" data-delay="200"><div class="achievement-icon"><i class="bi bi-star-fill"></i></div><h4>Best Academy Award</h4><p><span class="achievement-line">Named Best Dance</span><span class="achievement-line">Academy of Tamil</span><span class="achievement-line">Nadu by the</span><span class="achievement-line">State Arts Council</span><span class="achievement-line">for 2021, 2022,</span><span class="achievement-line">and 2023.</span></p></div>
+        <div class="achievement-card" data-animate="zoom-in" data-delay="250"><div class="achievement-icon"><i class="bi bi-camera-reels-fill"></i></div><h4>Film Choreography</h4><p>Faculty choreographed dance sequences for 12 major Tamil and Telugu films in the last five years.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — TESTIMONIALS -->
+  <section class="section section-alt" id="about-testimonials" aria-label="Student testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-badge" data-animate="fade-up"><i class="bi bi-chat-quote-fill"></i> Voices</p>
+        <h2 class="section-title" data-animate="fade-up" data-delay="100">What Our Students <span>Say</span></h2>
+        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+      </div>
+      <div class="cards-grid cards-grid-3">
+        <div class="testimonial-card" data-animate="fade-up" data-delay="100"><div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><p class="testimonial-text divya-testimonial">"RhythmVerse gave me a second home. The faculty are not just teachers — they are mentors who push you to discover the best version of yourself through dance."</p><div class="testimonial-author"><div class="testimonial-avatar-placeholder">DK</div><div><div class="testimonial-name">Divya Kumar</div><div class="testimonial-meta">Contemporary Dance, 4 Years</div></div></div></div>
+        <div class="testimonial-card" data-animate="fade-up" data-delay="200"><div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><p class="testimonial-text">"I trained at three academies before RhythmVerse. None matched the quality of instruction, the facilities, and community here. Truly exceptional."</p><div class="testimonial-author"><div class="testimonial-avatar-placeholder">VR</div><div><div class="testimonial-name">Vikram Rao</div><div class="testimonial-meta">Western &amp; Freestyle, 2 Years</div></div></div></div>
+        <div class="testimonial-card" data-animate="fade-up" data-delay="300"><div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div><p class="testimonial-text">"Sofia's salsa classes are absolutely transformative. I came in with two left feet and now dance at social events with total confidence. The couple's batch is particularly fun!"</p><div class="testimonial-author"><div class="testimonial-avatar-placeholder">MA</div><div><div class="testimonial-name">Meera &amp; Arun</div><div class="testimonial-meta">Salsa Couples Batch, 1 Year</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — CTA -->
+  <section class="cta-section" id="about-cta" aria-label="Call to action">
+    <div class="cta-bg" style="background-image:url('assets/images/banners/banner-home1.png');"></div>
+    <div class="cta-overlay"></div>
+    <div class="container"><div class="cta-content">
+      <p class="section-badge" data-animate="fade-up" style="color:var(--accent);justify-content:center;"><i class="bi bi-stars"></i> Be Part of Our Story</p>
+      <h2 data-animate="fade-up" data-delay="100">Write Your Chapter at <span>RhythmVerse</span></h2>
+      <p data-animate="fade-up" data-delay="200">Thousands of students have found their rhythm here. It is your turn to step onto the stage and shine.</p>
+      <div class="cta-btns" data-animate="fade-up" data-delay="300">
+        <a href="contact.html" class="btn btn-accent btn-lg"><i class="bi bi-person-plus-fill"></i> Enroll Now</a>
+        <a href="faculty.html" class="btn btn-outline-white btn-lg"><i class="bi bi-people-fill"></i> Meet Our Team</a>
+      </div>
+    </div></div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand" data-animate="fade-up"><a href="index.html" class="footer-logo"><div class="footer-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div><div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span class="logo-line2">Academy</span></div></a><p>A world-class dance academy dedicated to nurturing talent, passion, and artistry in every student.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div></div>
+      <div data-animate="fade-up" data-delay="100"><h4 class="footer-heading">Quick Links</h4><nav class="footer-links"><a href="index.html"><i class="bi bi-chevron-right"></i> Home 1</a><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Dance Styles</a><a href="faculty.html"><i class="bi bi-chevron-right"></i> Faculty</a><a href="events.html"><i class="bi bi-chevron-right"></i> Events</a><a href="dashboard.html"><i class="bi bi-chevron-right"></i> Dashboard</a><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></nav></div>
+      <div data-animate="fade-up" data-delay="200"><h4 class="footer-heading">Dance Styles</h4><nav class="footer-links"><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Classical Dance</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Western Dance</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Hip-Hop</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Salsa</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Contemporary</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Freestyle</a></nav></div>
+      <div data-animate="fade-up" data-delay="300"><h4 class="footer-heading">Contact Info</h4><address style="font-style:normal;"><div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>42, Dance Avenue, Arts District, Chennai – 600001</span></div><div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><span><a href="tel:+919876543210" style="color:inherit;">+91 98765 43210</a></span></div><div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span><a href="mailto:info@rhythmverseacademy.in" style="color:inherit;">info@rhythmverseacademy.in</a></span></div><div class="footer-contact-item"><i class="bi bi-clock-fill"></i><span>Mon–Sat: 7 AM – 9 PM</span></div></address></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;"><p>&copy; 2026 RhythmVerse Academy. All rights reserved.</p><nav class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></nav></div></div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

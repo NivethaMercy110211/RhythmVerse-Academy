@@ -21,6 +21,14 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  transition: opacity var(--trans-fast), transform var(--trans-fast), visibility var(--trans-fast);
+}
+
+body.auth-controls-hidden .auth-controls {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-12px);
 }
 
 [dir="rtl"] .auth-controls {

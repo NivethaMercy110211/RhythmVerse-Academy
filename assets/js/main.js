@@ -314,6 +314,19 @@
   }
 
   /* ─── Init All ─────────────────────────────────────────────── */
+  function initAuthControlsAutoHide() {
+    const authControls = document.querySelector('.auth-controls');
+    const authPage = document.querySelector('.auth-page');
+    if (!authControls || !authPage) return;
+
+    const onScroll = () => {
+      document.body.classList.toggle('auth-controls-hidden', window.scrollY > 24);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   function init() {
     initTheme();
     initDir();
@@ -328,6 +341,7 @@
     initParallax();
     initGalleryLightbox();
     initDashboardSidebar();
+    initAuthControlsAutoHide();
   }
 
   if (document.readyState === 'loading') {

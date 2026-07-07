@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Meet the expert faculty at RhythmVerse Academy — award-winning dance instructors specializing in Classical, Hip-Hop, Salsa, Western, Contemporary and Freestyle dance."/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Meet the expert faculty at RhythmVerse Academy — award-winning dance instructors specializing in Classical, Hip-Hop, Salsa, Western, Contemporary and Freestyle dance." />
   <title>Faculty | RhythmVerse Academy</title>
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/style.css?v=1.1"/>
-  <link rel="stylesheet" href="assets/css/navbar.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1.1" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
   <style>
-[dir="rtl"]
-.exp-bar-wrap{background:var(--bg-alt);border-radius:var(--radius-full);height:6px;overflow:hidden;margin-top:6px;}
-    .exp-bar{height:100%;border-radius:var(--radius-full);background:var(--grad-primary);transition:width 1.4s cubic-bezier(0.22,0.61,0.36,1);}
-    .cert-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:var(--radius-full);background:rgba(255,46,136,0.1);border:1px solid rgba(255,46,136,0.24);color:var(--accent);font-size:0.8rem;font-weight:600;margin:4px;white-space:nowrap;}
-    [data-theme="dark"] .cert-badge{color:var(--accent-light);}
-    .ipad-br { display: none; }
+    [dir="rtl"] .exp-bar-wrap {
+      background: var(--bg-alt);
+      border-radius: var(--radius-full);
+      height: 6px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .exp-bar {
+      height: 100%;
+      border-radius: var(--radius-full);
+      background: var(--grad-primary);
+      transition: width 1.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 46, 136, 0.1);
+      border: 1px solid rgba(255, 46, 136, 0.24);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin: 4px;
+      white-space: nowrap;
+    }
+
+    [data-theme="dark"] .cert-badge {
+      color: var(--accent-light);
+    }
+
+    .ipad-br {
+      display: none;
+    }
+
     .cert-badges-container {
       display: flex;
       flex-wrap: wrap;
@@ -25,25 +62,59 @@
       justify-content: center;
       margin-bottom: 64px;
     }
-    .teaching-method-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;height:100%;transition:transform var(--trans-base),box-shadow var(--trans-base),border-color var(--trans-base);}
-    .teaching-method-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--primary-light);}
-    .teaching-method-card h4 { margin-bottom: 12px; }
-    .tm-icon{width:54px;height:54px;border-radius:var(--radius-md);background:var(--grad-primary);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#FFF;margin-bottom:16px;}
+
+    .teaching-method-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      height: 100%;
+      transition: transform var(--trans-base), box-shadow var(--trans-base), border-color var(--trans-base);
+    }
+
+    .teaching-method-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-light);
+    }
+
+    .teaching-method-card h4 { margin-bottom: 0; }
+    /* Heading wrapper — holds the h4 and provides uniform spacing below */
+    .tm-heading { margin-bottom: 12px; }
+    /* iPad Pro forced 2-line break — hidden on all other sizes */
+    .ipad-h-br { display: none; }
+
+    .tm-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: var(--radius-md);
+      background: var(--grad-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #FFF;
+      margin-bottom: 16px;
+    }
+
     @media (max-width: 1024px) and (min-width: 768px) {
       .teaching-method-card p {
         line-height: 1.65 !important;
         min-height: 6.6em !important;
       }
+
       .feature-card p {
         line-height: 1.7 !important;
         min-height: 5.1em !important;
       }
+
       .cert-badges-container {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 12px !important;
         margin-bottom: 48px !important;
       }
+
       .cert-badges-container .cert-badge {
         margin: 0 !important;
         display: flex !important;
@@ -51,256 +122,596 @@
         justify-content: center !important;
         text-align: center !important;
       }
+
       .priya-bio {
         line-height: 1.7 !important;
         min-height: 8.5em !important;
       }
+
       .lalita-bio {
         line-height: 1.7 !important;
         min-height: 8.5em !important;
       }
+
       .ipad-br {
         display: inline !important;
       }
     }
-    @media(min-width:1024px){
-      #teaching-methods .performance-integration-text{max-width:270px;margin-left:0;margin-right:auto;}
-      #teaching-methods .teaching-desc-four-lines .teaching-line{display:block;white-space:nowrap;}
+
+    @media(min-width:1024px) {
+      #teaching-methods .performance-integration-text {
+        max-width: 270px;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      #teaching-methods .teaching-desc-four-lines .teaching-line {
+        display: block;
+        white-space: nowrap;
+      }
+
+      /* Force every Pedagogy heading to exactly 2 lines at iPad Pro.
+         Each h4 gets a <br class="ipad-h-br"> that is hidden by default
+         and shown only here. All 6 headings become identical height
+         (2 lines) so they align perfectly across the 3-column grid. */
+      .ipad-h-br { display: inline; }
     }
-    .faculty-gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-    .faculty-gal-item{border-radius:var(--radius-md);overflow:hidden;aspect-ratio:1;position:relative;cursor:pointer;}
-    .faculty-gal-item img{width:100%;height:100%;object-fit:cover;transition:transform var(--trans-slow);}
-    .faculty-gal-item:hover img{transform:scale(1.1);}
-    .faculty-gal-overlay{position:absolute;inset:0;background:rgba(106,13,173,0.6);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity var(--trans-base);}
-    .faculty-gal-item:hover .faculty-gal-overlay{opacity:1;}
-    @media(max-width:1024px){
-      .faculty-gallery-grid{grid-template-columns:repeat(3,1fr);}
-      .faculty-gallery-grid .faculty-gal-item:nth-last-child(2){grid-column:1 / 2;transform:translateX(calc(50% + 8px));}
-      .faculty-gallery-grid .faculty-gal-item:last-child{grid-column:2 / 3;transform:translateX(calc(50% + 8px));}
+
+    .faculty-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
-    @media(max-width:768px){
-      .faculty-gallery-grid{grid-template-columns:repeat(2,1fr);}
+
+    .faculty-gal-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 1;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .faculty-gal-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--trans-slow);
+    }
+
+    .faculty-gal-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .faculty-gal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(106, 13, 173, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--trans-base);
+    }
+
+    .faculty-gal-item:hover .faculty-gal-overlay {
+      opacity: 1;
+    }
+
+    @media(max-width:1024px) {
+      .faculty-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .faculty-gallery-grid .faculty-gal-item:nth-last-child(2) {
+        grid-column: 1 / 2;
+        transform: translateX(calc(50% + 8px));
+      }
+
+      .faculty-gallery-grid .faculty-gal-item:last-child {
+        grid-column: 2 / 3;
+        transform: translateX(calc(50% + 8px));
+      }
+    }
+
+    @media(max-width:768px) {
+      .faculty-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .faculty-gallery-grid .faculty-gal-item:nth-last-child(2),
-      .faculty-gallery-grid .faculty-gal-item:last-child{grid-column:auto;transform:none;}
+      .faculty-gallery-grid .faculty-gal-item:last-child {
+        grid-column: auto;
+        transform: none;
+      }
     }
   </style>
 </head>
+
 <body>
-<!-- NAVBAR -->
-<nav class="navbar" id="main-navbar" role="navigation" aria-label="Main navigation">
-  <div class="container"><div class="navbar-inner">
-    <a href="index.html" class="navbar-logo"><div class="navbar-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div><div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span class="logo-line2">Academy</span></div></a>
-    <ul class="navbar-menu" role="menubar">
-      <li><a href="index.html" class="nav-link">Home 1</a></li><li><a href="home2.html" class="nav-link">Home 2</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="dance-styles.html" class="nav-link">Dance Styles</a></li><li><a href="faculty.html" class="nav-link active">Faculty</a></li><li><a href="events.html" class="nav-link">Events</a></li><li><a href="contact.html" class="nav-link">Contact</a></li><li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-    </ul>
-    <div class="navbar-controls">
-      <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i></button>
-      <button class="nav-toggle-btn" data-dir-toggle aria-label="Toggle direction" title="Toggle direction">
-        <span class="icon-ltr">RTL</span>
-        <span class="icon-rtl">LTR</span>
-      </button>
-    </div>
-    <a href="login.html" class="btn-nav-login" id="nav-login-btn"><i class="bi bi-person-circle"></i> Login</a>
-    <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
-  </div></div>
-</nav>
-<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation"><div class="mobile-menu-inner">
-  <ul class="mobile-nav-list">
-    <li><a href="index.html" class="mobile-nav-link"><i class="bi bi-house-fill"></i>Home 1</a></li><li><a href="home2.html" class="mobile-nav-link"><i class="bi bi-house-heart-fill"></i>Home 2</a></li><li><a href="about.html" class="mobile-nav-link"><i class="bi bi-info-circle-fill"></i>About</a></li><li><a href="dance-styles.html" class="mobile-nav-link"><i class="bi bi-stars"></i>Dance Styles</a></li><li><a href="faculty.html" class="mobile-nav-link active"><i class="bi bi-people-fill"></i>Faculty</a></li><li><a href="events.html" class="mobile-nav-link"><i class="bi bi-calendar-event-fill"></i>Events</a></li><li><a href="contact.html" class="mobile-nav-link"><i class="bi bi-envelope-fill"></i>Contact</a></li><li><a href="dashboard.html" class="mobile-nav-link"><i class="bi bi-grid-fill"></i>Dashboard</a></li>
-  </ul>
-  <div class="mobile-menu-divider"></div>
-  <div class="mobile-controls"><span class="mobile-controls-label">Preferences</span><button class="mobile-toggle-btn" data-theme-toggle><i class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i></button><button class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle direction" title="Toggle direction"><span class="icon-ltr">RTL</span><span class="icon-rtl">LTR</span></button></div>
-  <a href="login.html" class="mobile-login-btn"><i class="bi bi-person-circle"></i> Login</a>
-</div></div>
-
-<main id="main-content">
-
-  <!-- SECTION 1 — BANNER -->
-  <section class="banner" aria-label="Faculty page banner">
-    <div class="banner-bg" style="background-image:url('assets/images/banners/faculty_banner.png');"></div>
-    <div class="banner-overlay"></div>
-    <div class="container"><div class="banner-content">
-      <div class="banner-breadcrumb"><a href="index.html">Home</a><span class="sep"><i class="bi bi-chevron-right"></i></span><span class="current">Faculty</span></div>
-      <h1 data-animate="fade-up">Meet Our <span>Expert Faculty</span></h1>
-      <p data-animate="fade-up" data-delay="100">18 nationally recognized dance artists and instructors who bring world-class expertise, passion and mentorship to every class.</p>
-    </div></div>
-  </section>
-
-  <!-- SECTION 2 — INSTRUCTOR PROFILES -->
-  <section class="section" id="instructor-profiles" aria-label="Instructor profiles">
+  <!-- NAVBAR -->
+  <nav class="navbar" id="main-navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <div class="section-header">
-        <p class="section-badge" data-animate="fade-up"><i class="bi bi-people-fill"></i> Our Team</p>
-        <h2 class="section-title" data-animate="fade-up" data-delay="100">The <span>Masterminds</span> Behind Your Growth</h2>
-        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
-        <p class="section-desc" data-animate="fade-up" data-delay="200">Every instructor at RhythmVerse is not just a dancer — they are a dedicated educator committed to your artistic journey.</p>
-      </div>
-      <div class="cards-grid cards-grid-3">
-        <div class="faculty-card" data-animate="fade-up" data-delay="100">
-          <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-1.png" alt="Priya Anand — Classical Dance Head Instructor" loading="lazy"/><div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" class="faculty-social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" class="faculty-social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></div></div>
-          <div class="faculty-body"><div class="faculty-name">Priya Anand</div><div class="faculty-role">Head Instructor —<br>Classical Dance</div><p class="faculty-bio priya-bio">18+ years of performance experience.<br class="ipad-br">National Gold Medalist under<br class="ipad-br">Guru Leela Samson, with<br class="ipad-br">acclaimed shows across<br class="ipad-br"> the nation.</p><div class="faculty-tags"><span class="faculty-tag">Bharatanatyam</span><span class="faculty-tag">Kathak</span><span class="faculty-tag">Odissi</span></div></div>
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">
+          <div class="navbar-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+          <div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span
+              class="logo-line2">Academy</span></div>
+        </a>
+        <ul class="navbar-menu" role="menubar">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="dance-styles.html" class="nav-link">Dance Styles</a></li>
+          <li><a href="faculty.html" class="nav-link active">Faculty</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+        <div class="navbar-controls">
+          <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"><i
+              class="bi bi-moon-stars-fill icon-moon"></i><i class="bi bi-sun-fill icon-sun"></i></button>
+          <button class="nav-toggle-btn" data-dir-toggle aria-label="Toggle direction" title="Toggle direction">
+            <span class="icon-ltr">RTL</span>
+            <span class="icon-rtl">LTR</span>
+          </button>
         </div>
-        <div class="faculty-card" data-animate="fade-up" data-delay="150">
-          <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-2.png" alt="Rajan Mehta — Hip-Hop Senior Instructor" loading="lazy"/><div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" class="faculty-social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div></div>
-          <div class="faculty-body"><div class="faculty-name">Rajan Mehta</div><div class="faculty-role">Senior Instructor —<br>Hip-Hop &amp; Freestyle</div><p class="faculty-bio">Pioneer of Chennai's urban dance scene. Film choreographer with credits in 12 productions. National crew championship coach and battle event judge for 8 years.</p><div class="faculty-tags"><span class="faculty-tag">Hip-Hop</span><span class="faculty-tag">Breaking</span><span class="faculty-tag">Freestyle</span></div></div>
-        </div>
-        <div class="faculty-card" data-animate="fade-up" data-delay="200">
-          <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-3.png" alt="Sofia Reyes — Salsa Instructor" loading="lazy"/><div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" class="faculty-social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a></div></div>
-          <div class="faculty-body"><div class="faculty-name">Sofia Reyes</div><div class="faculty-role">Instructor —<br>Salsa &amp; Latin Dance</div><p class="faculty-bio">International Latin dance champion. Performed in 12 countries. Specializes in Cuban Salsa, Bachata and Cha-Cha. Makes partner dancing accessible and joyful for all levels.</p><div class="faculty-tags"><span class="faculty-tag">Salsa</span><span class="faculty-tag">Bachata</span><span class="faculty-tag">Cha-Cha</span></div></div>
-        </div>
-        <div class="faculty-card" data-animate="fade-up" data-delay="250">
-          <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-4.png" alt="Meena Pillai — Western Dance Instructor" loading="lazy"/><div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a></div></div>
-          <div class="faculty-body"><div class="faculty-name">Meena Pillai</div><div class="faculty-role">Instructor —<br>Western &amp; Contemporary</div><p class="faculty-bio">Trained in contemporary dance at the prestigious Attakkalari Centre for Movement Arts. Has choreographed productions for leading theatre groups and dance companies.</p><div class="faculty-tags"><span class="faculty-tag">Western</span><span class="faculty-tag">Modern</span><span class="faculty-tag">Lyrical</span></div></div>
-        </div>
-        <div class="faculty-card" data-animate="fade-up" data-delay="300">
-          <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-5.png" alt="Arjun Das — Kids Program Instructor" loading="lazy"/><div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a></div></div>
-          <div class="faculty-body"><div class="faculty-name">Arjun Das</div><div class="faculty-role">Kids Program<br>Specialist</div><p class="faculty-bio">Specialist in child development through movement. Holds a degree in arts education. Uses play-based techniques to instill rhythm, coordination and confidence in young dancers.</p><div class="faculty-tags"><span class="faculty-tag">Kids</span><span class="faculty-tag">Class Jr</span><span class="faculty-tag">West Jr</span></div></div>
-        </div>
-        <div class="faculty-card" data-animate="fade-up" data-delay="350">
-          <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-6.png" alt="Lalita Krishnan — Advanced Program Instructor" loading="lazy"/><div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" class="faculty-social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div></div>
-          <div class="faculty-body"><div class="faculty-name">Lalita Krishnan</div><div class="faculty-role">Senior Instructor —<br>Advanced Program</div><p class="faculty-bio lalita-bio">Bharatanatyam arangetram graduate with two decades on stage. Leads advanced courses and coaches national award winners to success and excellence.</p><div class="faculty-tags"><span class="faculty-tag">Advanced</span><span class="faculty-tag">Prep</span><span class="faculty-tag">Cert</span></div></div>
-        </div>
+        <a href="login.html" class="btn-nav-login" id="nav-login-btn"><i class="bi bi-person-circle"></i> Login</a>
+        <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-menu"
+          aria-label="Open menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span
+            class="hamburger-line"></span></button>
       </div>
     </div>
-  </section>
-
-  <!-- SECTION 3 — EXPERIENCE HIGHLIGHTS -->
-  <section class="section section-alt" id="experience-highlights" aria-label="Faculty experience">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-badge" data-animate="fade-up"><i class="bi bi-bar-chart-fill"></i> Experience</p>
-        <h2 class="section-title" data-animate="fade-up" data-delay="100">Depth of <span>Expertise</span></h2>
-        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
-        <p class="section-desc" data-animate="fade-up" data-delay="200">Our faculty bring decades of combined experience across performance, choreography, and pedagogy.</p>
-      </div>
-      <div class="split-grid-2" style="max-width:900px;margin:0 auto;gap:32px;">
-        <div class="batch-card" data-animate="fade-right" data-delay="100">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-weight:600;color:var(--text);font-size:0.925rem;">Classical Dance</span><span style="color:var(--primary);font-weight:700;">18 Yrs</span></div>
-          <div class="exp-bar-wrap"><div class="exp-bar" style="width:90%;"></div></div>
-        </div>
-        <div class="batch-card" data-animate="fade-left" data-delay="100">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-weight:600;color:var(--text);font-size:0.925rem;">Hip-Hop &amp; Urban</span><span style="color:var(--primary);font-weight:700;">14 Yrs</span></div>
-          <div class="exp-bar-wrap"><div class="exp-bar" style="width:75%;"></div></div>
-        </div>
-        <div class="batch-card" data-animate="fade-right" data-delay="150">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-weight:600;color:var(--text);font-size:0.925rem;">Salsa &amp; Latin</span><span style="color:var(--primary);font-weight:700;">12 Yrs</span></div>
-          <div class="exp-bar-wrap"><div class="exp-bar" style="width:68%;"></div></div>
-        </div>
-        <div class="batch-card" data-animate="fade-left" data-delay="150">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-weight:600;color:var(--text);font-size:0.925rem;">Western &amp; Contemporary</span><span style="color:var(--primary);font-weight:700;">10 Yrs</span></div>
-          <div class="exp-bar-wrap"><div class="exp-bar" style="width:60%;"></div></div>
-        </div>
-        <div class="batch-card" data-animate="fade-right" data-delay="200">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-weight:600;color:var(--text);font-size:0.925rem;">Film Choreography</span><span style="color:var(--primary);font-weight:700;">8 Yrs</span></div>
-          <div class="exp-bar-wrap"><div class="exp-bar" style="width:50%;"></div></div>
-        </div>
-        <div class="batch-card" data-animate="fade-left" data-delay="200">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-weight:600;color:var(--text);font-size:0.925rem;">Kids Education</span><span style="color:var(--primary);font-weight:700;">8 Yrs</span></div>
-          <div class="exp-bar-wrap"><div class="exp-bar" style="width:50%;"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4 — TEACHING METHODS -->
-  <section class="section" id="teaching-methods" aria-label="Teaching methods">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-badge" data-animate="fade-up"><i class="bi bi-mortarboard-fill"></i> Pedagogy</p>
-        <h2 class="section-title" data-animate="fade-up" data-delay="100">How We <span>Teach</span></h2>
-        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
-        <p class="section-desc" data-animate="fade-up" data-delay="200">Our teaching philosophy blends structured technique with creative freedom to produce well-rounded dance artists.</p>
-      </div>
-      <div class="cards-grid cards-grid-3">
-        <div class="teaching-method-card" data-animate="fade-up" data-delay="100"><div class="tm-icon"><i class="bi bi-person-workspace"></i></div><h4>One-on-One Attention</h4><p>Small batch sizes of maximum 12 students ensure each dancer receives personalized feedback and coaching every session.</p></div>
-        <div class="teaching-method-card" data-animate="fade-up" data-delay="150"><div class="tm-icon"><i class="bi bi-camera-video-fill"></i></div><h4>Video Analysis</h4><p class="teaching-desc-four-lines"><span class="teaching-line">Sessions are recorded and reviewed.</span> <span class="teaching-line">Our faculty use video analysis</span> <span class="teaching-line">to pinpoint corrections and</span> <span class="teaching-line">celebrate growth.</span></p></div>
-        <div class="teaching-method-card" data-animate="fade-up" data-delay="200"><div class="tm-icon"><i class="bi bi-music-note-list"></i></div><h4>Music-First Approach</h4><p>We teach students to listen to music — understanding rhythm, melody and emotion — before translating it into movement.</p></div>
-        <div class="teaching-method-card" data-animate="fade-up" data-delay="250"><div class="tm-icon"><i class="bi bi-calendar-check-fill" style="color:#FFF;"></i></div><h4>Milestone-Based Progress</h4><p>Structured semester reviews and assessments keep students motivated and give families clear visibility into progress.</p></div>
-        <div class="teaching-method-card" data-animate="fade-up" data-delay="300"><div class="tm-icon"><i class="bi bi-people-fill"></i></div><h4>Collaborative Choreography</h4><p class="teaching-desc-four-lines"><span class="teaching-line">Students participate in group</span> <span class="teaching-line">creation — learning to collaborate,</span> <span class="teaching-line">negotiate ideas, and perform</span> <span class="teaching-line">as an ensemble unit.</span></p></div>
-        <div class="teaching-method-card" data-animate="fade-up" data-delay="350"><div class="tm-icon"><i class="bi bi-trophy-fill" style="color:#FFF;"></i></div><h4>Performance Integration</h4><p class="performance-integration-text">Each semester ends with a showcase, giving students real stage experience, confidence and audience exposure.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5 — STYLE SPECIALIZATIONS -->
-  <section class="section section-alt" id="style-specializations" aria-label="Faculty style specializations">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-badge" data-animate="fade-up"><i class="bi bi-stars"></i> Specializations</p>
-        <h2 class="section-title" data-animate="fade-up" data-delay="100">Expert Coverage <span>Across All Styles</span></h2>
-        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
-      </div>
-      <div class="cards-grid cards-grid-3">
-        <div class="feature-card" data-animate="zoom-in" data-delay="100"><div class="feature-icon"><i class="bi bi-flower1"></i></div><h4>Classical Forms</h4><p>Bharatanatyam, Kathak, Odissi and Kuchipudi forms taught in authentic guru-shishya tradition.</p></div>
-        <div class="feature-card" data-animate="zoom-in" data-delay="150"><div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div><h4>Urban Street Styles</h4><p>Breaking, Popping, Locking, Krumping and Waacking — the full spectrum of street dance.</p></div>
-        <div class="feature-card" data-animate="zoom-in" data-delay="200"><div class="feature-icon"><i class="bi bi-heart-fill"></i></div><h4>Latin &amp; Social Dance</h4><p>Salsa, Bachata and Cha-Cha social partner work with authentic Latin musicality.</p></div>
-        <div class="feature-card" data-animate="zoom-in" data-delay="250"><div class="feature-icon"><i class="bi bi-music-note-list"></i></div><h4>Western Styles</h4><p>Jazz, Lyrical, Contemporary Ballet and Musical Theatre dance forms for stage-aspiring dancers.</p></div>
-        <div class="feature-card" data-animate="zoom-in" data-delay="300"><div class="feature-icon"><i class="bi bi-wind"></i></div><h4>Contemporary Art</h4><p>Release technique, Somatic practice, Improvisation and Composition for contemporary artists.</p></div>
-        <div class="feature-card" data-animate="zoom-in" data-delay="350"><div class="feature-icon"><i class="bi bi-shuffle"></i></div><h4>Freestyle &amp; Fusion</h4><p>Multi-style fusion choreography, battle prep and personal style development for advanced dancers.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 6 — AWARDS & FACULTY GALLERY -->
-  <section class="section" id="awards-gallery" aria-label="Faculty awards and gallery">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-badge" data-animate="fade-up"><i class="bi bi-award-fill"></i> Recognition</p>
-        <h2 class="section-title" data-animate="fade-up" data-delay="100">Awards &amp; <span>Certifications</span></h2>
-        <div class="divider" data-animate="zoom-in" data-delay="150"></div>
-      </div>
-      <div class="cert-badges-container" data-animate="fade-up" data-delay="100">
-        <span class="cert-badge"><i class="bi bi-award-fill"></i> National Dance Championship Gold 2023</span>
-        <span class="cert-badge"><i class="bi bi-award-fill"></i> State Arts Council — Best Academy 2021-2022</span>
-        <span class="cert-badge"><i class="bi bi-award-fill"></i> Singapore Int'l Dance Fest Performer</span>
-        <span class="cert-badge"><i class="bi bi-award-fill"></i> Int'l Urban Dance Congress Member</span>
-        <span class="cert-badge"><i class="bi bi-award-fill"></i> Tamil Nadu Film Industry Choreography Award</span>
-        <span class="cert-badge"><i class="bi bi-award-fill"></i> Sangeet Natak Akademi Associate</span>
-        <span class="cert-badge"><i class="bi bi-award-fill"></i> Certified Yoga for Dancers (Priya Anand)</span>
-        <span class="cert-badge"><i class="bi bi-award-fill"></i> World Salsa Federation Certified (Sofia Reyes)</span>
-      </div>
-      <div class="faculty-gallery-grid" data-animate="zoom-in" data-delay="100">
-        <div class="faculty-gal-item"><img src="assets/images/banners/recognition_banner.png" alt="Faculty Awards and Certifications" loading="lazy"/><div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div></div>
-        <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_1.png" alt="Championship Gold Medal" loading="lazy"/><div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div></div>
-        <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_2.png" alt="Instructors Stage Trophy Ceremony" loading="lazy"/><div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div></div>
-        <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_3.png" alt="Certification Scroll and Shoes" loading="lazy"/><div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div></div>
-        <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_4.png" alt="Best Academy Glass Award Plaque" loading="lazy"/><div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div></div>
-        <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_5.png" alt="Theater Dance Showcase Performance" loading="lazy"/><div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div></div>
-        <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_6.png" alt="Certification Presentation Ceremony" loading="lazy"/><div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div></div>
-        <div class="faculty-gal-item"><img src="assets/images/banners/banner-events.png" alt="Faculty at annual recital" loading="lazy"/><div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 7 — CTA -->
-  <section class="cta-section" id="faculty-cta" aria-label="Faculty CTA">
-    <div class="cta-bg" style="background-image:url('assets/images/banners/faculty_cta_bg.png');"></div>
-    <div class="cta-overlay"></div>
-    <div class="container"><div class="cta-content">
-      <p class="section-badge" data-animate="fade-up" style="color:var(--accent-light);justify-content:center;"><i class="bi bi-stars"></i> Train with the Best</p>
-      <h2 data-animate="fade-up" data-delay="100">Learn from <span>Award-Winning</span> Dance Artists</h2>
-      <p data-animate="fade-up" data-delay="200">Book a free trial class and experience the difference of learning from truly world-class instructors who are invested in your success.</p>
-      <div class="cta-btns" data-animate="fade-up" data-delay="300">
-        <a href="contact.html" class="btn btn-accent btn-lg"><i class="bi bi-calendar-check-fill"></i> Book Free Trial</a>
-        <a href="dance-styles.html" class="btn btn-outline-white btn-lg"><i class="bi bi-stars"></i> Explore Dance Styles</a>
-      </div>
-    </div></div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand" data-animate="fade-up"><a href="index.html" class="footer-logo"><div class="footer-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div><div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span class="logo-line2">Academy</span></div></a><p>A world-class dance academy dedicated to nurturing talent, passion, and artistry in every student.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div></div>
-      <div data-animate="fade-up" data-delay="100"><h4 class="footer-heading">Quick Links</h4><nav class="footer-links"><a href="index.html"><i class="bi bi-chevron-right"></i> Home 1</a><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Dance Styles</a><a href="faculty.html"><i class="bi bi-chevron-right"></i> Faculty</a><a href="events.html"><i class="bi bi-chevron-right"></i> Events</a><a href="dashboard.html"><i class="bi bi-chevron-right"></i> Dashboard</a><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></nav></div>
-      <div data-animate="fade-up" data-delay="200"><h4 class="footer-heading">Dance Styles</h4><nav class="footer-links"><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Classical Dance</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Western Dance</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Hip-Hop</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Salsa</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Contemporary</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Freestyle</a></nav></div>
-      <div data-animate="fade-up" data-delay="300"><h4 class="footer-heading">Contact Info</h4><address style="font-style:normal;"><div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>42, Dance Avenue, Arts District, Chennai – 600001</span></div><div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><span><a href="tel:+919876543210" style="color:inherit;">+91 98765 43210</a></span></div><div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span><a href="mailto:info@rhythmverseacademy.in" style="color:inherit;">info@rhythmverseacademy.in</a></span></div><div class="footer-contact-item"><i class="bi bi-clock-fill"></i><span>Mon–Sat: 7 AM – 9 PM</span></div></address></div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link"><i class="bi bi-house-fill"></i>Home 1</a></li>
+        <li><a href="home2.html" class="mobile-nav-link"><i class="bi bi-house-heart-fill"></i>Home 2</a></li>
+        <li><a href="about.html" class="mobile-nav-link"><i class="bi bi-info-circle-fill"></i>About</a></li>
+        <li><a href="dance-styles.html" class="mobile-nav-link"><i class="bi bi-stars"></i>Dance Styles</a></li>
+        <li><a href="faculty.html" class="mobile-nav-link active"><i class="bi bi-people-fill"></i>Faculty</a></li>
+        <li><a href="events.html" class="mobile-nav-link"><i class="bi bi-calendar-event-fill"></i>Events</a></li>
+        <li><a href="contact.html" class="mobile-nav-link"><i class="bi bi-envelope-fill"></i>Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link"><i class="bi bi-grid-fill"></i>Dashboard</a></li>
+      </ul>
+      <div class="mobile-menu-divider"></div>
+      <div class="mobile-controls"><span class="mobile-controls-label">Preferences</span><button
+          class="mobile-toggle-btn" data-theme-toggle><i class="bi bi-moon-stars-fill icon-moon"></i><i
+            class="bi bi-sun-fill icon-sun"></i></button><button class="mobile-toggle-btn" data-dir-toggle
+          aria-label="Toggle direction" title="Toggle direction"><span class="icon-ltr">RTL</span><span
+            class="icon-rtl">LTR</span></button></div>
+      <a href="login.html" class="mobile-login-btn"><i class="bi bi-person-circle"></i> Login</a>
     </div>
   </div>
-  <div class="footer-bottom"><div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;"><p>&copy; 2026 RhythmVerse Academy. All rights reserved.</p><nav class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></nav></div></div>
-</footer>
-<script src="assets/js/main.js"></script>
+
+  <main id="main-content">
+
+    <!-- SECTION 1 — BANNER -->
+    <section class="banner" aria-label="Faculty page banner">
+      <div class="banner-bg" style="background-image:url('assets/images/banners/faculty_banner.png');"></div>
+      <div class="banner-overlay"></div>
+      <div class="container">
+        <div class="banner-content">
+          <div class="banner-breadcrumb"><a href="index.html">Home</a><span class="sep"><i
+                class="bi bi-chevron-right"></i></span><span class="current">Faculty</span></div>
+          <h1 data-animate="fade-up">Meet Our <span>Expert Faculty</span></h1>
+          <p data-animate="fade-up" data-delay="100">18 nationally recognized dance artists and instructors who bring
+            world-class expertise, passion and mentorship to every class.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — INSTRUCTOR PROFILES -->
+    <section class="section" id="instructor-profiles" aria-label="Instructor profiles">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-people-fill"></i> Our Team</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">The <span>Masterminds</span> Behind Your
+            Growth</h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">Every instructor at RhythmVerse is not just a
+            dancer — they are a dedicated educator committed to your artistic journey.</p>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <div class="faculty-card" data-animate="fade-up" data-delay="100">
+            <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-1.png"
+                alt="Priya Anand — Classical Dance Head Instructor" loading="lazy" />
+              <div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i
+                    class="bi bi-instagram"></i></a><a href="#" class="faculty-social-icon" aria-label="YouTube"><i
+                    class="bi bi-youtube"></i></a><a href="#" class="faculty-social-icon" aria-label="LinkedIn"><i
+                    class="bi bi-linkedin"></i></a></div>
+            </div>
+            <div class="faculty-body">
+              <div class="faculty-name">Priya Anand</div>
+              <div class="faculty-role">Head Instructor —<br>Classical Dance</div>
+              <p class="faculty-bio priya-bio">18+ years of performance experience.<br class="ipad-br">National Gold
+                Medalist under<br class="ipad-br">Guru Leela Samson, with<br class="ipad-br">acclaimed shows across<br
+                  class="ipad-br"> the nation.</p>
+              <div class="faculty-tags"><span class="faculty-tag">Bharatanatyam</span><span
+                  class="faculty-tag">Kathak</span><span class="faculty-tag">Odissi</span></div>
+            </div>
+          </div>
+          <div class="faculty-card" data-animate="fade-up" data-delay="150">
+            <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-2.png"
+                alt="Rajan Mehta — Hip-Hop Senior Instructor" loading="lazy" />
+              <div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i
+                    class="bi bi-instagram"></i></a><a href="#" class="faculty-social-icon" aria-label="YouTube"><i
+                    class="bi bi-youtube"></i></a></div>
+            </div>
+            <div class="faculty-body">
+              <div class="faculty-name">Rajan Mehta</div>
+              <div class="faculty-role">Senior Instructor —<br>Hip-Hop &amp; Freestyle</div>
+              <p class="faculty-bio">Pioneer of Chennai's urban dance scene. Film choreographer with credits in 12
+                productions. National crew championship coach and battle event judge for 8 years.</p>
+              <div class="faculty-tags"><span class="faculty-tag">Hip-Hop</span><span
+                  class="faculty-tag">Breaking</span><span class="faculty-tag">Freestyle</span></div>
+            </div>
+          </div>
+          <div class="faculty-card" data-animate="fade-up" data-delay="200">
+            <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-3.png"
+                alt="Sofia Reyes — Salsa Instructor" loading="lazy" />
+              <div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i
+                    class="bi bi-instagram"></i></a><a href="#" class="faculty-social-icon" aria-label="Facebook"><i
+                    class="bi bi-facebook"></i></a></div>
+            </div>
+            <div class="faculty-body">
+              <div class="faculty-name">Sofia Reyes</div>
+              <div class="faculty-role">Instructor —<br>Salsa &amp; Latin Dance</div>
+              <p class="faculty-bio">International Latin dance champion. Performed in 12 countries. Specializes in Cuban
+                Salsa, Bachata and Cha-Cha. Makes partner dancing accessible and joyful for all levels.</p>
+              <div class="faculty-tags"><span class="faculty-tag">Salsa</span><span
+                  class="faculty-tag">Bachata</span><span class="faculty-tag">Cha-Cha</span></div>
+            </div>
+          </div>
+          <div class="faculty-card" data-animate="fade-up" data-delay="250">
+            <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-4.png"
+                alt="Meena Pillai — Western Dance Instructor" loading="lazy" />
+              <div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i
+                    class="bi bi-instagram"></i></a></div>
+            </div>
+            <div class="faculty-body">
+              <div class="faculty-name">Meena Pillai</div>
+              <div class="faculty-role">Instructor —<br>Western &amp; Contemporary</div>
+              <p class="faculty-bio">Trained in contemporary dance at the prestigious Attakkalari Centre for Movement
+                Arts. Has choreographed productions for leading theatre groups and dance companies.</p>
+              <div class="faculty-tags"><span class="faculty-tag">Western</span><span
+                  class="faculty-tag">Modern</span><span class="faculty-tag">Lyrical</span></div>
+            </div>
+          </div>
+          <div class="faculty-card" data-animate="fade-up" data-delay="300">
+            <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-5.png"
+                alt="Arjun Das — Kids Program Instructor" loading="lazy" />
+              <div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i
+                    class="bi bi-instagram"></i></a></div>
+            </div>
+            <div class="faculty-body">
+              <div class="faculty-name">Arjun Das</div>
+              <div class="faculty-role">Kids Program<br>Specialist</div>
+              <p class="faculty-bio">Specialist in child development through movement. Holds a degree in arts education.
+                Uses play-based techniques to instill rhythm, coordination and confidence in young dancers.</p>
+              <div class="faculty-tags"><span class="faculty-tag">Kids</span><span class="faculty-tag">Class
+                  Jr</span><span class="faculty-tag">West Jr</span></div>
+            </div>
+          </div>
+          <div class="faculty-card" data-animate="fade-up" data-delay="350">
+            <div class="faculty-img-wrapper"><img src="assets/images/faculty/faculty-6.png"
+                alt="Lalita Krishnan — Advanced Program Instructor" loading="lazy" />
+              <div class="faculty-img-overlay"><a href="#" class="faculty-social-icon" aria-label="Instagram"><i
+                    class="bi bi-instagram"></i></a><a href="#" class="faculty-social-icon" aria-label="YouTube"><i
+                    class="bi bi-youtube"></i></a></div>
+            </div>
+            <div class="faculty-body">
+              <div class="faculty-name">Lalita Krishnan</div>
+              <div class="faculty-role">Senior Instructor —<br>Advanced Program</div>
+              <p class="faculty-bio lalita-bio">Bharatanatyam arangetram graduate with two decades on stage. Leads
+                advanced courses and coaches national award winners to success and excellence.</p>
+              <div class="faculty-tags"><span class="faculty-tag">Advanced</span><span
+                  class="faculty-tag">Prep</span><span class="faculty-tag">Cert</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — EXPERIENCE HIGHLIGHTS -->
+    <section class="section section-alt" id="experience-highlights" aria-label="Faculty experience">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-bar-chart-fill"></i> Experience</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Depth of <span>Expertise</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">Our faculty bring decades of combined
+            experience across performance, choreography, and pedagogy.</p>
+        </div>
+        <div class="split-grid-2" style="max-width:900px;margin:0 auto;gap:32px;">
+          <div class="batch-card" data-animate="fade-right" data-delay="100">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span
+                style="font-weight:600;color:var(--text);font-size:0.925rem;">Classical Dance</span><span
+                style="color:var(--primary);font-weight:700;">18 Yrs</span></div>
+            <div class="exp-bar-wrap">
+              <div class="exp-bar" style="width:90%;"></div>
+            </div>
+          </div>
+          <div class="batch-card" data-animate="fade-left" data-delay="100">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span
+                style="font-weight:600;color:var(--text);font-size:0.925rem;">Hip-Hop &amp; Urban</span><span
+                style="color:var(--primary);font-weight:700;">14 Yrs</span></div>
+            <div class="exp-bar-wrap">
+              <div class="exp-bar" style="width:75%;"></div>
+            </div>
+          </div>
+          <div class="batch-card" data-animate="fade-right" data-delay="150">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span
+                style="font-weight:600;color:var(--text);font-size:0.925rem;">Salsa &amp; Latin</span><span
+                style="color:var(--primary);font-weight:700;">12 Yrs</span></div>
+            <div class="exp-bar-wrap">
+              <div class="exp-bar" style="width:68%;"></div>
+            </div>
+          </div>
+          <div class="batch-card" data-animate="fade-left" data-delay="150">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span
+                style="font-weight:600;color:var(--text);font-size:0.925rem;">Western &amp; Contemporary</span><span
+                style="color:var(--primary);font-weight:700;">10 Yrs</span></div>
+            <div class="exp-bar-wrap">
+              <div class="exp-bar" style="width:60%;"></div>
+            </div>
+          </div>
+          <div class="batch-card" data-animate="fade-right" data-delay="200">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span
+                style="font-weight:600;color:var(--text);font-size:0.925rem;">Film Choreography</span><span
+                style="color:var(--primary);font-weight:700;">8 Yrs</span></div>
+            <div class="exp-bar-wrap">
+              <div class="exp-bar" style="width:50%;"></div>
+            </div>
+          </div>
+          <div class="batch-card" data-animate="fade-left" data-delay="200">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span
+                style="font-weight:600;color:var(--text);font-size:0.925rem;">Kids Education</span><span
+                style="color:var(--primary);font-weight:700;">8 Yrs</span></div>
+            <div class="exp-bar-wrap">
+              <div class="exp-bar" style="width:50%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — TEACHING METHODS -->
+    <section class="section" id="teaching-methods" aria-label="Teaching methods">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-mortarboard-fill"></i> Pedagogy</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">How We <span>Teach</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">Our teaching philosophy blends structured
+            technique with creative freedom to produce well-rounded dance artists.</p>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <div class="teaching-method-card" data-animate="fade-up" data-delay="100">
+            <div class="tm-icon"><i class="bi bi-person-workspace"></i></div>
+            <div class="tm-heading"><h4>One-on-One<br class="ipad-h-br"> Attention</h4></div>
+            <p>Small batch sizes of maximum 12 students ensure each dancer receives personalized feedback and coaching
+              every session.</p>
+          </div>
+          <div class="teaching-method-card" data-animate="fade-up" data-delay="150">
+            <div class="tm-icon"><i class="bi bi-camera-video-fill"></i></div>
+            <div class="tm-heading"><h4>Video<br class="ipad-h-br"> Analysis</h4></div>
+            <p class="teaching-desc-four-lines"><span class="teaching-line">Sessions are recorded and reviewed.</span>
+              <span class="teaching-line">Our faculty use video analysis</span> <span class="teaching-line">to pinpoint
+                corrections and</span> <span class="teaching-line">celebrate growth.</span></p>
+          </div>
+          <div class="teaching-method-card" data-animate="fade-up" data-delay="200">
+            <div class="tm-icon"><i class="bi bi-music-note-list"></i></div>
+            <div class="tm-heading"><h4>Music-First<br class="ipad-h-br"> Approach</h4></div>
+            <p>We teach students to listen to music — understanding rhythm, melody and emotion — before translating it
+              into movement.</p>
+          </div>
+          <div class="teaching-method-card" data-animate="fade-up" data-delay="250">
+            <div class="tm-icon"><i class="bi bi-calendar-check-fill" style="color:#FFF;"></i></div>
+            <div class="tm-heading"><h4>Milestone-Based<br class="ipad-h-br"> Progress</h4></div>
+            <p>Structured semester reviews and assessments keep students motivated and give families clear visibility
+              into progress.</p>
+          </div>
+          <div class="teaching-method-card" data-animate="fade-up" data-delay="300">
+            <div class="tm-icon"><i class="bi bi-people-fill"></i></div>
+            <div class="tm-heading"><h4>Collaborative<br class="ipad-h-br"> Choreography</h4></div>
+            <p class="teaching-desc-four-lines"><span class="teaching-line">Students participate in group</span> <span
+                class="teaching-line">creation — learning to collaborate,</span> <span class="teaching-line">negotiate
+                ideas, and perform</span> <span class="teaching-line">as an ensemble unit.</span></p>
+          </div>
+          <div class="teaching-method-card" data-animate="fade-up" data-delay="350">
+            <div class="tm-icon"><i class="bi bi-trophy-fill" style="color:#FFF;"></i></div>
+            <div class="tm-heading"><h4>Performance<br class="ipad-h-br"> Integration</h4></div>
+            <p class="performance-integration-text">Each semester ends with a showcase, giving students real stage
+              experience, confidence and audience exposure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — STYLE SPECIALIZATIONS -->
+    <section class="section section-alt" id="style-specializations" aria-label="Faculty style specializations">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-stars"></i> Specializations</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Expert Coverage <span>Across All
+              Styles</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <div class="feature-card" data-animate="zoom-in" data-delay="100">
+            <div class="feature-icon"><i class="bi bi-flower1"></i></div>
+            <h4>Classical Forms</h4>
+            <p>Bharatanatyam, Kathak, Odissi and Kuchipudi forms taught in authentic guru-shishya tradition.</p>
+          </div>
+          <div class="feature-card" data-animate="zoom-in" data-delay="150">
+            <div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+            <h4>Urban Street Styles</h4>
+            <p>Breaking, Popping, Locking, Krumping and Waacking — the full spectrum of street dance.</p>
+          </div>
+          <div class="feature-card" data-animate="zoom-in" data-delay="200">
+            <div class="feature-icon"><i class="bi bi-heart-fill"></i></div>
+            <h4>Latin &amp; Social Dance</h4>
+            <p>Salsa, Bachata and Cha-Cha social partner work with authentic Latin musicality.</p>
+          </div>
+          <div class="feature-card" data-animate="zoom-in" data-delay="250">
+            <div class="feature-icon"><i class="bi bi-music-note-list"></i></div>
+            <h4>Western Styles</h4>
+            <p>Jazz, Lyrical, Contemporary Ballet and Musical Theatre dance forms for stage-aspiring dancers.</p>
+          </div>
+          <div class="feature-card" data-animate="zoom-in" data-delay="300">
+            <div class="feature-icon"><i class="bi bi-wind"></i></div>
+            <h4>Contemporary Art</h4>
+            <p>Release technique, Somatic practice, Improvisation and Composition for contemporary artists.</p>
+          </div>
+          <div class="feature-card" data-animate="zoom-in" data-delay="350">
+            <div class="feature-icon"><i class="bi bi-shuffle"></i></div>
+            <h4>Freestyle &amp; Fusion</h4>
+            <p>Multi-style fusion choreography, battle prep and personal style development for advanced dancers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — AWARDS & FACULTY GALLERY -->
+    <section class="section" id="awards-gallery" aria-label="Faculty awards and gallery">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-award-fill"></i> Recognition</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Awards &amp; <span>Certifications</span>
+          </h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+        </div>
+        <div class="cert-badges-container" data-animate="fade-up" data-delay="100">
+          <span class="cert-badge"><i class="bi bi-award-fill"></i> National Dance Championship Gold 2023</span>
+          <span class="cert-badge"><i class="bi bi-award-fill"></i> State Arts Council — Best Academy 2021-2022</span>
+          <span class="cert-badge"><i class="bi bi-award-fill"></i> Singapore Int'l Dance Fest Performer</span>
+          <span class="cert-badge"><i class="bi bi-award-fill"></i> Int'l Urban Dance Congress Member</span>
+          <span class="cert-badge"><i class="bi bi-award-fill"></i> Tamil Nadu Film Industry Choreography Award</span>
+          <span class="cert-badge"><i class="bi bi-award-fill"></i> Sangeet Natak Akademi Associate</span>
+          <span class="cert-badge"><i class="bi bi-award-fill"></i> Certified Yoga for Dancers (Priya Anand)</span>
+          <span class="cert-badge"><i class="bi bi-award-fill"></i> World Salsa Federation Certified (Sofia
+            Reyes)</span>
+        </div>
+        <div class="faculty-gallery-grid" data-animate="zoom-in" data-delay="100">
+          <div class="faculty-gal-item"><img src="assets/images/banners/recognition_banner.png"
+              alt="Faculty Awards and Certifications" loading="lazy" />
+            <div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div>
+          </div>
+          <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_1.png"
+              alt="Championship Gold Medal" loading="lazy" />
+            <div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div>
+          </div>
+          <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_2.png"
+              alt="Instructors Stage Trophy Ceremony" loading="lazy" />
+            <div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div>
+          </div>
+          <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_3.png"
+              alt="Certification Scroll and Shoes" loading="lazy" />
+            <div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div>
+          </div>
+          <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_4.png"
+              alt="Best Academy Glass Award Plaque" loading="lazy" />
+            <div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div>
+          </div>
+          <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_5.png"
+              alt="Theater Dance Showcase Performance" loading="lazy" />
+            <div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div>
+          </div>
+          <div class="faculty-gal-item"><img src="assets/images/banners/recognition_gallery_6.png"
+              alt="Certification Presentation Ceremony" loading="lazy" />
+            <div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div>
+          </div>
+          <div class="faculty-gal-item"><img src="assets/images/banners/banner-events.png"
+              alt="Faculty at annual recital" loading="lazy" />
+            <div class="faculty-gal-overlay"><i class="bi bi-zoom-in" style="color:#FFF;font-size:1.5rem;"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — CTA -->
+    <section class="cta-section" id="faculty-cta" aria-label="Faculty CTA">
+      <div class="cta-bg" style="background-image:url('assets/images/banners/faculty_cta_bg.png');"></div>
+      <div class="cta-overlay"></div>
+      <div class="container">
+        <div class="cta-content">
+          <p class="section-badge" data-animate="fade-up" style="color:var(--accent-light);justify-content:center;"><i
+              class="bi bi-stars"></i> Train with the Best</p>
+          <h2 data-animate="fade-up" data-delay="100">Learn from <span>Award-Winning</span> Dance Artists</h2>
+          <p data-animate="fade-up" data-delay="200">Book a free trial class and experience the difference of learning
+            from truly world-class instructors who are invested in your success.</p>
+          <div class="cta-btns" data-animate="fade-up" data-delay="300">
+            <a href="contact.html" class="btn btn-accent btn-lg"><i class="bi bi-calendar-check-fill"></i> Book Free
+              Trial</a>
+            <a href="dance-styles.html" class="btn btn-outline-white btn-lg"><i class="bi bi-stars"></i> Explore Dance
+              Styles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand" data-animate="fade-up"><a href="index.html" class="footer-logo">
+            <div class="footer-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
+            <div class="navbar-logo-text"><span class="logo-line1">RhythmVerse</span><span
+                class="logo-line2">Academy</span></div>
+          </a>
+          <p>A world-class dance academy dedicated to nurturing talent, passion, and artistry in every student.</p>
+          <div class="footer-social"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#"
+              aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="YouTube"><i
+                class="bi bi-youtube"></i></a><a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a><a
+              href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div>
+        </div>
+        <div data-animate="fade-up" data-delay="100">
+          <h4 class="footer-heading">Quick Links</h4>
+          <nav class="footer-links"><a href="index.html"><i class="bi bi-chevron-right"></i> Home 1</a><a
+              href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a><a href="about.html"><i
+                class="bi bi-chevron-right"></i> About Us</a><a href="dance-styles.html"><i
+                class="bi bi-chevron-right"></i> Dance Styles</a><a href="faculty.html"><i
+                class="bi bi-chevron-right"></i> Faculty</a><a href="events.html"><i class="bi bi-chevron-right"></i>
+              Events</a><a href="dashboard.html"><i class="bi bi-chevron-right"></i> Dashboard</a><a
+              href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></nav>
+        </div>
+        <div data-animate="fade-up" data-delay="200">
+          <h4 class="footer-heading">Dance Styles</h4>
+          <nav class="footer-links"><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Classical
+              Dance</a><a href="dance-styles.html"><i class="bi bi-chevron-right"></i> Western Dance</a><a
+              href="dance-styles.html"><i class="bi bi-chevron-right"></i> Hip-Hop</a><a href="dance-styles.html"><i
+                class="bi bi-chevron-right"></i> Salsa</a><a href="dance-styles.html"><i
+                class="bi bi-chevron-right"></i> Contemporary</a><a href="dance-styles.html"><i
+                class="bi bi-chevron-right"></i> Freestyle</a></nav>
+        </div>
+        <div data-animate="fade-up" data-delay="300">
+          <h4 class="footer-heading">Contact Info</h4>
+          <address style="font-style:normal;">
+            <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>42, Dance Avenue, Arts District,
+                Chennai – 600001</span></div>
+            <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><span><a href="tel:+919876543210"
+                  style="color:inherit;">+91 98765 43210</a></span></div>
+            <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span><a
+                  href="mailto:info@rhythmverseacademy.in" style="color:inherit;">info@rhythmverseacademy.in</a></span>
+            </div>
+            <div class="footer-contact-item"><i class="bi bi-clock-fill"></i><span>Mon–Sat: 7 AM – 9 PM</span></div>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"
+        style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <p>&copy; 2026 RhythmVerse Academy. All rights reserved.</p>
+        <nav class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a
+            href="#">Sitemap</a></nav>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

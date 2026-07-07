@@ -75,6 +75,13 @@
 
 /* ─── CSS Variables — Dark Theme ───────────────────────────── */
 [data-theme="dark"] {
+  --primary:        #D8B4FE;
+  --primary-dark:   #6D28D9;
+  --primary-light:  #F0ABFC;
+  --secondary:      #93C5FD;
+  --secondary-dark: #2563EB;
+  --secondary-light:#BFDBFE;
+
   --bg:             #0F0E17; /* Dark Purple-Black background */
   --bg-alt:         #181524;
   --bg-card:        #1E1A2F;
@@ -86,14 +93,19 @@
   --text-light:     #9E8EB9;
   --text-on-dark:   #F8F6FF;
 
-  --border:         rgba(255,46,136,0.12);
-  --border-strong:  rgba(255,46,136,0.28);
+  --border:         rgba(216,180,254,0.16);
+  --border-strong:  rgba(216,180,254,0.34);
   --shadow-sm:      0 2px 8px rgba(0,0,0,0.5);
   --shadow-md:      0 8px 24px rgba(0,0,0,0.6);
   --shadow-lg:      0 16px 48px rgba(0,0,0,0.7);
   --shadow-xl:      0 24px 64px rgba(0,0,0,0.8);
 
-  --banner-overlay: linear-gradient(135deg, rgba(15,14,23,0.95) 0%, rgba(59,15,112,0.80) 50%, rgba(255,46,136,0.75) 100%);
+  --grad-primary:   linear-gradient(135deg, #7C3AED 0%, #DB2777 55%, #F97316 100%);
+  --grad-hero:      linear-gradient(135deg, rgba(15,14,23,0.96) 0%, rgba(109,40,217,0.84) 52%, rgba(219,39,119,0.78) 100%);
+  --grad-cta:       linear-gradient(135deg, #7C3AED 0%, #DB2777 100%);
+  --grad-accent:    linear-gradient(135deg, #C084FC 0%, #FB7185 100%);
+  --grad-card-hover: linear-gradient(135deg, rgba(216,180,254,0.12) 0%, rgba(251,113,133,0.08) 100%);
+  --banner-overlay: linear-gradient(135deg, rgba(15,14,23,0.95) 0%, rgba(109,40,217,0.80) 50%, rgba(219,39,119,0.75) 100%);
 
   /* High contrast accent for dark mode */
   --accent:         #FF2E88; /* Accent Pink */
@@ -2643,6 +2655,15 @@ textarea.form-control {
 .icon-moon { display: block; }
 [data-theme="dark"] .icon-sun  { display: block; }
 [data-theme="dark"] .icon-moon { display: none; }
+
+[data-theme="dark"] .accordion-item.active .accordion-icon,
+[data-theme="dark"] .footer-social a:hover,
+[data-theme="dark"] .faculty-social-icon:hover,
+[data-theme="dark"] .cal-day.today {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #FFFFFF;
+}
 
 .icon-rtl { display: none; }
 .icon-ltr { display: block; }

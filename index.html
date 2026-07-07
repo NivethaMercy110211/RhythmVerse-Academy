@@ -21,6 +21,19 @@
   <link rel="stylesheet" href="assets/css/navbar.css" />
 <style>
 /* Hero specific */
+    html[data-theme="light"] #hero .banner-content h1 {
+      color: #FFF7ED;
+      text-shadow: 0 5px 24px rgba(26, 10, 46, 0.55);
+    }
+
+    html[data-theme="light"] #hero .banner-content h1 span {
+      background: linear-gradient(135deg, #FFE8A3 0%, #FF8FBF 52%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 4px 14px rgba(26, 10, 46, 0.42));
+    }
+
     .hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 36px; }
     .hero-scroll-hint { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 48px; }
     .scroll-dot { width: 28px; height: 44px; border: 2px solid rgba(255,255,255,0.4); border-radius: 14px; display: flex; align-items: flex-start; justify-content: center; padding-top: 6px; }

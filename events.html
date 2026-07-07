@@ -17,16 +17,19 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/navbar.css" />
   <style>
-[dir="rtl"]
-.schedule-table-wrap {
+    .schedule-table-wrap {
       border-radius: var(--radius-lg);
       overflow: hidden;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-md);
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     .schedule-table {
       width: 100%;
+      min-width: 720px;
       border-collapse: collapse;
     }
 
@@ -413,7 +416,29 @@
 
     @media(max-width:480px) {
       .schedule-table-wrap {
+        width: 100%;
+        max-width: calc(100vw - 32px);
         overflow-x: auto;
+        overflow-y: hidden;
+        border-radius: var(--radius-md);
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .schedule-table {
+        min-width: 620px;
+      }
+
+      .schedule-table th,
+      .schedule-table td {
+        padding: 10px 12px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+      }
+
+      .schedule-table td:nth-child(2),
+      .schedule-table td:nth-child(3) {
+        white-space: normal;
+        min-width: 150px;
       }
     }
   </style>
@@ -635,118 +660,6 @@
             <div class="past-perf-body">
               <div class="past-perf-year">2023</div>
               <div class="past-perf-title past-perf-title-single-line">National Youth Dance Championship — Gold</div>
-              <p class="past-perf-desc">Our classical dance team secured GOLD at the National Youth Dance Championship
-                held in New Delhi — our most prestigious win to date.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4 — COMPETITION HIGHLIGHTS / UPCOMING SCHEDULE TABLE -->
-    <section class="section" id="competition-highlights" aria-label="Competition highlights schedule">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-badge" data-animate="fade-up"><i class="bi bi-trophy-fill"></i> Competition Calendar</p>
-          <h2 class="section-title" data-animate="fade-up" data-delay="100">Full <span>Event Schedule</span></h2>
-          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
-          <p class="section-desc" data-animate="fade-up" data-delay="200">Every event RhythmVerse is participating in or
-            hosting across the 2026 season.</p>
-        </div>
-        <div class="schedule-table-wrap" data-animate="fade-up" data-delay="100">
-          <table class="schedule-table" role="table" aria-label="2026 Event Schedule">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Event Name</th>
-                <th>Venue</th>
-                <th>Type</th>
-                <th>Open To</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Jul 20, 2026</td>
-                <td>Monthly Student Showcase — July</td>
-                <td>Studio A, RhythmVerse</td>
-                <td><span class="event-type-tag showcase">Showcase</span></td>
-                <td>All Students</td>
-              </tr>
-              <tr>
-                <td>Jul 28, 2026</td>
-                <td>Latin Fiesta Workshop</td>
-                <td>Studio B, RhythmVerse</td>
-                <td><span class="event-type-tag workshop">Workshop</span></td>
-                <td>Salsa Students</td>
-              </tr>
-              <tr>
-                <td>Aug 15, 2026</td>
-                <td>Grand Recital Night 1 — Classical</td>
-                <td>City Cultural Center</td>
-                <td><span class="event-type-tag recital">Recital</span></td>
-                <td>Advanced Classical</td>
-              </tr>
-              <tr>
-                <td>Aug 16, 2026</td>
-                <td>Grand Recital Night 2 — Urban Fusion</td>
-                <td>City Cultural Center</td>
-                <td><span class="event-type-tag recital">Recital</span></td>
-                <td>Hip-Hop, Freestyle</td>
-              </tr>
-              <tr>
-                <td>Aug 17, 2026</td>
-                <td>Grand Finale Showcase</td>
-                <td>City Cultural Center</td>
-                <td><span class="event-type-tag recital">Recital</span></td>
-                <td>All Students</td>
-              </tr>
-              <tr>
-                <td>Aug 24, 2026</td>
-                <td>Monthly Student Showcase — August</td>
-                <td>Studio A, RhythmVerse</td>
-                <td><span class="event-type-tag showcase">Showcase</span></td>
-                <td>All Students</td>
-              </tr>
-              <tr>
-                <td>Sep 10, 2026</td>
-                <td>TN State Youth Dance Championship</td>
-                <td>Jawaharlal Nehru Stadium</td>
-                <td><span class="event-type-tag competition">Competition</span></td>
-                <td>Advanced Students</td>
-              </tr>
-              <tr>
-                <td>Oct 15, 2026</td>
-                <td>Diwali Special Recital</td>
-                <td>Studio A, RhythmVerse</td>
-                <td><span class="event-type-tag showcase">Showcase</span></td>
-                <td>Classical Students</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5 — EVENT GALLERY -->
-    <section class="section section-alt" id="event-gallery" aria-label="Event photo gallery">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-badge" data-animate="fade-up"><i class="bi bi-images"></i> Gallery</p>
-          <h2 class="section-title" data-animate="fade-up" data-delay="100">Event <span>Highlights</span></h2>
-          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
-        </div>
-        <div class="gallery-grid" data-animate="zoom-in" data-delay="100">
-          <div class="gallery-item"><img src="assets/images/events/upcoming-urban-fusion.png" alt="Grand Recital 2025"
-              loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="gallery-item"><img src="assets/images/events/archive-recital-2025.png" alt="Stage performance"
-              loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="gallery-item"><img src="assets/images/events/upcoming-classical-recital.png" alt="Classical performance"
-              loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
               <p class="past-perf-desc">Our classical dance team secured GOLD at the National Youth Dance Championship
                 held in New Delhi — our most prestigious win to date.</p>
             </div>

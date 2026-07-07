@@ -131,6 +131,16 @@
   background: rgba(180,120,255,0.12);
 }
 
+[data-theme="dark"] .sidebar-link.active,
+[data-theme="dark"] .sidebar-link.active i,
+[data-theme="dark"] .dash-card-title i,
+[data-theme="dark"] .dash-card-link,
+[data-theme="dark"] .dashboard-date i,
+[data-theme="dark"] .recital-info .recital-meta i,
+[data-theme="dark"] .btc-instructor i {
+  color: var(--primary);
+}
+
 .sidebar-link.active i {
   color: var(--primary);
 }
@@ -975,6 +985,19 @@
   background: var(--primary);
   color: #FFFFFF;
   border-color: var(--primary);
+}
+
+[data-theme="dark"] .dash-ctrl-btn {
+  background: rgba(216, 180, 254, 0.1);
+  border-color: rgba(216, 180, 254, 0.28);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .dash-ctrl-btn:hover,
+[data-theme="dark"] .month-nav-btn:hover {
+  background: var(--primary-dark);
+  color: #FFFFFF;
+  border-color: var(--primary-dark);
 }
 
 .dash-ctrl-btn.icon-btn {

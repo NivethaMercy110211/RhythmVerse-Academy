@@ -18,6 +18,7 @@
     .story-badge{position:absolute;bottom:24px;left:24px;background:var(--grad-primary);color:#FFF;border-radius:var(--radius-md);padding:14px 20px;display:flex;align-items:center;gap:10px;}
     .story-badge strong{font-family:var(--font-head);font-size:1.4rem;font-weight:800;}
     .story-badge span{font-size:0.8rem;opacity:0.85;}
+    .about-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
     .mv-card{background:var(--bg-card);border-radius:var(--radius-xl);border:1px solid var(--border);padding:40px;position:relative;overflow:hidden;height:100%;}
     .mv-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;opacity:0.06;}
     .mv-card.mission::before{background:var(--primary);}
@@ -66,6 +67,31 @@
     @media(min-width:769px) and (max-width:1024px){.story-img{max-width:760px;}}
     @media(max-width:1024px){.story-grid{grid-template-columns:1fr;}.story-copy{order:1;}.story-media{order:2;}}
     @media(max-width:768px){.story-badge{bottom:12px;left:12px;padding:10px 14px;}.story-badge strong{font-size:1.1rem;}}
+    @media(max-width:480px){
+      .story-grid{gap:28px;}
+      .story-copy,.story-media{min-width:0;}
+      .story-copy .section-badge{justify-content:center;text-align:center;}
+      .story-copy .section-title{text-align:center!important;margin-bottom:16px!important;}
+      .story-copy p{text-align:center;}
+      .story-img{width:100%;max-width:none;border-radius:var(--radius-lg);}
+      .story-img img{aspect-ratio:16/11;object-fit:cover;object-position:center;}
+      .story-badge{bottom:10px;left:10px;padding:8px 12px;border-radius:var(--radius-sm);}
+      .story-badge strong{font-size:1rem;line-height:1;}
+      .story-badge span{font-size:0.72rem;}
+      .about-stats-grid{grid-template-columns:1fr;gap:12px;}
+      .mv-card,.achievement-card,.testimonial-card,.feature-card{padding:22px 18px;}
+      .mv-icon,.achievement-icon,.feature-icon{margin-left:auto;margin-right:auto;}
+      .mv-card h3,.mv-card p,.feature-card h4,.feature-card p,.achievement-card h4,.achievement-card p{text-align:center;}
+      .mv-card ul{padding-left:0!important;}
+      #training-approach .cards-grid{gap:16px;}
+      #training-approach .approach-step{padding:18px;gap:14px;align-items:flex-start;}
+      #training-approach .step-num{width:42px;height:42px;font-size:0.95rem;}
+      #training-approach .step-content{min-width:0;flex:1;}
+      #training-approach .step-content h5{font-size:0.98rem;line-height:1.3;white-space:normal;overflow-wrap:anywhere;}
+      #training-approach .step-content p,
+      #training-approach .approach-step:nth-child(4) .step-content p{width:auto;max-width:none;min-height:0;}
+      #training-approach .video-review-desc .method-line{display:inline;line-height:1.65;white-space:normal;}
+    }
   </style>
 </head>
 <body>
@@ -150,7 +176,7 @@
           <p style="margin-bottom:16px;">RhythmVerse Academy was founded in 2009 by Guru Priya Anand — a celebrated Bharatanatyam artist who believed that every individual, regardless of age or background, deserves access to professional dance training.</p>
           <p style="margin-bottom:16px;">What began as a small studio in Chennai's Arts District with just 12 students has grown into a premier multi-studio dance institution serving over 1,200 active students annually.</p>
           <p style="margin-bottom:28px;">Over 15 years, we have expanded our faculty to 18 expert instructors, introduced 6 distinct dance disciplines, and produced award-winning performers who have graced national and international stages.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="about-stats-grid">
             <div class="stat-card"><div class="stat-number" data-count="2009" data-suffix="">2009</div><div class="stat-label">Year Founded</div></div>
             <div class="stat-card"><div class="stat-number" data-count="4" data-suffix=" Studios">4 Studios</div><div class="stat-label">State-of-the-Art Facilities</div></div>
           </div>

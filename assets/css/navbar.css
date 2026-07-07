@@ -23,6 +23,10 @@
   background: var(--bg-nav);
 }
 
+.navbar > .container {
+  height: 100%;
+}
+
 [data-theme="dark"] .navbar {
   background: rgba(10, 10, 20, 0.97);
   border-bottom: 1px solid rgba(180, 120, 255, 0.1);
@@ -36,9 +40,9 @@
 .navbar-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
   box-sizing: border-box;
-  padding-top: 8px;
   gap: 16px;
 }
 
@@ -46,6 +50,7 @@
 .navbar-logo {
   display: flex;
   align-items: center;
+  height: 100%;
   gap: 10px;
   font-family: var(--font-head);
   font-weight: 800;
@@ -79,6 +84,7 @@
 .navbar-logo-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   line-height: 1.1;
 }
 
@@ -172,6 +178,20 @@
   background: var(--primary);
   color: #FFFFFF;
   border-color: var(--primary);
+}
+
+[data-theme="dark"] .nav-toggle-btn,
+[data-theme="dark"] .mobile-toggle-btn {
+  background: rgba(216, 180, 254, 0.1);
+  border-color: rgba(216, 180, 254, 0.28);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .nav-toggle-btn:hover,
+[data-theme="dark"] .mobile-toggle-btn:hover {
+  background: var(--primary-dark);
+  color: #FFFFFF;
+  border-color: var(--primary-dark);
 }
 
 /* Theme & RTL toggle icons */
@@ -701,6 +721,11 @@
 }
 
 /* ─── Responsive ─────────────────────────────────────────────── */
+.hamburger {
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 1024px) {
   .navbar-menu {
     display: none !important;
@@ -742,10 +767,6 @@
 }
 
 @media (max-width: 768px) {
-  .navbar-inner {
-    padding-top: 6px;
-  }
-
   .navbar-logo {
     font-size: 1.15rem;
   }

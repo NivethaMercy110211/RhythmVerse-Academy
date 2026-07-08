@@ -34,6 +34,19 @@
       filter: drop-shadow(0 4px 14px rgba(26, 10, 46, 0.42));
     }
 
+    html[data-theme="dark"] #hero .banner-content h1 {
+      color: #F3E8FF;
+      text-shadow: 0 5px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    html[data-theme="dark"] #hero .banner-content h1 span {
+      background: linear-gradient(135deg, #F0ABFC 0%, #FF2E88 48%, #FB7185 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 4px 16px rgba(255, 46, 136, 0.28));
+    }
+
     .hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 36px; }
     .hero-scroll-hint { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 48px; }
     .scroll-dot { width: 28px; height: 44px; border: 2px solid rgba(255,255,255,0.4); border-radius: 14px; display: flex; align-items: flex-start; justify-content: center; padding-top: 6px; }
@@ -428,14 +441,14 @@
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
     <div class="mobile-menu-inner">
       <ul class="mobile-nav-list" role="menubar">
-        <li role="none"><a href="index.html"        class="mobile-nav-link active" role="menuitem"><i class="bi bi-house-fill"></i>Home 1</a></li>
-        <li role="none"><a href="home2.html"        class="mobile-nav-link" role="menuitem"><i class="bi bi-house-heart-fill"></i>Home 2</a></li>
-        <li role="none"><a href="about.html"        class="mobile-nav-link" role="menuitem"><i class="bi bi-info-circle-fill"></i>About</a></li>
-        <li role="none"><a href="dance-styles.html" class="mobile-nav-link" role="menuitem"><i class="bi bi-stars"></i>Dance Styles</a></li>
-        <li role="none"><a href="faculty.html"      class="mobile-nav-link" role="menuitem"><i class="bi bi-people-fill"></i>Faculty</a></li>
-        <li role="none"><a href="events.html"       class="mobile-nav-link" role="menuitem"><i class="bi bi-calendar-event-fill"></i>Events</a></li>
-        <li role="none"><a href="contact.html"      class="mobile-nav-link" role="menuitem"><i class="bi bi-envelope-fill"></i>Contact</a></li>
-        <li role="none"><a href="dashboard.html"    class="mobile-nav-link" role="menuitem"><i class="bi bi-grid-fill"></i>Dashboard</a></li>
+        <li role="none"><a href="index.html"        class="mobile-nav-link active" role="menuitem">Home 1</a></li>
+        <li role="none"><a href="home2.html"        class="mobile-nav-link" role="menuitem">Home 2</a></li>
+        <li role="none"><a href="about.html"        class="mobile-nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="dance-styles.html" class="mobile-nav-link" role="menuitem">Dance Styles</a></li>
+        <li role="none"><a href="faculty.html"      class="mobile-nav-link" role="menuitem">Faculty</a></li>
+        <li role="none"><a href="events.html"       class="mobile-nav-link" role="menuitem">Events</a></li>
+        <li role="none"><a href="contact.html"      class="mobile-nav-link" role="menuitem">Contact</a></li>
+        <li role="none"><a href="dashboard.html"    class="mobile-nav-link" role="menuitem">Dashboard</a></li>
       </ul>
 
       <div class="mobile-menu-divider"></div>

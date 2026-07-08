@@ -313,6 +313,69 @@
     });
   }
 
+  /* ─── Dashboard Profile Dropdown ───────────────────────────── */
+  function initProfileDropdown() {
+    const trigger = document.getElementById('profile-dropdown-trigger');
+    const menu = document.getElementById('profile-dropdown-menu');
+    if (!trigger || !menu) return;
+
+    const toggleDropdown = (e) => {
+      e.stopPropagation();
+      const isOpen = trigger.classList.contains('active');
+      if (isOpen) {
+        closeDropdown();
+      } else {
+        openDropdown();
+      }
+    };
+
+    const openDropdown = () => {
+      trigger.classList.add('active');
+      trigger.setAttribute('aria-expanded', 'true');
+      document.addEventListener('click', closeDropdownOutside);
+    };
+
+    const closeDropdown = () => {
+      trigger.classList.remove('active');
+      trigger.setAttribute('aria-expanded', 'false');
+      document.removeEventListener('click', closeDropdownOutside);
+    };
+
+    const closeDropdownOutside = (e) => {
+      if (!trigger.contains(e.target)) {
+        closeDropdown();
+      }
+    };
+
+    trigger.addEventListener('click', toggleDropdown);
+
+    // Keyboard accessibility support
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleDropdown(e);
+      } else if (e.key === 'Escape') {
+        closeDropdown();
+      }
+    });
+
+    // Handle logout trigger
+    const logoutBtn = document.getElementById('navbar-logout-btn');
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeDropdown();
+        const localModalTrigger = document.getElementById('logout-trigger');
+        if (localModalTrigger) {
+          localModalTrigger.click();
+        } else {
+          window.location.href = 'login.html';
+        }
+      });
+    }
+  }
+
   /* ─── Init All ─────────────────────────────────────────────── */
   function initAuthControlsAutoHide() {
     const authControls = document.querySelector('.auth-controls');
@@ -341,6 +404,7 @@
     initParallax();
     initGalleryLightbox();
     initDashboardSidebar();
+    initProfileDropdown();
     initAuthControlsAutoHide();
   }
 

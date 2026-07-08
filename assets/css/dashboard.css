@@ -1006,10 +1006,25 @@
 }
 
 /* Profile Box */
+/* Profile Box (Interactive Dropdown Trigger) */
 .dash-profile-box {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  cursor: pointer;
+  padding: 6px 12px;
+  margin: -6px -12px;
+  border-radius: var(--radius-sm);
+  transition: all var(--trans-fast);
+  user-select: none;
+  border: 1px solid transparent;
+}
+
+.dash-profile-box:hover,
+.dash-profile-box.active {
+  background: var(--bg-alt);
+  border-color: var(--border);
 }
 
 .dash-profile-box .profile-text {
@@ -1047,7 +1062,174 @@
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 0.9rem;
+  flex-shrink: 0;
 }
+
+.profile-chevron {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  transition: transform var(--trans-fast);
+}
+
+[dir="rtl"] .profile-chevron {
+  transform: rotate(0deg);
+}
+
+.dash-profile-box.active .profile-chevron {
+  transform: rotate(180deg);
+}
+
+/* Profile Dropdown Menu Styling */
+.profile-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: -4px;
+  width: 260px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 12px 0;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  transform: translateY(12px);
+  opacity: 0;
+  transition: opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1), transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  text-align: left;
+}
+
+[dir="rtl"] .profile-dropdown-menu {
+  right: auto;
+  left: -4px;
+  text-align: right;
+}
+
+.dash-profile-box.active .profile-dropdown-menu {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Theme-specific glassmorphism & visual adjustments */
+[data-theme="light"] .profile-dropdown-menu {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(59, 15, 112, 0.08);
+}
+
+[data-theme="dark"] .profile-dropdown-menu {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(30, 26, 47, 0.96);
+  border-color: rgba(216, 180, 254, 0.12);
+}
+
+/* Dropdown Header User Info Block */
+.profile-dropdown-menu .dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px 12px;
+}
+
+.profile-avatar-large {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2.5px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.dropdown-user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.dropdown-user-info .dropdown-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.dropdown-user-info .dropdown-status {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Dividers & Items */
+.profile-dropdown-menu .dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 6px 0;
+}
+
+.profile-dropdown-menu .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  transition: all var(--trans-fast);
+}
+
+[dir="rtl"] .profile-dropdown-menu .dropdown-item {
+  flex-direction: row;
+}
+
+.profile-dropdown-menu .dropdown-item i {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  transition: color var(--trans-fast);
+  display: flex;
+  align-items: center;
+}
+
+.profile-dropdown-menu .dropdown-item span {
+  transition: color var(--trans-fast);
+}
+
+.profile-dropdown-menu .dropdown-item:hover {
+  background: var(--border);
+  color: var(--primary-light);
+}
+
+[data-theme="dark"] .profile-dropdown-menu .dropdown-item:hover {
+  color: var(--primary);
+  background: rgba(216, 180, 254, 0.08);
+}
+
+.profile-dropdown-menu .dropdown-item:hover i {
+  color: var(--accent);
+}
+
+.profile-dropdown-menu .dropdown-item.logout-item:hover {
+  color: var(--accent);
+}
+.profile-dropdown-menu .dropdown-item.logout-item:hover i {
+  color: var(--accent);
+}
+
 
 @media (max-width: 1024px) {
   .dash-top-bar-left .navbar-logo {

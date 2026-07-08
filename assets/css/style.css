@@ -448,7 +448,7 @@ p { color: var(--text-muted); line-height: 1.8; }
 .hero-banner .banner-content .btn:first-of-type,
 .hero2-left .btn:first-of-type {
   background: #FFFFFF;
-  color: var(--primary) !important;
+  color: #3B0F70 !important;
   border: 2px solid #FFFFFF;
   box-shadow: 0 10px 30px rgba(26, 10, 46, 0.26);
 }
@@ -666,10 +666,11 @@ p { color: var(--text-muted); line-height: 1.8; }
   color: var(--highlight);
   font-weight: 600;
   font-size: 0.875rem;
-  transition: gap var(--trans-fast);
+  transition: color var(--trans-fast), gap var(--trans-fast);
 }
 
 .style-card:hover .style-card-link {
+  color: #FFFFFF;
   gap: 10px;
 }
 
@@ -2459,7 +2460,7 @@ textarea.form-control {
 .cta-section .cta-btns .btn:first-child,
 .cta-section .btn-accent {
   background: #FFFFFF;
-  color: var(--primary) !important;
+  color: #3B0F70 !important;
   border: 2px solid #FFFFFF;
   box-shadow: 0 10px 30px rgba(26, 10, 46, 0.24);
 }

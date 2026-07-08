@@ -50,7 +50,7 @@
   <div class="dash-top-bar-left">
     <!-- Mobile toggle button (hidden on desktop) -->
     <button class="sidebar-toggle-btn" aria-label="Toggle sidebar navigation" title="Toggle sidebar">
-      <i class="bi bi-layout-sidebar-inset"></i>
+      <i class="bi bi-list"></i>
     </button>
     <a href="index.html" class="navbar-logo">
       <div class="navbar-logo-icon"><img src="assets/images/logo-icon.svg" alt="RhythmVerse Logo"></div>
@@ -69,12 +69,38 @@
       <span class="icon-rtl">LTR</span>
     </button>
     <div class="dash-top-divider"></div>
-    <div class="dash-profile-box">
+    <div class="dash-profile-box" id="profile-dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">
       <div class="profile-text">
         <span class="profile-name">Ananya Nair</span>
         <span class="profile-status">Active Member</span>
       </div>
       <div class="profile-avatar">AN</div>
+      <i class="bi bi-chevron-down profile-chevron"></i>
+      
+      <!-- Profile Dropdown Menu -->
+      <div class="profile-dropdown-menu" id="profile-dropdown-menu" aria-label="Profile options">
+        <div class="dropdown-header">
+          <div class="profile-avatar-large">AN</div>
+          <div class="dropdown-user-info">
+            <span class="dropdown-name">Ananya Nair</span>
+            <span class="dropdown-status">Active Member</span>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <a href="dashboard-profile.html" class="dropdown-item">
+          <i class="bi bi-person-fill"></i>
+          <span>My Profile</span>
+        </a>
+        <a href="dashboard-settings.html" class="dropdown-item">
+          <i class="bi bi-gear-fill"></i>
+          <span>Settings</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <button id="navbar-logout-btn" class="dropdown-item logout-item" type="button">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Logout</span>
+        </button>
+      </div>
     </div>
   </div>
 </header>
@@ -105,13 +131,7 @@
       <a href="dashboard-recitals.html" class="sidebar-link"><i class="bi bi-stars"></i> Recital Schedule</a>
       <a href="dashboard-fees.html" class="sidebar-link"><i class="bi bi-credit-card-fill"></i> Fee Status</a>
       <a href="dashboard-notifications.html" class="sidebar-link"><i class="bi bi-bell-fill"></i> Notifications<span class="sidebar-notif-dot" aria-label="3 new notifications"></span></a>
-      <div class="sidebar-label">Account</div>
-      <a href="dashboard-profile.html" class="sidebar-link"><i class="bi bi-person-fill"></i> My Profile</a>
-      <a href="dashboard-settings.html" class="sidebar-link active" aria-current="page"><i class="bi bi-gear-fill"></i> Settings</a>
     </nav>
-    <div class="sidebar-bottom">
-      <a href="login.html" class="sidebar-link" style="color:var(--accent);"><i class="bi bi-box-arrow-right"></i> Logout</a>
-    </div>
   </aside>
 
   <!-- DASHBOARD MAIN -->

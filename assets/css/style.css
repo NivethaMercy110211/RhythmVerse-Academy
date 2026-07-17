@@ -880,6 +880,7 @@ p { color: var(--text-muted); line-height: 1.8; }
 
 .testimonial-stars {
   display: flex;
+  justify-content: center;
   gap: 4px;
   color: var(--highlight);
   font-size: 1rem;
@@ -2320,6 +2321,7 @@ textarea.form-control {
 [dir="rtl"] .testimonial-card::before { left: auto; right: 20px; content: '\201D'; }
 .testimonial-stars {
   display: flex;
+  justify-content: center;
   gap: 4px;
   margin-bottom: 16px;
   color: var(--highlight);

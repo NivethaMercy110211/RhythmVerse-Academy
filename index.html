@@ -21,6 +21,14 @@
   <link rel="stylesheet" href="assets/css/navbar.css" />
 <style>
 /* Hero specific */
+    .hero-banner .banner-content {
+      text-align: center;
+    }
+    .hero-banner .banner-content > p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     html[data-theme="light"] #hero .banner-content h1 {
       color: #FFF7ED;
       text-shadow: 0 5px 24px rgba(26, 10, 46, 0.55);
@@ -47,14 +55,14 @@
       filter: drop-shadow(0 4px 16px rgba(255, 46, 136, 0.28));
     }
 
-    .hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 36px; }
-    .hero-scroll-hint { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 48px; }
+    .hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 36px; }
+    .hero-scroll-hint { display: flex; align-items: center; justify-content: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 48px; }
     .scroll-dot { width: 28px; height: 44px; border: 2px solid rgba(255,255,255,0.4); border-radius: 14px; display: flex; align-items: flex-start; justify-content: center; padding-top: 6px; }
     .scroll-dot::after { content: ''; width: 4px; height: 8px; background: #FFF; border-radius: 2px; animation: scrollBounce 1.6s infinite; }
     @keyframes scrollBounce { 0%,100%{transform:translateY(0)}50%{transform:translateY(10px)} }
 
     /* Stats row */
-    .hero-stats { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 48px; padding-top: 32px; padding-bottom: 28px; border-top: 1px solid rgba(255,255,255,0.15); }
+    .hero-stats { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; margin-top: 48px; padding-top: 32px; padding-bottom: 28px; border-top: 1px solid rgba(255,255,255,0.15); }
     .hero-stat-num { font-family: 'Outfit',sans-serif; font-size: 2rem; font-weight: 900; color: var(--accent); line-height: 1; }
     .hero-stat-lbl { color: rgba(255,255,255,0.75); font-size: 0.82rem; margin-top: 4px; }
 

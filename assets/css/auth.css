@@ -81,7 +81,10 @@ body.auth-controls-hidden .auth-controls {
 }
 
 @media (min-width: 1024px) {
-  .auth-left { display: block; }
+  .auth-left {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .auth-bg {
@@ -115,10 +118,12 @@ body.auth-controls-hidden .auth-controls {
   position: relative;
   z-index: 2;
   height: 100%;
+  width: 100%;
+  max-width: 580px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 48px;
+  padding: 48px 24px;
 }
 
 .auth-brand {
@@ -275,8 +280,8 @@ body.auth-controls-hidden .auth-controls {
 
 @media (min-width: 1024px) {
   .auth-right {
-    width: 55%;
-    max-width: 700px;
+    width: 50%;
+    max-width: none;
     flex-shrink: 0;
   }
 }
@@ -335,6 +340,9 @@ body.auth-controls-hidden .auth-controls {
   box-shadow: var(--shadow-xl);
   border: 1px solid var(--border);
   transition: background var(--trans-base), border-color var(--trans-base);
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
 }
 
 @media (max-width: 1023px) {
@@ -773,51 +781,83 @@ body.auth-controls-hidden .auth-controls {
   margin-bottom: 8px;
 }
 
-/* ─── Center Left Panel for Forgot Password ──────────────────── */
-.auth-left-middle {
-  margin-top: auto;
-  margin-bottom: auto;
+/* ─── Center Left Panel & Glass Card ─────────────────────────── */
+.auth-left-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   gap: 32px;
-  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-@media (min-width: 1024px) {
-  .forgot-page .auth-left-middle {
-    min-height: 420px;
-    justify-content: space-between;
-    gap: 0;
-  }
+[data-theme="dark"] .auth-left-card {
+  background: rgba(10, 5, 20, 0.25);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
-.forgot-page .auth-left-content {
-  text-align: center;
+.auth-left-card .auth-left-headline h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  line-height: 1.25;
+  margin-bottom: 16px;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
 }
 
-.forgot-page .auth-left-headline {
-  text-align: center;
+.auth-left-card .auth-left-headline p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 0;
 }
 
-.forgot-page .auth-left-headline h2 {
-  text-align: center;
+/* Glass card contents styling overrides */
+.auth-left-card .auth-stat {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: all var(--trans-fast);
 }
 
-.forgot-page .auth-features {
-  margin: 0 auto;
+.auth-left-card .auth-stat:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.auth-left-card .auth-feature-item {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: all var(--trans-fast);
+}
+
+.auth-left-card .auth-feature-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+
+.auth-left-footer {
+  margin-top: auto;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
-  max-width: 420px;
-}
-
-.forgot-page .auth-feature-item {
-  justify-content: flex-start;
-}
-
-.forgot-page .auth-left-content > div:last-child {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 @media (max-width: 1023px) {
@@ -825,3 +865,5 @@ body.auth-controls-hidden .auth-controls {
     margin-bottom: 40px !important;
   }
 }
+
+

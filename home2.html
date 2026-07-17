@@ -350,6 +350,20 @@
         font-size: 1rem;
       }
     }
+
+    /* Why choose section items */
+    .why-list { display: flex; flex-direction: column; gap: 16px; }
+    .why-item { display: flex; gap: 16px; align-items: flex-start; }
+    .why-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--grad-primary); display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 1.1rem; flex-shrink: 0; box-shadow: 0 4px 12px rgba(106,13,173,0.3); }
+    .why-item h5 { color: var(--text); margin-bottom: 4px; font-size: 1rem; }
+    .why-item p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+    @media (max-width: 768px) {
+      .why-icon { width: 40px; height: 40px; font-size: 1rem; }
+      #gallery-preview .gallery-grid {
+        grid-auto-rows: 260px;
+      }
+    }
   </style>
 </head>
 
@@ -479,59 +493,8 @@
       </div>
     </section>
 
-    <!-- SECTION 2 — STUDENT SUCCESS STORIES -->
-    <section class="section" id="success-stories" aria-label="Student success stories">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-badge" data-animate="fade-up"><i class="bi bi-chat-quote-fill"></i> Testimonials</p>
-          <h2 class="section-title" data-animate="fade-up" data-delay="100">Words from Our <span>Champions</span></h2>
-          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
-          <p class="section-desc" data-animate="fade-up" data-delay="200">Real stories from students whose lives were
-            transformed through dance at RhythmVerse Academy.</p>
-        </div>
-        <div class="cards-grid cards-grid-3">
-          <div class="testimonial-card" data-animate="fade-up" data-delay="100">
-            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p class="testimonial-text">"I joined RhythmVerse with zero dance experience. Within a year, I was already performing live on stage at the Annual Recital. All the instructors here genuinely care about each student's growth."</p>
-            <div class="testimonial-author">
-              <img src="assets/images/testimonials/champion-1.png" alt="Ananya Nair" class="testimonial-avatar" />
-              <div>
-                <div class="testimonial-name">Ananya Nair</div>
-                <div class="testimonial-meta">Classical Dance, 2 Years</div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card" data-animate="fade-up" data-delay="200">
-            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p class="testimonial-text">"Rajan sir's hip-hop classes completely changed my confidence. I competed at the State Youth Competition and won Silver. This would never have happened without RhythmVerse."</p>
-            <div class="testimonial-author">
-              <img src="assets/images/testimonials/champion-2.png" alt="Karthik Suresh" class="testimonial-avatar" />
-              <div>
-                <div class="testimonial-name">Karthik Suresh</div>
-                <div class="testimonial-meta">Hip-Hop, 3 Years</div>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card" data-animate="fade-up" data-delay="300">
-            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
-            <p class="testimonial-text">"My daughter has been attending the kids' classical dance batch for eight months. The discipline, grace and joy she has developed is truly remarkable. We highly recommend this academy!"</p>
-            <div class="testimonial-author">
-              <img src="assets/images/testimonials/champion-3.png" alt="Rekha Pillai" class="testimonial-avatar" />
-              <div>
-                <div class="testimonial-name">Rekha Pillai</div>
-                <div class="testimonial-meta">Parent of Student</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- SECTION 3 — DANCE PROGRAMS -->
-    <section class="section section-alt" id="programs" aria-label="Dance programs">
+    <section class="section" id="programs" aria-label="Dance programs">
       <div class="container">
         <div class="section-header">
           <p class="section-badge" data-animate="fade-up"><i class="bi bi-collection-fill"></i> Programs</p>
@@ -580,9 +543,238 @@
         </div>
       </div>
     </section>
+    <!-- SECTION 3 — WHY CHOOSE US (Achievements) -->
+    <section class="section section-alt" id="why-choose" aria-label="Why choose RhythmVerse">
+      <div class="container">
+        <div class="split-grid-2">
+          <div data-animate="fade-right">
+            <p class="section-badge"><i class="bi bi-patch-check-fill"></i> Why RhythmVerse</p>
+            <h2 class="section-title" style="text-align:left; margin-bottom:24px;">The Academy That <span>Shapes Champions</span></h2>
+            <p style="margin-bottom:36px;">We blend traditional pedagogy with modern choreography. Our faculty, our infrastructure and our community make RhythmVerse the premier dance destination.</p>
+            <div class="why-list">
+              <div class="why-item">
+                <div class="why-icon"><i class="bi bi-award-fill"></i></div>
+                <div>
+                  <h5>Award-Winning Faculty</h5>
+                  <p>Our instructors are nationally recognized performers and choreographers with 10+ years of experience.</p>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-icon"><i class="bi bi-building"></i></div>
+                <div>
+                  <h5>World-Class Studio Facilities</h5>
+                  <p>Professional sprung floors, mirrored walls, state-of-the-art sound systems and lighting equipment.</p>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-icon"><i class="bi bi-people-fill"></i></div>
+                <div>
+                  <h5>Structured Learning Batches</h5>
+                  <p>Small batch sizes ensuring personalized attention. Batches for kids, teens, adults and professionals.</p>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-icon"><i class="bi bi-trophy-fill"></i></div>
+                <div>
+                  <h5>Performance Opportunities</h5>
+                  <p>Regular recitals, competitions and stage performances to showcase your progress and build confidence.</p>
+                </div>
+              </div>
+            </div>
+            <a href="about.html" class="btn btn-primary mt-32">
+              <i class="bi bi-arrow-right-circle-fill"></i> Learn About Us
+            </a>
+          </div>
+          <div data-animate="fade-left">
+            <div class="stat-cards-grid">
+              <div class="stat-card">
+                <div class="stat-number" data-count="1200" data-suffix="+">1200+</div>
+                <div class="stat-label">Students Trained</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-count="18" data-suffix="">18</div>
+                <div class="stat-label">Expert Instructors</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-count="95" data-suffix="%">95%</div>
+                <div class="stat-label">Student Satisfaction</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-count="150" data-suffix="+">150+</div>
+                <div class="stat-label">Awards Won</div>
+              </div>
+              <div class="stat-card" style="grid-column:1/-1;">
+                <div class="stat-number" data-count="15" data-suffix=" Yrs">15 Yrs</div>
+                <div class="stat-label">Of Excellence in Dance Education</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- SECTION 4 — TRIAL CLASS -->
-    <section class="section" id="trial-class" aria-label="Book trial class">
+    <!-- SECTION 4 — STUDIO FACILITIES -->
+    <section class="section" id="facilities" aria-label="Studio facilities">
+      <div class="container">
+        <div class="split-grid-2">
+          <div data-animate="fade-right">
+            <div style="border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-xl);">
+              <img src="assets/images/auth/forgot-bg.png" alt="Dance studio interior"
+                style="width:100%; aspect-ratio:4/3; object-fit:cover;" loading="lazy" />
+            </div>
+          </div>
+          <div data-animate="fade-left">
+            <p class="section-badge"><i class="bi bi-building"></i> Facilities</p>
+            <h2 class="section-title" style="text-align:left; margin-bottom:24px;">World-Class <span>Studio
+                Infrastructure</span></h2>
+            <div class="facility-list">
+              <div class="facility-item">
+                <div class="facility-icon p"><i class="bi bi-layers-fill"></i></div>
+                <div>
+                  <h5>Professional Sprung Floors</h5>
+                  <p>Specially designed resilient sprung hardwood floors that reduce impact and protect your joints
+                    during intensive training sessions.</p>
+                </div>
+              </div>
+              <div class="facility-item">
+                <div class="facility-icon b"><i class="bi bi-soundwave"></i></div>
+                <div>
+                  <h5>Studio-Grade Sound Systems</h5>
+                  <p>High-fidelity surround sound installations in every studio for an immersive musical experience
+                    during classes and performances.</p>
+                </div>
+              </div>
+              <div class="facility-item">
+                <div class="facility-icon g"><i class="bi bi-lightbulb-fill"></i></div>
+                <div>
+                  <h5>Professional Stage Lighting</h5>
+                  <p>Programmable LED stage lighting simulating theatrical conditions, helping dancers build confidence and master stage presence.</p>
+                </div>
+              </div>
+              <div class="facility-item">
+                <div class="facility-icon r"><i class="bi bi-camera-video-fill"></i></div>
+                <div>
+                  <h5>Recording & Playback Studio</h5>
+                  <p>Full HD recording capabilities so students can review their performances, track progress, and
+                    create professional demo videos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 5 — GALLERY PREVIEW -->
+    <section class="section section-alt" id="gallery-preview" aria-label="Photo gallery">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-images"></i> Gallery</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Moments of <span>Pure Magic</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">A glimpse into the energy, artistry, and joy
+            that fills our studios and stages every single day.</p>
+        </div>
+        <div class="gallery-grid" data-animate="zoom-in" data-delay="100">
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-1.png" alt="Classical dance performance" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-2.png" alt="Breakdancer handstand trick" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-3.png" alt="Salsa dancers in spin" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-4.png" alt="Contemporary dance jump" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-5.png" alt="Synchronized jazz performance" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-6.png" alt="Street dance routine" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-7.png" alt="Graceful ballet dancer on stage" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-8.png" alt="Energetic hip-hop jump trick" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery/gallery-9.png" alt="Ballroom waltz dance spin" loading="lazy" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="text-center mt-48">
+          <a href="events.html" class="btn btn-primary" data-animate="zoom-in"><i class="bi bi-images"></i> View Full
+            Gallery</a>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 6 — CLASS SCHEDULE -->
+    <section class="section" id="batch-preview" aria-label="Batch timings">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-clock-fill"></i> Schedule</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Flexible <span>Batch Timings</span></h2>
+          <div class="divider" data-animate="zoom-in" data-delay="150"></div>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">We offer morning, evening, and weekend batches to fit your busy lifestyle.</p>
+        </div>
+        <div class="cards-grid cards-grid-3" data-animate="fade-up" data-delay="200">
+          <div class="batch-card">
+            <span class="batch-badge morning"><i class="bi bi-sunrise-fill"></i> Morning</span>
+            <div class="batch-time">07:00 – 09:00 AM</div>
+            <div class="batch-days"><i class="bi bi-calendar3"></i> Mon, Wed, Fri</div>
+            <div class="batch-info">Ideal for students and working professionals who prefer early starts. Classical & Western styles.</div>
+          </div>
+          <div class="batch-card">
+            <span class="batch-badge evening"><i class="bi bi-moon-stars-fill"></i> Evening</span>
+            <div class="batch-time">05:30 – 07:30 PM</div>
+            <div class="batch-days"><i class="bi bi-calendar3"></i> Tue, Thu, Sat</div>
+            <div class="batch-info">Our most popular batch. Hip-Hop, Salsa, and Contemporary. Open to teens and adults.</div>
+          </div>
+          <div class="batch-card">
+            <span class="batch-badge weekend"><i class="bi bi-calendar-week-fill"></i> Weekend</span>
+            <div class="batch-time">09:00 – 12:00 PM</div>
+            <div class="batch-days"><i class="bi bi-calendar3"></i> Sat & Sun</div>
+            <div class="batch-info">Dedicated weekend intensive for Freestyle and Freestyle Fusion enthusiasts. All levels welcome.</div>
+          </div>
+          <div class="batch-card">
+            <span class="batch-badge morning"><i class="bi bi-brightness-high-fill"></i> Kids AM</span>
+            <div class="batch-time">10:00 – 11:30 AM</div>
+            <div class="batch-days"><i class="bi bi-calendar3"></i> Mon, Wed, Fri</div>
+            <div class="batch-info">Fun and structured sessions for children aged 5–12. Focus on rhythm, coordination and joy of movement.</div>
+          </div>
+          <div class="batch-card">
+            <span class="batch-badge evening"><i class="bi bi-star-fill"></i> Advanced</span>
+            <div class="batch-time">07:30 – 09:00 PM</div>
+            <div class="batch-days"><i class="bi bi-calendar3"></i> Daily</div>
+            <div class="batch-info">Exclusive advanced batch for competitive dancers preparing for auditions and national events.</div>
+          </div>
+          <div class="batch-card">
+            <span class="batch-badge weekend"><i class="bi bi-people-fill"></i> Couples</span>
+            <div class="batch-time">06:00 – 07:30 PM</div>
+            <div class="batch-days"><i class="bi bi-calendar3"></i> Sat</div>
+            <div class="batch-info">Salsa and partner dance classes exclusively for couples. Perfect for beginners and social dancers.</div>
+          </div>
+        </div>
+        <div class="text-center mt-48">
+          <a href="contact.html" class="btn btn-primary" data-animate="zoom-in">
+            <i class="bi bi-person-plus-fill"></i> Book a Free Trial Class
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — TRIAL CLASS (Free Trial) -->
+    <section class="section section-alt" id="trial-class" aria-label="Book trial class">
       <div class="container">
         <div class="trial-section-grid">
           <div data-animate="fade-right">
@@ -664,114 +856,58 @@
       </div>
     </section>
 
-    <!-- SECTION 5 — STUDIO FACILITIES -->
-    <section class="section section-alt" id="facilities" aria-label="Studio facilities">
-      <div class="container">
-        <div class="split-grid-2">
-          <div data-animate="fade-right">
-            <div style="border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-xl);">
-              <img src="assets/images/banners/banner-faculty.png" alt="Dance studio interior"
-                style="width:100%; aspect-ratio:4/3; object-fit:cover;" loading="lazy" />
-            </div>
-          </div>
-          <div data-animate="fade-left">
-            <p class="section-badge"><i class="bi bi-building"></i> Facilities</p>
-            <h2 class="section-title" style="text-align:left; margin-bottom:24px;">World-Class <span>Studio
-                Infrastructure</span></h2>
-            <div class="facility-list">
-              <div class="facility-item">
-                <div class="facility-icon p"><i class="bi bi-layers-fill"></i></div>
-                <div>
-                  <h5>Professional Sprung Floors</h5>
-                  <p>Specially designed resilient sprung hardwood floors that reduce impact and protect your joints
-                    during intensive training sessions.</p>
-                </div>
-              </div>
-              <div class="facility-item">
-                <div class="facility-icon b"><i class="bi bi-soundwave"></i></div>
-                <div>
-                  <h5>Studio-Grade Sound Systems</h5>
-                  <p>High-fidelity surround sound installations in every studio for an immersive musical experience
-                    during classes and performances.</p>
-                </div>
-              </div>
-              <div class="facility-item">
-                <div class="facility-icon g"><i class="bi bi-lightbulb-fill"></i></div>
-                <div>
-                  <h5>Professional Stage Lighting</h5>
-                  <p>Programmable LED stage lighting simulating theatrical conditions, helping dancers build confidence and master stage presence.</p>
-                </div>
-              </div>
-              <div class="facility-item">
-                <div class="facility-icon r"><i class="bi bi-camera-video-fill"></i></div>
-                <div>
-                  <h5>Recording & Playback Studio</h5>
-                  <p>Full HD recording capabilities so students can review their performances, track progress, and
-                    create professional demo videos.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 6 — GALLERY PREVIEW -->
-    <section class="section" id="gallery-preview" aria-label="Photo gallery">
+    <!-- SECTION 8 — TESTIMONIALS (Student Success Stories) -->
+    <section class="section" id="success-stories" aria-label="Student success stories">
       <div class="container">
         <div class="section-header">
-          <p class="section-badge" data-animate="fade-up"><i class="bi bi-images"></i> Gallery</p>
-          <h2 class="section-title" data-animate="fade-up" data-delay="100">Moments of <span>Pure Magic</span></h2>
+          <p class="section-badge" data-animate="fade-up"><i class="bi bi-chat-quote-fill"></i> Testimonials</p>
+          <h2 class="section-title" data-animate="fade-up" data-delay="100">Words from Our <span>Champions</span></h2>
           <div class="divider" data-animate="zoom-in" data-delay="150"></div>
-          <p class="section-desc" data-animate="fade-up" data-delay="200">A glimpse into the energy, artistry, and joy
-            that fills our studios and stages every single day.</p>
+          <p class="section-desc" data-animate="fade-up" data-delay="200">Real stories from students whose lives were
+            transformed through dance at RhythmVerse Academy.</p>
         </div>
-        <div class="gallery-grid" data-animate="zoom-in" data-delay="100">
-          <div class="gallery-item">
-            <img src="assets/images/gallery/gallery-1.png" alt="Classical dance performance" loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        <div class="cards-grid cards-grid-3">
+          <div class="testimonial-card" data-animate="fade-up" data-delay="100">
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testimonial-text">"I joined RhythmVerse with zero dance experience. Within a year, I was already performing live on stage at the Annual Recital. All the instructors here genuinely care about each student's growth."</p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonials/champion-1.png" alt="Ananya Nair" class="testimonial-avatar" />
+              <div>
+                <div class="testimonial-name">Ananya Nair</div>
+                <div class="testimonial-meta">Classical Dance, 2 Years</div>
+              </div>
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="assets/images/gallery/gallery-2.png" alt="Breakdancer handstand trick" loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          <div class="testimonial-card" data-animate="fade-up" data-delay="200">
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testimonial-text">"Rajan sir's hip-hop classes completely changed my confidence. I competed at the State Youth Competition and won Silver. This would never have happened without RhythmVerse."</p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonials/champion-2.png" alt="Karthik Suresh" class="testimonial-avatar" />
+              <div>
+                <div class="testimonial-name">Karthik Suresh</div>
+                <div class="testimonial-meta">Hip-Hop, 3 Years</div>
+              </div>
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="assets/images/gallery/gallery-3.png" alt="Salsa dancers in spin" loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          <div class="testimonial-card" data-animate="fade-up" data-delay="300">
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+            <p class="testimonial-text">"My daughter has been attending the kids' classical dance batch for eight months. The discipline, grace and joy she has developed is truly remarkable. We highly recommend this academy!"</p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonials/champion-3.png" alt="Rekha Pillai" class="testimonial-avatar" />
+              <div>
+                <div class="testimonial-name">Rekha Pillai</div>
+                <div class="testimonial-meta">Parent of Student</div>
+              </div>
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="assets/images/gallery/gallery-4.png" alt="Contemporary dance jump" loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="gallery-item">
-            <img src="assets/images/gallery/gallery-5.png" alt="Synchronized jazz performance" loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="gallery-item">
-            <img src="assets/images/gallery/gallery-6.png" alt="Street dance routine" loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="gallery-item">
-            <img src="assets/images/gallery/gallery-7.png" alt="Graceful ballet dancer on stage" loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="gallery-item">
-            <img src="assets/images/gallery/gallery-8.png" alt="Energetic hip-hop jump trick" loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
-          </div>
-          <div class="gallery-item">
-            <img src="assets/images/gallery/gallery-9.png" alt="Ballroom waltz dance spin" loading="lazy" />
-            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
-          </div>
-        </div>
-        <div class="text-center mt-48">
-          <a href="events.html" class="btn btn-primary" data-animate="zoom-in"><i class="bi bi-images"></i> View Full
-            Gallery</a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 7 — CTA SECTION -->
+    <!-- SECTION 9 — CTA SECTION -->
     <section class="cta-section" id="home2-cta" aria-label="Call to action">
       <div class="cta-bg" style="background-image:url('assets/images/banners/home2_cta_bg.png');"></div>
       <div class="cta-overlay"></div>
